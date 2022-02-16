@@ -154,6 +154,7 @@
   @keyframes expand {
     100% {
       width: 500px;
+      max-width: 100vw;
     }
   }
 
