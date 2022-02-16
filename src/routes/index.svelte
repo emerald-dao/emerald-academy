@@ -174,6 +174,16 @@
     align-items: center;
   }
 
+  @media screen and (max-width: 750px) {
+    .text {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
   .text > span {
     margin: 10px;
   }
