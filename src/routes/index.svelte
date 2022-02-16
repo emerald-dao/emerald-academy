@@ -49,27 +49,27 @@
     <a href="https://discord.gg/emeraldcity" target="_blank">
       <article href="https://discord.gg/emeraldcity" target="_blank">
         <img src="/cityskyline.png" alt="city skyline" />
-        <h5>Join Emerald City</h5>
-        <p>We are the first DAO on Flow. Educate, build, and govern.</p>
+        <div class="card-description">
+          <h5>Emerald City</h5>
+          <p>We are the first DAO on Flow. Educate, build, and govern.</p>
+          <button>Join now</button>
+        </div>
       </article>
     </a>
-    <span href="https://github.com/jacob-tucker/Flow-Zero-to-Jacob" target="_blank" class="not-started">
+    <a href="https://discord.gg/SevZaemaF3" target="_blank">
       <article>
         <img src="/Flow-Zero-to-Jacob.png" alt="Flow Zero to Jacob course" />
-        <h5>Bootcamp #1</h5>
-        <p>Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.</p>
-        <small>Starting on February 21st.</small>
+        <div class="card-description">
+          <h5>Bootcamp #1</h5>
+          <p>Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.</p>
+          <button>Starting on February 21st.</button>
+        </div>
       </article>
-    </span>
+    </a>
   </div>
 </div>
 
 <style>
-
-  small {
-    font-size: 12px;
-    color: var(--text);
-  }
 
   .theme-toggle {
     opacity: 0;
@@ -110,7 +110,7 @@
   .cards article {
     opacity: 0;
     width: 300px;
-    height: 250px;
+    height: 300px;
     margin: 0px 30px 30px 30px;
     animation: show .5s forwards;
     animation-delay: 1.1s;
@@ -139,6 +139,21 @@
     color: var(--text);
     margin-left: 10px;
     width: 85%;
+  }
+
+  .card-description {
+    position: relative;
+    height: 200px;
+    padding: 10px;
+  }
+
+  .card-description button {
+    position: absolute;
+    bottom: 0;
+    font-size: 17px;
+    padding: 5px;
+    left: 10%;
+    width: 80%;
   }
 
   .description {
@@ -173,7 +188,7 @@
   h1 {
     position: relative;
     text-align: center;
-    font-size: 70px;
+    font-size: 45px;
     overflow: hidden;
   }
 
@@ -234,8 +249,8 @@
   }
 
   @media screen and (max-width: 500px) {
-    .text {
-      font-size: 40px;
+    h1 {
+      font-size: 20px;
     }
     .description {
       font-size: 20px;
