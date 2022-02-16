@@ -43,7 +43,8 @@
     </svg>
   </a>
 
-  <article class="description">Learn everything about the Flow Blockchain and the Cadence Smart Contract programming language.</article>
+  <article class="description">Learn everything about the Flow blockchain and the Cadence Smart Contract programming language. <br />
+    Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City</a>.</article>
   <div class="cards">
     <a href="https://discord.gg/emeraldcity" target="_blank">
       <article href="https://discord.gg/emeraldcity" target="_blank">
@@ -52,17 +53,23 @@
         <p>We are the first DAO on Flow. Educate, build, and govern.</p>
       </article>
     </a>
-    <a href="https://github.com/jacob-tucker/Flow-Zero-to-Jacob" target="_blank">
+    <span href="https://github.com/jacob-tucker/Flow-Zero-to-Jacob" target="_blank" class="not-started">
       <article>
         <img src="/Flow-Zero-to-Jacob.png" alt="Flow Zero to Jacob course" />
         <h5>Bootcamp #1</h5>
         <p>Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.</p>
+        <small>Starting on February 21st.</small>
       </article>
-    </a>
+    </span>
   </div>
 </div>
 
 <style>
+
+  small {
+    font-size: 12px;
+    color: var(--text);
+  }
 
   .theme-toggle {
     opacity: 0;
@@ -76,6 +83,10 @@
     animation: show .5s forwards;
     animation-delay: 1.5s;
     margin-top: 10px;
+  }
+
+  .not-started:hover {
+    opacity: .4;
   }
 
   #logo {
