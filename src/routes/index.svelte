@@ -75,6 +75,7 @@
     text-align: center;
     animation: show .5s forwards;
     animation-delay: 1.5s;
+    margin-top: 10px;
   }
 
   #logo {
@@ -135,6 +136,7 @@
     animation-delay: 1.1s;
     font-size: 25px;
     color: var(--text);
+    margin-top: 5px;
   }
 
   @keyframes show {
