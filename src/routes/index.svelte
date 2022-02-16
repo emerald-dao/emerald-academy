@@ -189,6 +189,7 @@
   }
 
   .main {
+    top: 0;
     left: 0;
     width: 100vw;
     text-align: center;
@@ -200,7 +201,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    top: 50vh;
+    top: 35vh;
     margin-top: 0px;
     animation: moveUp 1s forwards;
     animation-delay: .75s;
@@ -216,6 +217,21 @@
   @keyframes comeBack {
     100% {
       transform: translateY(0%);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .text {
+      font-size: 40px;
+    }
+    .description {
+      font-size: 20px;
+    }
+    @keyframes moveUp {
+      100% {
+        top: 0vh;
+        margin-top: 0px;
+      }
     }
   }
 </style>
