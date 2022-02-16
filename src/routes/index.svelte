@@ -154,6 +154,7 @@
     padding: 5px;
     left: 10%;
     width: 80%;
+    margin-bottom: 5px;
   }
 
   .description {
