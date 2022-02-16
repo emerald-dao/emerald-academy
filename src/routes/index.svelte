@@ -43,7 +43,7 @@
     </svg>
   </a>
 
-  <article class="description">Learn everything about the Flow blockchain and the Cadence Smart Contract programming language. <br />
+  <article class="description">Learn everything about the Flow blockchain and the Cadence Smart Contract programming language. <br /><br />
     Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City</a>.</article>
   <div class="cards">
     <a href="https://discord.gg/emeraldcity" target="_blank">
@@ -148,6 +148,7 @@
     font-size: 25px;
     color: var(--text);
     margin-top: 5px;
+    padding: 40px;
   }
 
   @keyframes show {
