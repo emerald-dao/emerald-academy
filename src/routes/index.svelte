@@ -110,7 +110,7 @@
   .cards article {
     opacity: 0;
     width: 300px;
-    height: 300px;
+    height: 325px;
     margin: 0px 30px 30px 30px;
     animation: show .5s forwards;
     animation-delay: 1.1s;
@@ -143,7 +143,7 @@
 
   .card-description {
     position: relative;
-    height: 200px;
+    height: 220px;
     padding: 10px;
   }
 
