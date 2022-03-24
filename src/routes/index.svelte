@@ -92,7 +92,7 @@
             Learn what the Flow blockchain is and how to start writing smart
             contracts in Cadence.
           </p>
-          <button>Completed</button>
+          <button>Click to View</button>
         </div>
       </article>
     </a>
