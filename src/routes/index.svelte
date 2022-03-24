@@ -90,7 +90,20 @@
             Learn what the Flow blockchain is and how to start writing smart
             contracts in Cadence.
           </p>
-          <button>In progress. Join now!</button>
+          <button>Completed</button>
+        </div>
+      </article>
+    </a>
+    <a href="https://discord.gg/SevZaemaF3" target="_blank">
+      <article>
+        <img src="/Flow-Zero-to-Jacob.png" alt="Flow Zero to Jacob course" />
+        <div class="card-description">
+          <h5>Bootcamp #2</h5>
+          <p>
+            Learn what the Flow blockchain is and how to start writing smart
+            contracts in Cadence.
+          </p>
+          <button>Coming soon!</button>
         </div>
       </article>
     </a>
