@@ -7,13 +7,12 @@
 
   onMount(() => {
     let html = document.querySelector("html");
-    let currentTheme = html.getAttribute("data-theme");
-    $theme = currentTheme || "light";
+    html.setAttribute("data-theme", $theme);
+
     toggleTheme = () => {
       let newTheme = $theme === "light" ? "dark" : "light";
-      html.setAttribute("data-theme", newTheme);
       $theme = newTheme;
-      localStorage.setItem("theme", newTheme);
+      html.setAttribute("data-theme", $theme);
     };
   });
 </script>
@@ -81,11 +80,14 @@
         </div>
       </article>
     </a>
-    <a href="https://discord.gg/SevZaemaF3" target="_blank">
+    <a href="/bootcamp1" target="_blank">
       <article>
         <img src="/Flow-Zero-to-Jacob.png" alt="Flow Zero to Jacob course" />
         <div class="card-description">
-          <h5>Bootcamp #1</h5>
+          <h5 class="title-date">
+            Bootcamp #1 <small style="color: grey; right: 0px; font-size: 13px;"
+              >03/22/2022</small>
+          </h5>
           <p>
             Learn what the Flow blockchain is and how to start writing smart
             contracts in Cadence.
@@ -94,7 +96,7 @@
         </div>
       </article>
     </a>
-    <a href="https://discord.gg/SevZaemaF3" target="_blank">
+    <a href="https://discord.gg/emeraldcity">
       <article>
         <img src="/Flow-Zero-to-Jacob.png" alt="Flow Zero to Jacob course" />
         <div class="card-description">
@@ -111,6 +113,11 @@
 </div>
 
 <style>
+  .title-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .theme-toggle {
     opacity: 0;
     padding: 0;
@@ -123,10 +130,6 @@
     animation: show 0.5s forwards;
     animation-delay: 1.5s;
     margin-top: 10px;
-  }
-
-  .not-started:hover {
-    opacity: 0.4;
   }
 
   #logo {
