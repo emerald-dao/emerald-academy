@@ -11,6 +11,7 @@ export const bootcamps = {
       { src: "https://www.youtube.com/embed/Y9PMiXB4mAg", title: "Workshop 8/8", content: ["Chapter 5, Day 3"] }
     ],
     description: "Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.",
-    date: "March 18th, 2022"
+    date: "March 18th, 2022",
+    link: "https://github.com/jacob-tucker/flow-zero-to-jacob"
   }
 }

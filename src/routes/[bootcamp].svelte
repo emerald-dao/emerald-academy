@@ -18,7 +18,8 @@
     </p>
   </div>
 
-  <img src="/Flow-Zero-to-Jacob.png" alt="bootcamp #1" />
+  <a href={bootcamp.link} target="_blank"
+    ><img src="/Flow-Zero-to-Jacob.png" alt="bootcamp #1" /></a>
   <article class="description">{bootcamp.description}</article>
 
   {#each bootcamp.videos as video}
@@ -46,6 +47,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    justify-items: center;
   }
 
   .video-desc h4 {
@@ -112,5 +114,21 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  @media all and (max-width: 750px) {
+    img {
+      max-width: 250px;
+    }
+    iframe {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 75%;
+      min-height: 150px;
+    }
+    article {
+      width: 95vw;
+    }
   }
 </style>
