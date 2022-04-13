@@ -2,6 +2,8 @@
   import { onMount } from "svelte";
   import { theme } from "$lib/stores.js";
   import { fade, draw } from "svelte/transition";
+  import { bootcamps } from "$lib/bootcamps";
+  import BootcampCard from "$lib/BootcampCard.svelte";
 
   let toggleTheme;
 
@@ -70,54 +72,19 @@
     <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City</a>.
   </article>
   <div class="cards">
-    <a href="https://discord.gg/emeraldcity" target="_blank">
-      <article href="https://discord.gg/emeraldcity" target="_blank">
-        <img src="/cityskyline.png" alt="city skyline" />
-        <div class="card-description">
-          <h5>Emerald City</h5>
-          <p>We are the first DAO on Flow. Educate, build, and govern.</p>
-          <button>Join Emerald City</button>
-        </div>
-      </article>
-    </a>
-    <a href="/bootcamp1" target="_blank">
-      <article>
-        <img src="/Flow-Zero-to-Jacob.png" alt="Flow Zero to Jacob course" />
-        <div class="card-description">
-          <h5 class="title-date">
-            Bootcamp #1 <small style="color: grey; right: 0px; font-size: 13px;"
-              >03/22/2022</small>
-          </h5>
-          <p>
-            Learn what the Flow blockchain is and how to start writing smart
-            contracts in Cadence.
-          </p>
-          <button>Click to View</button>
-        </div>
-      </article>
-    </a>
-    <a href="https://discord.gg/emeraldcity">
-      <article>
-        <img src="/Flow-Zero-to-Jacob.png" alt="Flow Zero to Jacob course" />
-        <div class="card-description">
-          <h5>Bootcamp #2</h5>
-          <p>
-            Learn what the Flow blockchain is and how to start writing smart
-            contracts in Cadence.
-          </p>
-          <button>Coming soon!</button>
-        </div>
-      </article>
-    </a>
+    {#each bootcamps as bootcamp (bootcamp.title)}
+    <BootcampCard
+      title={bootcamp.title}
+      description={bootcamp.description}
+      image={bootcamp.image}
+      imageAlt={bootcamp.imageAlt}
+      href={bootcamp.href}
+    />
+    {/each}
   </div>
 </div>
 
 <style>
-  .title-date {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .theme-toggle {
     opacity: 0;
     padding: 0;
@@ -148,56 +115,6 @@
   a {
     outline: 0;
     text-decoration: none;
-  }
-
-  .cards article {
-    opacity: 0;
-    width: 300px;
-    height: 325px;
-    margin: 0px 30px 30px 30px;
-    animation: show 0.5s forwards;
-    animation-delay: 1.1s;
-    padding: 0px;
-    min-width: 300px;
-  }
-
-  .cards img {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-  }
-
-  .cards h5 {
-    text-align: left;
-    margin: 5px 0px 5px 10px;
-    color: var(--primary);
-  }
-
-  .cards p {
-    font-size: 17px;
-    text-align: left;
-    margin: 0px;
-    color: var(--text);
-    margin-left: 10px;
-    width: 85%;
-  }
-
-  .card-description {
-    position: relative;
-    height: 220px;
-    padding: 10px;
-  }
-
-  .card-description button {
-    position: absolute;
-    bottom: 0;
-    font-size: 17px;
-    padding: 5px;
-    left: 10%;
-    width: 80%;
-    margin-bottom: 5px;
   }
 
   .description {

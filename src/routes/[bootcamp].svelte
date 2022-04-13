@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { page } from "$app/stores";
   import { bootcamps } from "$lib/bootcamps";
 
@@ -131,4 +131,4 @@
       width: 95vw;
     }
   }
-</style>
+</style> -->
