@@ -1,4 +1,5 @@
 @import '@picocss/pico';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins&display=swap');
 
 /* Green Light scheme (Default) */
 /* Can be forced with data-theme="light" */
@@ -40,6 +41,11 @@
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
 
+  /* Fonts */
+  --font-headers: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-accent: 'JetBrains Mono', monospace;
+
   /* Container widths */
   --container-width-full: 100%;
   --container-width-large: 1600px;
@@ -47,8 +53,10 @@
   --container-width-small: 800px;
 
   /* Gutters */
-  --gutter-x: 10px;
-  --gutter-y: 20px;
+  --gutter-x: 30px;
+  --gutter-y: 25px;
+
+  font-family: var(--font-display);
 }
 
 button {
@@ -57,6 +65,12 @@ button {
 
 h1,
 h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headers);
+}
 gh3 {
   margin-bottom: 0;
 }

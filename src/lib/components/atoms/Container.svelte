@@ -1,23 +1,18 @@
 <script>
   export let width = "medium"
+  export let direction = "column"
   export let gutterX = true
   export let gutterY = true
 </script>
 
-<div class={width} class:gutter-x={gutterX} class:gutter-y={gutterY}><slot></slot></div>
+<div class={`${width} ${direction}`} class:gutter-x={gutterX} class:gutter-y={gutterY}>
+  <slot/>
+</div>
 
 <style>
   div {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
-    background-color: red;
   }
 
   .full {
@@ -45,4 +40,5 @@
     padding-top: var(--gutter-y);
     padding-bottom: var(--gutter-y);
   }
+
 </style>
