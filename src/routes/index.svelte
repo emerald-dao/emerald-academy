@@ -1,7 +1,6 @@
 <script>
-  import { bootcamps } from "$lib/data/bootcamps";
-  import BootcampCard from "$lib/components/modules/BootcampCard.svelte";
-import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
+  import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
+  import BootcampsSection from "$lib/components/sections/index/BootcampsSection.svelte";
 </script>
 
 <svelte:head>
@@ -10,16 +9,8 @@ import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
 
 <div class="background-gradient"/>
 <div class="main">
-  <HeroSection />
-  {#each bootcamps as bootcamp (bootcamp.title)}
-  <BootcampCard
-    title={bootcamp.title}
-    description={bootcamp.description}
-    image={bootcamp.image}
-    imageAlt={bootcamp.imageAlt}
-    href={bootcamp.href}
-  />
-  {/each}
+  <HeroSection/>
+  <BootcampsSection/>
     <div class="circle a"/>
     <div class="circle b rotating">
       <div class="circle-little"/>
@@ -42,6 +33,7 @@ import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
 
 <style>
   .main {
+    min-height: 100vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -51,8 +43,8 @@ import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
     background: 
       radial-gradient(ellipse at right, var(--gradient-primary), transparent),
       radial-gradient(ellipse at bottom, var(--gradient-secondary), transparent);
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;

@@ -1,6 +1,5 @@
 <script>
 import Container from "$lib/components/atoms/Container.svelte";
-
 </script>
 
 
@@ -18,7 +17,6 @@ import Container from "$lib/components/atoms/Container.svelte";
 
 
 <style>
-
   .column {
     display: flex;
     flex-direction: column;
