@@ -1,8 +1,9 @@
 <script>
 import Container from "$lib/components/atoms/Container.svelte";
+import Section from "$lib/components/atoms/Section.svelte";
 </script>
 
-
+<Section>
 <Container width="small">
   <div class="column">
     <span>WELCOME TO</span>
@@ -14,7 +15,7 @@ import Container from "$lib/components/atoms/Container.svelte";
     </p>
   </div>
 </Container>
-
+</Section>
 
 <style>
   .column {

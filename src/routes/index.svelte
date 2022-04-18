@@ -1,6 +1,7 @@
 <script>
   import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
   import BootcampsSection from "$lib/components/sections/index/BootcampsSection.svelte";
+import InvitationSection from "$lib/components/sections/index/InvitationSection.svelte";
 </script>
 
 <svelte:head>
@@ -11,6 +12,7 @@
 <div class="main">
   <HeroSection/>
   <BootcampsSection/>
+  <InvitationSection/>
     <div class="circle a"/>
     <div class="circle b rotating">
       <div class="circle-little"/>
@@ -33,7 +35,6 @@
 
 <style>
   .main {
-    min-height: 100vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -45,7 +46,7 @@
       radial-gradient(ellipse at bottom, var(--gradient-secondary), transparent);
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;

@@ -5,7 +5,7 @@
 
 <Header />
 
-<main class="container">
+<main>
   <slot />
 </main>
 
@@ -20,8 +20,9 @@
 </footer>
 
 <style>
-  .container {
+  main {
     min-height: 100vh;
+    width: 100vw;
   }
 
   footer {

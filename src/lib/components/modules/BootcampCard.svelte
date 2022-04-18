@@ -26,29 +26,20 @@
 
   .card-description {
     position: relative;
-    height: 220px;
-    padding: 10px;
+    padding: 30px;
   }
 
   .card-description button {
-    position: absolute;
-    bottom: 0;
     font-size: 17px;
     padding: 5px;
-    left: 10%;
-    width: 80%;
-    margin-bottom: 5px;
   }
 
   article {
-    /* opacity: 0; */
     width: 300px;
-    height: 325px;
     margin: 0px 30px 30px 30px;
     animation: show 0.5s forwards;
-    animation-delay: 1.1s;
-    padding: 0px;
     min-width: 300px;
+    background-color: rgba(18, 18, 18, 0.53);
   }
 
   img {
