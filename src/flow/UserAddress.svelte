@@ -1,5 +1,5 @@
 <script>
-  import { user } from "../flow/stores";
+  import { user } from "./stores";
 </script>
 
 <style>

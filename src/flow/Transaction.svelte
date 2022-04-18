@@ -1,5 +1,5 @@
 <script>
-import { transactionStatus, transactionInProgress } from "../flow/stores";
+import { transactionStatus, transactionInProgress } from "./stores";
 import { slide } from 'svelte/transition';
 </script>
 

@@ -20,6 +20,10 @@
 </footer>
 
 <style>
+  .container {
+    min-height: 100vh;
+  }
+
   footer {
     position: relative;
     display: flex;

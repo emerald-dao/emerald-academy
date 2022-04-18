@@ -8,7 +8,7 @@ import Logo from "../modules/Logo.svelte";
 <Container width="medium" >
   <nav>
     <Logo/>
-    <div class="menu">
+    <div class="navigation">
       <ul>
         <li><a href="/">Bootcamp #1</a></li>
         <li><a href="/">Bootcamp #2</a></li>
@@ -39,7 +39,7 @@ import Logo from "../modules/Logo.svelte";
     font-size: 15px;
   }
 
-  .menu {
+  .navigation {
     display: flex;
     flex-direction: row;
     gap: 20px;

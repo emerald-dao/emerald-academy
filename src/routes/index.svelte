@@ -1,101 +1,176 @@
 <script>
   import { bootcamps } from "$lib/data/bootcamps";
   import BootcampCard from "$lib/components/modules/BootcampCard.svelte";
-  import Container from "$lib/components/atoms/Container.svelte";
+import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
 </script>
 
 <svelte:head>
   <title>Emerald Academy</title>
 </svelte:head>
 
+<div class="background-gradient"/>
 <div class="main">
-  <article class="description">
-    Learn everything about the Flow blockchain and the Cadence Smart Contract
-    programming language. <br /><br />
-    Emerald Academy is a series of Flow educational resources throughout time, by
-    your <i>best</i> friends at
-    <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City</a>.
-  </article>
-  <div class="cards">
-    {#each bootcamps as bootcamp (bootcamp.title)}
-    <BootcampCard
-      title={bootcamp.title}
-      description={bootcamp.description}
-      image={bootcamp.image}
-      imageAlt={bootcamp.imageAlt}
-      href={bootcamp.href}
-    />
-    {/each}
-  </div>
+  <HeroSection />
+  {#each bootcamps as bootcamp (bootcamp.title)}
+  <BootcampCard
+    title={bootcamp.title}
+    description={bootcamp.description}
+    image={bootcamp.image}
+    imageAlt={bootcamp.imageAlt}
+    href={bootcamp.href}
+  />
+  {/each}
+    <div class="circle a"/>
+    <div class="circle b rotating">
+      <div class="circle-little"/>
+    </div>
+    <div class="circle c"/>
+    <div class="circle d rotating reverse">
+      <div class="circle-little"/>
+    </div>
+    <div class="circle e"/>
+    <div class="circle f rotating">
+      <div class="circle-little"/>
+    </div>
+    <div class="circle g rotating reverse">
+      <div class="circle-little"/>
+    </div>
+    <div class="circle h"/>
+    <div class="circle i"/>
+    <div class="circle j"/>   
 </div>
 
 <style>
-  .cards {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  a {
-    outline: 0;
-    text-decoration: none;
-  }
-
-  .description {
-    opacity: 0;
-    animation: show 0.5s forwards;
-    animation-delay: 1.1s;
-    font-size: 25px;
-    color: var(--text);
-    margin-top: 5px;
-    padding: 40px;
-  }
-
-  @keyframes show {
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes expand {
-    100% {
-      width: 500px;
-      max-width: 100vw;
-    }
-  }
-
   .main {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .background-gradient {
+    background: 
+      radial-gradient(ellipse at right, var(--gradient-primary), transparent),
+      radial-gradient(ellipse at bottom, var(--gradient-secondary), transparent);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    text-align: center;
+    z-index: -1;
   }
 
-  @keyframes moveUp {
-    100% {
-      top: 0vh;
-      margin-top: 50px;
-    }
+  .circle {
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(96, 123, 87, 0.06);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; 
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    z-index: -2;
   }
 
-  @keyframes comeBack {
-    100% {
-      transform: translateY(0%);
-    }
+  .circle-little {
+    border-radius: 50%;
+    background: rgba(96, 123, 87, 0.04);
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    aspect-ratio: 1/1;
+    z-index: -2;
   }
 
-  @media screen and (max-width: 500px) {
-    .description {
-      font-size: 20px;
+  .circle.a {
+    width: 100%;
+  }
+
+  .circle.b {
+    width: 90%;
+  }
+
+  .circle.c {
+    width: 80%;
+  }
+
+  .circle.d {
+    width: 70%;
+  }
+
+  .circle.e {
+    width: 60%;
+  }
+
+  .circle.f {
+    width: 50%;
+  }
+
+  .circle.g {
+    width: 40%;
+  }
+
+  .circle.h {
+    width: 30%;
+  }
+
+  .circle.i {
+    width: 20%;
+  }
+
+  .circle.j {
+    width: 10%;
+  }
+
+  /* Circle rotating effect */
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
     }
-    @keyframes moveUp {
-      100% {
-        top: 0vh;
-        margin-top: 0px;
-      }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 8s linear infinite;
+    -moz-animation: rotating 8s linear infinite;
+    -ms-animation: rotating 8s linear infinite;
+    -o-animation: rotating 8s linear infinite;
+    animation: rotating 8s linear infinite;
+  }
+
+  .rotating.b, .rotating.g {
+    -webkit-animation: rotating 14s linear infinite;
+    -moz-animation: rotating 14s linear infinite;
+    -ms-animation: rotating 14s linear infinite;
+    -o-animation: rotating 14s linear infinite;
+    animation: rotating 14s linear infinite;
+  }
+
+  .rotating.reverse {
+    animation-direction: reverse;
   }
 </style>

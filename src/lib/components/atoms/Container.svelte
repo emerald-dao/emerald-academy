@@ -11,6 +11,7 @@
 
 <style>
   div {
+    box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
   }
