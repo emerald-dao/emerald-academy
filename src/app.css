@@ -1,10 +1,9 @@
 @import '@picocss/pico';
 
-
 /* Green Light scheme (Default) */
 /* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
+[data-theme='light'],
+:root:not([data-theme='dark']) {
   --primary: #35d9ba;
   --primary-hover: #248f7a;
   --primary-focus: transparent;
@@ -15,7 +14,7 @@
 /* Green Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme='light']) {
     --primary: #38e8c6;
     --primary-hover: #12bf9d;
     --primary-focus: transparent;
@@ -26,7 +25,7 @@
 
 /* Green Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --primary: #38e8c6;
   --primary-hover: #12bf9d;
   --primary-focus: transparent;
@@ -40,31 +39,44 @@
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
+
+  /* Container widths */
+  --container-width-full: 100%;
+  --container-width-large: 1600px;
+  --container-width-medium: 1200px;
+  --container-width-small: 800px;
+
+  /* Gutters */
+  --gutter-x: 10px;
+  --gutter-y: 20px;
 }
 
 button {
   font-weight: bold;
 }
 
-h1, h2, gh3 {
+h1,
+h2,
+gh3 {
   margin-bottom: 0;
 }
 
 .card {
-  margin:0;
+  margin: 0;
   padding: 1em 2em;
 }
 
-.container, main {
+.container,
+main {
   margin: 0;
   padding: 0;
 }
 
 .mb-1 {
-  margin-bottom:1em;
+  margin-bottom: 1em;
 }
 .mb-2 {
-  margin-bottom:2em;
+  margin-bottom: 2em;
 }
 
 .accent-border {

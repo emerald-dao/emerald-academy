@@ -1,9 +1,10 @@
 <script>
   import { onMount } from "svelte";
-  import { theme } from "$lib/stores.js";
-  import { fade, draw } from "svelte/transition";
-  import { bootcamps } from "$lib/bootcamps";
-  import BootcampCard from "$lib/BootcampCard.svelte";
+  import { theme } from "$lib/stores/ThemeStore.js";
+  import { draw } from "svelte/transition";
+  import { bootcamps } from "$lib/data/bootcamps";
+  import BootcampCard from "$lib/components/modules/BootcampCard.svelte";
+  import Container from "$lib/components/atoms/Container.svelte";
 
   let toggleTheme;
 
@@ -34,7 +35,6 @@
     </h1>
     <span class="line" />
   </div>
-
   <!-- Toggle theme -->
   <a class="theme-toggle" href="/" on:click|preventDefault={toggleTheme}>
     {#if $theme === "light"}
