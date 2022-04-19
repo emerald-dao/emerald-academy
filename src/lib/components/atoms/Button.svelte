@@ -13,7 +13,7 @@
     color: black;
     font-family: var(--font-family-secondary);
     font-size: 15px;
-    padding: 6px 20px;
+    padding: 6px 30px;
     border-radius: 60px;
   }
 

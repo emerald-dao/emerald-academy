@@ -7,7 +7,7 @@
 
 <div>
   <Section>
-    <Container width="small">
+    <Container width="medium">
       <div class="row">
         {#each bootcamps as bootcamp (bootcamp.title)}
           <BootcampCard
@@ -25,10 +25,12 @@
 
 <style>
   .row {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    gap: 40px;
   }
   
 </style>
