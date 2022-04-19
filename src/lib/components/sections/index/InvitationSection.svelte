@@ -14,7 +14,6 @@ import Section from "$lib/components/atoms/Section.svelte";
       <Button link="/hola" size="large">Join DAO</Button>
     </div>
   </Container>
-  <img src="/city.webp" alt="Emerald City buildings"/>
 </Section>
 
 <style>
@@ -28,11 +27,5 @@ import Section from "$lib/components/atoms/Section.svelte";
   h2 {
     text-align: center;
     font-size: 40px;
-  }
-
-  img {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
   }
 </style>

@@ -26,7 +26,8 @@
     text-align: center;
     background-color: black;
     border-radius: 10px;
-    box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 0px, rgba(255, 255, 255, 0.1) 0px 0px 8px;    padding: 0;
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 0px, rgba(255, 255, 255, 0.1) 0px 0px 8px;    
+    padding: 0;
   }
 
   img {
