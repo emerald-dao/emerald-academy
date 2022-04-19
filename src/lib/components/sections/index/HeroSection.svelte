@@ -9,9 +9,10 @@ import Section from "$lib/components/atoms/Section.svelte";
     <span>WELCOME TO</span>
     <h1>EMERALD ACADEMY</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-      consectetur, nisl eget congue consectetur, nunc nisl aliquet
-      purus, eget tincidunt nisl nisl eu nisl.
+      Learn everything about the <b>Flow Blockchain</b> and the Cadence Smart Contract programming language.
+    </p>
+    <p>
+      Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at Emerald City.
     </p>
   </div>
 </Container>
@@ -43,5 +44,6 @@ import Section from "$lib/components/atoms/Section.svelte";
 
   p {
     text-align: center;
+    font-size: 18px;
   }
 </style>
