@@ -3,7 +3,7 @@ import Container from "$lib/components/atoms/Container.svelte";
 import Section from "$lib/components/atoms/Section.svelte";
 </script>
 
-<Section>
+<Section paddingTop={false}>
   <Container width="small">
     <div class="column">
       <span>WELCOME TO</span>
@@ -12,7 +12,7 @@ import Section from "$lib/components/atoms/Section.svelte";
         Learn everything about the <b>Flow Blockchain</b> and the Cadence Smart Contract programming language.
       </p>
       <p>
-        Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at Emerald City.
+        Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at <b>Emerald City</b>.
       </p>
     </div>
   </Container>
@@ -45,5 +45,9 @@ import Section from "$lib/components/atoms/Section.svelte";
   p {
     text-align: center;
     font-size: 18px;
+  }
+  
+  b {
+    color: var(--primary);
   }
 </style>
