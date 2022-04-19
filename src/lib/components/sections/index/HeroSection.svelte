@@ -4,18 +4,18 @@ import Section from "$lib/components/atoms/Section.svelte";
 </script>
 
 <Section>
-<Container width="small">
-  <div class="column">
-    <span>WELCOME TO</span>
-    <h1>EMERALD ACADEMY</h1>
-    <p>
-      Learn everything about the <b>Flow Blockchain</b> and the Cadence Smart Contract programming language.
-    </p>
-    <p>
-      Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at Emerald City.
-    </p>
-  </div>
-</Container>
+  <Container width="small">
+    <div class="column">
+      <span>WELCOME TO</span>
+      <h1>EMERALD ACADEMY</h1>
+      <p>
+        Learn everything about the <b>Flow Blockchain</b> and the Cadence Smart Contract programming language.
+      </p>
+      <p>
+        Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at Emerald City.
+      </p>
+    </div>
+  </Container>
 </Section>
 
 <style>

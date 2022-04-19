@@ -4,7 +4,7 @@ import Container from "$lib/components/atoms/Container.svelte";
 import Section from "$lib/components/atoms/Section.svelte";
 </script>
 
-<Section>
+<Section paddingBottom={false}>
   <Container width="small">
     <div class="column">
       <h2>Emerald City</h2>
