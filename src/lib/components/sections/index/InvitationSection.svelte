@@ -1,4 +1,5 @@
 <script>
+import Button from "$lib/components/atoms/Button.svelte";
 import Container from "$lib/components/atoms/Container.svelte";
 import Section from "$lib/components/atoms/Section.svelte";
 </script>
@@ -10,7 +11,7 @@ import Section from "$lib/components/atoms/Section.svelte";
       <p>
         We are the first DAO on the Flow Blockchain. Educate, build, and govern.
       </p>
-      <button>Join DAO</button>
+      <Button link="/hola">Join DAO</Button>
     </div>
   </Container>
   <img src="/city.webp" alt="Emerald City buildings"/>

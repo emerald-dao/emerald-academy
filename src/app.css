@@ -22,8 +22,8 @@
     --primary-hover: #12bf9d;
     --primary-focus: transparent;
     --primary-inverse: #111;
-    --gradient-primary: #6fffe92c;
-    --gradient-secondary: #5b68df2c;
+    --gradient-primary: #6fffe938;
+    --gradient-secondary: #5b68df53;
     --text: #fff;
   }
 }
@@ -35,8 +35,8 @@
   --primary-hover: #12bf9d;
   --primary-focus: transparent;
   --primary-inverse: #111;
-  --gradient-primary: #6fffe92c;
-  --gradient-secondary: #5b68df2c;
+  --gradient-primary: #6fffe938;
+  --gradient-secondary: #5b68df53;
   --text: #fff;
 }
 

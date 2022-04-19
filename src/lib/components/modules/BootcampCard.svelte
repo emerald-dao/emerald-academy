@@ -1,4 +1,6 @@
 <script>
+  import Button from "../atoms/Button.svelte";
+
   export let href = '';
   export let image = '';
   export let imageAlt = '';
@@ -12,7 +14,7 @@
     <div class="card-description">
       <h5 class="title-date">{title}</h5>
       <p>{description}</p>
-      <button>Join Emerald City</button>
+      <Button>Join Emerald City</Button>
     </div>
   </a>
 </article>
@@ -27,11 +29,6 @@
   .card-description {
     position: relative;
     padding: 30px;
-  }
-
-  .card-description button {
-    font-size: 17px;
-    padding: 5px;
   }
 
   article {
