@@ -14,7 +14,7 @@
     <div class="card-description">
       <h5 class="title-date">{title}</h5>
       <p>{description}</p>
-      <Button>Join Emerald City</Button>
+      <Button ghost={true}>Join Emerald City</Button>
     </div>
   </a>
 </article>

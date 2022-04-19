@@ -11,7 +11,7 @@ import Section from "$lib/components/atoms/Section.svelte";
       <p>
         We are the first DAO on the Flow Blockchain. Educate, build, and govern.
       </p>
-      <Button link="/hola">Join DAO</Button>
+      <Button link="/hola" size="large">Join DAO</Button>
     </div>
   </Container>
   <img src="/city.webp" alt="Emerald City buildings"/>

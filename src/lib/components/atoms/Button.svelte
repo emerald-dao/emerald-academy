@@ -1,8 +1,10 @@
 <script>
   export let link = "/"
+  export let ghost = false
+  export let size = "medium"
 </script>
 
-<button href={link}><slot/></button>
+<button class:ghost={ghost} class={size} href={link}><slot/></button>
 
 <style>
   button {
@@ -13,5 +15,23 @@
     font-size: 15px;
     padding: 6px 20px;
     border-radius: 60px;
+  }
+
+  .ghost {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+  }
+
+  .small {
+    font-size: 12px;
+  }
+
+  .medium {
+    font-size: 15px;
+  }
+
+  .large {
+    font-size: 20px;
   }
 </style>
