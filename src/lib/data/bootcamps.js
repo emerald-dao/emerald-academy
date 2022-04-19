@@ -1,6 +1,7 @@
 export const bootcamps = [
   {
     title: 'Bootcamp 1',
+    id: 1,
     image: '/Flow-Zero-to-Jacob.png',
     imageAlt: 'Flow Zero to Jacob course',
     href: '/bootcamp1',
@@ -45,9 +46,11 @@ export const bootcamps = [
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     date: 'March 18th, 2022',
     link: 'https://github.com/jacob-tucker/flow-zero-to-jacob',
+    timeToFinish: '2 weeks',
   },
   {
     title: 'Bootcamp 2',
+    id: 2,
     image: '/Flow-Zero-to-Jacob.png',
     imageAlt: 'Flow Zero to Jacob course',
     href: '/bootcamp1',
@@ -92,9 +95,11 @@ export const bootcamps = [
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     date: 'March 18th, 2022',
     link: 'https://github.com/jacob-tucker/flow-zero-to-jacob',
+    timeToFinish: '2 weeks',
   },
   {
     title: 'Bootcamp 3',
+    id: 3,
     image: '/Flow-Zero-to-Jacob.png',
     imageAlt: 'Flow Zero to Jacob course',
     href: '/bootcamp1',
@@ -139,5 +144,6 @@ export const bootcamps = [
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     date: 'March 18th, 2022',
     link: 'https://github.com/jacob-tucker/flow-zero-to-jacob',
+    timeToFinish: '2 weeks',
   },
 ];

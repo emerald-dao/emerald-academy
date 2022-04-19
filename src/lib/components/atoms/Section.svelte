@@ -13,10 +13,10 @@
     padding-top: 20px;
   }
   .padding-top.medium {
-    padding-top: 40px;
+    padding-top: 50px;
   }
   .padding-top.large {
-    padding-top: 60px;
+    padding-top: 90px;
   }
 
   .padding-bottom.small {
@@ -24,11 +24,11 @@
   }
 
   .padding-bottom.medium {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
 
   .padding-bottom.large {
-    padding-bottom: 60px;
+    padding-bottom: 90px;
   }
 
 </style>
