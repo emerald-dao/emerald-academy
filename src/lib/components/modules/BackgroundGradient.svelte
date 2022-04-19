@@ -58,43 +58,43 @@
   }
 
   .circle.a {
-    width: 100%;
+    width: 95%;
   }
 
   .circle.b {
-    width: 90%;
+    width: 85%;
   }
 
   .circle.c {
-    width: 80%;
+    width: 75%;
   }
 
   .circle.d {
-    width: 70%;
+    width: 65%;
   }
 
   .circle.e {
-    width: 60%;
+    width: 55%;
   }
 
   .circle.f {
-    width: 50%;
+    width: 45%;
   }
 
   .circle.g {
-    width: 40%;
+    width: 35%;
   }
 
   .circle.h {
-    width: 30%;
+    width: 25%;
   }
 
   .circle.i {
-    width: 20%;
+    width: 15%;
   }
 
   .circle.j {
-    width: 10%;
+    width: 5%;
   }
 
   /* Circle rotating effect */
