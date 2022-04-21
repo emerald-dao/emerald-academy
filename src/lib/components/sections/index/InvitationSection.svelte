@@ -9,9 +9,11 @@ import Section from "$lib/components/atoms/Section.svelte";
     <div class="column">
       <h2>Emerald City</h2>
       <p>
-        We are the first DAO on the Flow Blockchain. Educate, build, and govern.
+        We are the first DAO on the Flow Blockchain. 
+        <br/>
+        Educate, build, and govern.
       </p>
-      <Button link="/hola" size="large">Join DAO</Button>
+      <Button link="/">Join DAO</Button>
     </div>
   </Container>
 </Section>
@@ -22,10 +24,16 @@ import Section from "$lib/components/atoms/Section.svelte";
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(1.2rem, 15vw, 2.4rem);
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin-bottom: 50px;
   }
 </style>

@@ -18,8 +18,8 @@
     {bootcamp.description}
   </p>
   <div class="buttons">
-    <Button>Welcome Video</Button>
-    <Button ghost="true">Workshops</Button>
+    <Button size="small">Welcome Video</Button>
+    <Button size="small" ghost="true">Workshops</Button>
   </div>
 </div>
 
@@ -30,33 +30,34 @@
   }
 
   #date {
-    font-size: 15px;
+    font-size: var(--font-size-xs);
     color: var(--primary);
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-accent);
+    margin-bottom: 2em;
   }
 
   h1 {
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: clamp(1.4rem, 15vw, 2rem);
+    margin-bottom: .6em;
+    margin-top: 0;
   }
 
   #time-to-finish {
-    font-size: 14px;
+    font-size: var(--font-size-xs);
     color: var(--primary);
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-accent);
     text-transform: uppercase;
-    letter-spacing: 4px;
-    padding-top: 15px;
+    letter-spacing: .3em;
+    margin-bottom: 1.4em;
   }
 
   #description {
-    font-size: 18px;
-    margin-bottom: 46px;
+    margin-bottom: 3em;
     max-width: 45ch;
   }
 
   .buttons {
     display: flex;
-    gap: 16px;
+    gap: .9em;
   }
 </style>

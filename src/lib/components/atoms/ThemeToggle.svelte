@@ -24,7 +24,6 @@
       width="16"
       height="16"
       fill="currentColor"
-      class="bi bi-moon-fill"
       viewBox="0 0 16 16">
       <path
         in:draw={{ duration: 200 }}
@@ -36,7 +35,6 @@
       width="16"
       height="16"
       fill="currentColor"
-      class="bi bi-sun-fill"
       viewBox="0 0 16 16">
       <path
         in:draw={{ duration: 200 }}

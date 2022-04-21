@@ -13,7 +13,7 @@
   <div>
     <h5>{title}</h5>
     <p>{description}</p>
-    <Button ghost={true}>Join Emerald City</Button>
+    <Button ghost={true} size="small">Join Emerald City</Button>
   </div>
 </article>
 
@@ -24,10 +24,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: black;
+    background-color: var(--primary-bg);
     border-radius: 10px;
-    box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 0px, rgba(255, 255, 255, 0.1) 0px 0px 8px;    
+    box-shadow: var(--shadow);    
     padding: 0;
+    margin: 0;
   }
 
   img {
@@ -35,10 +36,11 @@
   }
 
   h5 {
-    font-size: 25px;
+    margin-bottom: 1em
   }
   p {
-    font-size: 15px;
+    font-size: var(--font-size-xs);
+    margin-bottom: 2em;
   }
 
   div {

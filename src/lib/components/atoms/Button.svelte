@@ -11,10 +11,9 @@
     width: fit-content;
     background: var(--primary);
     color: black;
-    font-family: var(--font-family-secondary);
-    font-size: 15px;
-    padding: 6px 30px;
-    border-radius: 60px;
+    font-family: var(--font-accent);
+    padding: 0.5em 1.4em;
+    border-radius: 5em;
   }
 
   .ghost {
@@ -24,14 +23,14 @@
   }
 
   .small {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
   }
 
   .medium {
-    font-size: 15px;
+    font-size: var(--font-size-m);
   }
 
   .large {
-    font-size: 20px;
+    font-size: var(--font-size-l);
   }
 </style>

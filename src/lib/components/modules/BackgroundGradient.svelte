@@ -1,25 +1,24 @@
 <div class="background-gradient"/>
-<div class="circle a"/>
-<div class="circle b rotating">
+<div class="circle one"/>
+<div class="circle two rotating">
   <div class="circle-little"/>
 </div>
-<div class="circle c"/>
-<div class="circle d rotating reverse">
+<div class="circle three"/>
+<div class="circle four rotating reverse">
   <div class="circle-little"/>
 </div>
-<div class="circle e"/>
-<div class="circle f rotating">
+<div class="circle five"/>
+<div class="circle six rotating">
   <div class="circle-little"/>
 </div>
-<div class="circle g rotating reverse">
+<div class="circle seven rotating reverse">
   <div class="circle-little"/>
 </div>
-<div class="circle h"/>
-<div class="circle i"/>
-<div class="circle j"/>   
+<div class="circle eight"/>
+<div class="circle nine"/>
 
 <style>  
-.background-gradient {
+  .background-gradient {
     background: 
       radial-gradient(ellipse at right, var(--gradient-primary), transparent),
       radial-gradient(ellipse at bottom, var(--gradient-secondary), transparent);
@@ -57,44 +56,40 @@
     z-index: -2;
   }
 
-  .circle.a {
+  .circle.one {
     width: 95%;
   }
 
-  .circle.b {
+  .circle.two {
     width: 85%;
   }
 
-  .circle.c {
+  .circle.three {
     width: 75%;
   }
 
-  .circle.d {
+  .circle.four {
     width: 65%;
   }
 
-  .circle.e {
+  .circle.five {
     width: 55%;
   }
 
-  .circle.f {
+  .circle.six {
     width: 45%;
   }
 
-  .circle.g {
+  .circle.seven {
     width: 35%;
   }
 
-  .circle.h {
+  .circle.eight {
     width: 25%;
   }
 
-  .circle.i {
+  .circle.nine {
     width: 15%;
-  }
-
-  .circle.j {
-    width: 5%;
   }
 
   /* Circle rotating effect */
@@ -134,7 +129,7 @@
     animation: rotating 8s linear infinite;
   }
 
-  .rotating.b, .rotating.g {
+  .rotating.two, .rotating.seven {
     -webkit-animation: rotating 14s linear infinite;
     -moz-animation: rotating 14s linear infinite;
     -ms-animation: rotating 14s linear infinite;
@@ -145,4 +140,4 @@
   .rotating.reverse {
     animation-direction: reverse;
   }
-  </style>
+</style>

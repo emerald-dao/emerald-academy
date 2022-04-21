@@ -6,7 +6,7 @@
   export let bootcamp;
 </script>
 
-<Section padding="large" paddingTop={false}>
+<Section padding="large">
   <Container>
     <div class="grid">
       <BootcampIntro bootcamp={bootcamp}/>
@@ -18,12 +18,13 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit,  minmax(min(14rem, 100%), 1fr));
+    gap: 4rem;
     align-items: center;
   }
 
   iframe {
     border-radius: 20px;
+    aspect-ratio: 16/9;
   }
 </style>

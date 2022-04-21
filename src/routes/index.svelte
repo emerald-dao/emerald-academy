@@ -9,17 +9,7 @@
   <title>Emerald Academy</title>
 </svelte:head>
 
-<div class="main">
-  <BackgroundGradient/>
-  <HeroSection/>
-  <BootcampsSection/>
-  <InvitationSection/>
-</div>
-
-<style>
-  .main {
-    width: 100vw;
-    position: relative;
-    overflow: hidden;
-  }
-</style>
+<HeroSection/>
+<BootcampsSection/>
+<InvitationSection/>
+<BackgroundGradient/>

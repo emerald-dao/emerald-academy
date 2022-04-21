@@ -8,7 +8,7 @@
 <div>
   <Section>
     <Container width="medium">
-      <div class="row">
+      <div class="grid">
         {#each bootcamps as bootcamp (bootcamp.title)}
           <BootcampCard
             title={bootcamp.title}
@@ -24,13 +24,10 @@
 </div>
 
 <style>
-  .row {
+  .grid {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
     gap: 40px;
   }
-  
 </style>

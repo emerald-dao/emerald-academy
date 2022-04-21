@@ -11,30 +11,23 @@
 
 <style>
   div {
-    box-sizing: border-box;
-    margin-right: auto;
-    margin-left: auto;
+    margin-inline: auto;
   }
 
   .full {
-    max-width: var(--container-width-full);
+    width: min(90%, var(--container-width-full))
   }
   
   .large {
-    max-width: var(--container-width-large);
+    width: min(90%, var(--container-width-large))
   }
 
   .medium {
-    max-width: var(--container-width-medium);
+    width: min(90%, var(--container-width-medium))
   }
   
   .small {
-    max-width: var(--container-width-small);
-  }
-
-  .gutter-x {
-    padding-left: var(--gutter-x);
-    padding-right: var(--gutter-x);
+    width: min(90%, var(--container-width-small))
   }
 
   .gutter-y {

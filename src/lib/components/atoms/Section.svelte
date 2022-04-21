@@ -10,25 +10,25 @@
 
 <style>
   .padding-top.small {
-    padding-top: 20px;
+    padding-top: 3rem;
   }
   .padding-top.medium {
-    padding-top: 50px;
+    padding-top: 3.5rem;
   }
   .padding-top.large {
-    padding-top: 90px;
+    padding-top: 4rem;
   }
 
   .padding-bottom.small {
-    padding-bottom: 20px;
+    padding-bottom: 3rem;
   }
 
   .padding-bottom.medium {
-    padding-bottom: 50px;
+    padding-bottom: 3.5rem;
   }
 
   .padding-bottom.large {
-    padding-bottom: 90px;
+    padding-bottom: 4rem;
   }
 
 </style>

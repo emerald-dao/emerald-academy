@@ -1,18 +1,23 @@
 <script>
-  import Header from "$lib/components/layout/Header.svelte";
-  import Footer from "$lib/components/layout/Footer.svelte";
   import "../app.css";
+
+  import { page } from '$app/stores'
+  
+  import Header from "$lib/components/sections/layout/Header.svelte";
+  import Footer from "$lib/components/sections/layout/Footer.svelte";
+  import PageTransition from '$lib/components/atoms/PageTransition.svelte';
 </script>
 
 <Header/>
 <main>
-  <slot />
+  <PageTransition url={$page.url}>
+    <slot/>
+  </PageTransition>
 </main>
 <Footer/>
 
 <style>
   main {
-    min-height: 100vh;
-    width: 100vw;
+    padding: 0;
   }
 </style>

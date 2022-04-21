@@ -18,35 +18,35 @@
   .video-card {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color:  var(--primary-bg);
     border-radius: 10px;
     height: 100%;
-    box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 0px, rgba(255, 255, 255, 0.1) 0px 0px 8px;
   }
 
   iframe {
     border-radius: 10px;
+    aspect-ratio: 16/9;
   }
 
   .video-content {
-    padding: 20px 40px 0px;
+    padding: 1.8rem 2.4rem 0;
   }
 
   h5 {
-    font-size: 18px;
+    font-size: var(--font-size-m);
     font-weight: bold;
-    color: white;
-    margin-bottom: 16px;
+    color: var(--primary);
     padding: 0;
   }
-
+  
   ul {
-    padding: 0px;
-  }
-
-  li {
-    font-family: var(--font-family-secondary);
-    font-size: 13px;
     padding: 0;
+  }
+  
+  li {
+    font-family: var(--font-accent);
+    font-size: var(--font-size-xs);
+    padding: 0;
+    margin: 0;
   }
 </style>
