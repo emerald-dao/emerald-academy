@@ -890,7 +890,7 @@ var init_install_fetch = __esm({
         factory(exports);
       })(commonjsGlobal, function(exports2) {
         const SymbolPolyfill = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? Symbol : (description) => `Symbol(${description})`;
-        function noop3() {
+        function noop4() {
           return void 0;
         }
         function getGlobals() {
@@ -907,7 +907,7 @@ var init_install_fetch = __esm({
         function typeIsObject(x2) {
           return typeof x2 === "object" && x2 !== null || typeof x2 === "function";
         }
-        const rethrowAssertionErrorRejection = noop3;
+        const rethrowAssertionErrorRejection = noop4;
         const originalPromise = Promise;
         const originalPromiseThen = Promise.prototype.then;
         const originalPromiseResolve = Promise.resolve.bind(originalPromise);
@@ -3116,7 +3116,7 @@ var init_install_fetch = __esm({
                 return newPromise((resolveRead, rejectRead) => {
                   ReadableStreamDefaultReaderRead(reader, {
                     _chunkSteps: (chunk) => {
-                      currentWrite = PerformPromiseThen(WritableStreamDefaultWriterWrite(writer, chunk), void 0, noop3);
+                      currentWrite = PerformPromiseThen(WritableStreamDefaultWriterWrite(writer, chunk), void 0, noop4);
                       resolveRead(false);
                     },
                     _closeSteps: () => resolveRead(true),
@@ -3829,10 +3829,10 @@ var init_install_fetch = __esm({
           const readable = pair === null || pair === void 0 ? void 0 : pair.readable;
           assertRequiredField(readable, "readable", "ReadableWritablePair");
           assertReadableStream(readable, `${context} has member 'readable' that`);
-          const writable2 = pair === null || pair === void 0 ? void 0 : pair.writable;
-          assertRequiredField(writable2, "writable", "ReadableWritablePair");
-          assertWritableStream(writable2, `${context} has member 'writable' that`);
-          return { readable, writable: writable2 };
+          const writable3 = pair === null || pair === void 0 ? void 0 : pair.writable;
+          assertRequiredField(writable3, "writable", "ReadableWritablePair");
+          assertWritableStream(writable3, `${context} has member 'writable' that`);
+          return { readable, writable: writable3 };
         }
         class ReadableStream2 {
           constructor(rawUnderlyingSource = {}, rawStrategy = {}) {
@@ -4011,7 +4011,7 @@ var init_install_fetch = __esm({
             reader._readIntoRequests = new SimpleQueue();
           }
           const sourceCancelPromise = stream._readableStreamController[CancelSteps](reason);
-          return transformPromiseWith(sourceCancelPromise, noop3);
+          return transformPromiseWith(sourceCancelPromise, noop4);
         }
         function ReadableStreamClose(stream) {
           stream._state = "closed";
@@ -4410,10 +4410,10 @@ var init_install_fetch = __esm({
           if (stream._backpressure) {
             const backpressureChangePromise = stream._backpressureChangePromise;
             return transformPromiseWith(backpressureChangePromise, () => {
-              const writable2 = stream._writable;
-              const state = writable2._state;
+              const writable3 = stream._writable;
+              const state = writable3._state;
               if (state === "erroring") {
-                throw writable2._storedError;
+                throw writable3._storedError;
               }
               return TransformStreamDefaultControllerPerformTransform(controller, chunk);
             });
@@ -4709,15 +4709,15 @@ var init_install_fetch = __esm({
       }
       forEach(a, b) {
         x("forEach", arguments, 1);
-        for (var [c, d] of this)
-          a.call(b, d, c, this);
+        for (var [c, d2] of this)
+          a.call(b, d2, c, this);
       }
       set(...a) {
         x("set", arguments, 2);
         var b = [], c = true;
         a = f2(...a);
-        this.#d.forEach((d) => {
-          d[0] === a[0] ? c && (c = !b.push(a)) : b.push(d);
+        this.#d.forEach((d2) => {
+          d2[0] === a[0] ? c && (c = !b.push(a)) : b.push(d2);
         });
         c && b.push(a);
         this.#d = b;
@@ -5716,7 +5716,7 @@ function writable(value, start = noop2) {
   function update(fn) {
     set(fn(value));
   }
-  function subscribe(run2, invalidate = noop2) {
+  function subscribe2(run2, invalidate = noop2) {
     const subscriber = [run2, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
@@ -5731,7 +5731,7 @@ function writable(value, start = noop2) {
       }
     };
   }
-  return { set, update, subscribe };
+  return { set, update, subscribe: subscribe2 };
 }
 function hash(value) {
   let hash2 = 5381;
@@ -5778,9 +5778,9 @@ async function render_response({
   page_config,
   status,
   error: error2,
-  page
+  page: page2
 }) {
-  const css4 = new Set(options2.entry.css);
+  const css8 = new Set(options2.entry.css);
   const js = new Set(options2.entry.js);
   const styles = new Set();
   const serialized_data = [];
@@ -5793,7 +5793,7 @@ async function render_response({
   if (page_config.ssr) {
     branch.forEach(({ node, loaded, fetched, uses_credentials }) => {
       if (node.css)
-        node.css.forEach((url) => css4.add(url));
+        node.css.forEach((url) => css8.add(url));
       if (node.js)
         node.js.forEach((url) => js.add(url));
       if (node.styles)
@@ -5811,7 +5811,7 @@ async function render_response({
         navigating: writable(null),
         session
       },
-      page,
+      page: page2,
       components: branch.map(({ node }) => node.module.default)
     };
     for (let i2 = 0; i2 < branch.length; i2 += 1) {
@@ -5836,7 +5836,7 @@ async function render_response({
     js.clear();
   const links = options2.amp ? styles.size > 0 || rendered.css.code.length > 0 ? `<style amp-custom>${Array.from(styles).concat(rendered.css.code).join("\n")}</style>` : "" : [
     ...Array.from(js).map((dep) => `<link rel="modulepreload" href="${dep}">`),
-    ...Array.from(css4).map((dep) => `<link rel="stylesheet" href="${dep}">`)
+    ...Array.from(css8).map((dep) => `<link rel="stylesheet" href="${dep}">`)
   ].join("\n		");
   let init2 = "";
   if (options2.amp) {
@@ -5854,7 +5854,7 @@ async function render_response({
 				session: ${try_serialize($session, (error3) => {
       throw new Error(`Failed to serialize session data: ${error3.message}`);
     })},
-				host: ${page && page.host ? s$1(page.host) : "location.host"},
+				host: ${page2 && page2.host ? s$1(page2.host) : "location.host"},
 				route: ${!!page_config.router},
 				spa: ${!page_config.ssr},
 				trailing_slash: ${s$1(options2.trailing_slash)},
@@ -5865,12 +5865,12 @@ async function render_response({
 						${(branch || []).map(({ node }) => `import(${s$1(node.entry)})`).join(",\n						")}
 					],
 					page: {
-						host: ${page && page.host ? s$1(page.host) : "location.host"}, // TODO this is redundant
-						path: ${page && page.path ? try_serialize(page.path, (error3) => {
+						host: ${page2 && page2.host ? s$1(page2.host) : "location.host"}, // TODO this is redundant
+						path: ${page2 && page2.path ? try_serialize(page2.path, (error3) => {
       throw new Error(`Failed to serialize page.path: ${error3.message}`);
     }) : null},
-						query: new URLSearchParams(${page && page.query ? s$1(page.query.toString()) : ""}),
-						params: ${page && page.params ? try_serialize(page.params, (error3) => {
+						query: new URLSearchParams(${page2 && page2.query ? s$1(page2.query.toString()) : ""}),
+						params: ${page2 && page2.params ? try_serialize(page2.params, (error3) => {
       throw new Error(`Failed to serialize page.params: ${error3.message}`);
     }) : null}
 					}
@@ -5984,7 +5984,7 @@ async function load_node({
   options: options2,
   state,
   route,
-  page,
+  page: page2,
   node,
   $session,
   stuff,
@@ -5999,7 +5999,7 @@ async function load_node({
   const fetched = [];
   let set_cookie_headers = [];
   let loaded;
-  const page_proxy = new Proxy(page, {
+  const page_proxy = new Proxy(page2, {
     get: (target, prop, receiver) => {
       if (prop === "query" && prerender_enabled) {
         throw new Error("Cannot access query on a page with prerendering enabled");
@@ -6038,11 +6038,11 @@ async function load_node({
         const prefix = options2.paths.assets || options2.paths.base;
         const filename = (resolved.startsWith(prefix) ? resolved.slice(prefix.length) : resolved).slice(1);
         const filename_html = `${filename}/index.html`;
-        const asset = options2.manifest.assets.find((d) => d.file === filename || d.file === filename_html);
+        const asset = options2.manifest.assets.find((d2) => d2.file === filename || d2.file === filename_html);
         if (asset) {
           response = options2.read ? new Response(options2.read(asset.file), {
             headers: asset.type ? { "content-type": asset.type } : {}
-          }) : await fetch(`http://${page.host}/${asset.file}`, opts);
+          }) : await fetch(`http://${page2.host}/${asset.file}`, opts);
         } else if (is_root_relative(resolved)) {
           const relative = resolved;
           const headers = {
@@ -6163,7 +6163,7 @@ async function load_node({
 async function respond_with_error({ request, options: options2, state, $session, status, error: error2 }) {
   const default_layout = await options2.load_component(options2.manifest.layout);
   const default_error = await options2.load_component(options2.manifest.error);
-  const page = {
+  const page2 = {
     host: request.host,
     path: request.path,
     query: request.query,
@@ -6174,7 +6174,7 @@ async function respond_with_error({ request, options: options2, state, $session,
     options: options2,
     state,
     route: null,
-    page,
+    page: page2,
     node: default_layout,
     $session,
     stuff: {},
@@ -6189,7 +6189,7 @@ async function respond_with_error({ request, options: options2, state, $session,
       options: options2,
       state,
       route: null,
-      page,
+      page: page2,
       node: default_error,
       $session,
       stuff: loaded ? loaded.stuff : {},
@@ -6212,7 +6212,7 @@ async function respond_with_error({ request, options: options2, state, $session,
       status,
       error: error2,
       branch,
-      page
+      page: page2
     });
   } catch (err) {
     const error3 = coalesce_to_error(err);
@@ -6386,7 +6386,7 @@ async function render_page(request, route, match, options2, state) {
     };
   }
   const params = route.params(match);
-  const page = {
+  const page2 = {
     host: request.host,
     path: request.path,
     query: request.query,
@@ -6399,7 +6399,7 @@ async function render_page(request, route, match, options2, state) {
     state,
     $session,
     route,
-    page
+    page: page2
   });
   if (response) {
     return response;
@@ -6673,102 +6673,688 @@ var init_ssr = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-16195fdc.js
-var layout_16195fdc_exports = {};
-__export(layout_16195fdc_exports, {
+// .svelte-kit/output/server/chunks/stores-ba39d13f.js
+var getStores, page, navigating;
+var init_stores_ba39d13f = __esm({
+  ".svelte-kit/output/server/chunks/stores-ba39d13f.js"() {
+    init_shims();
+    init_app_807d5c7e();
+    getStores = () => {
+      const stores = getContext("__svelte__");
+      return {
+        page: {
+          subscribe: stores.page.subscribe
+        },
+        navigating: {
+          subscribe: stores.navigating.subscribe
+        },
+        get preloading() {
+          console.error("stores.preloading is deprecated; use stores.navigating instead");
+          return {
+            subscribe: stores.navigating.subscribe
+          };
+        },
+        session: stores.session
+      };
+    };
+    page = {
+      subscribe(fn) {
+        const store = getStores().page;
+        return store.subscribe(fn);
+      }
+    };
+    navigating = {
+      subscribe(fn) {
+        const store = getStores().navigating;
+        return store.subscribe(fn);
+      }
+    };
+  }
+});
+
+// .svelte-kit/output/server/chunks/bootcamps-71f71815.js
+var css, Container, bootcamps;
+var init_bootcamps_71f71815 = __esm({
+  ".svelte-kit/output/server/chunks/bootcamps-71f71815.js"() {
+    init_shims();
+    init_app_807d5c7e();
+    css = {
+      code: "div.svelte-ayk24v{margin-inline:auto}.full.svelte-ayk24v{width:min(90%, var(--container-width-full))\n  }.large.svelte-ayk24v{width:min(90%, var(--container-width-large))\n  }.medium.svelte-ayk24v{width:min(90%, var(--container-width-medium))\n  }.small.svelte-ayk24v{width:min(90%, var(--container-width-small))\n  }.gutter-y.svelte-ayk24v{padding-top:var(--gutter-y);padding-bottom:var(--gutter-y)}",
+      map: null
+    };
+    Container = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { width = "medium" } = $$props;
+      let { direction = "column" } = $$props;
+      let { gutterX = true } = $$props;
+      let { gutterY = true } = $$props;
+      if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+        $$bindings.width(width);
+      if ($$props.direction === void 0 && $$bindings.direction && direction !== void 0)
+        $$bindings.direction(direction);
+      if ($$props.gutterX === void 0 && $$bindings.gutterX && gutterX !== void 0)
+        $$bindings.gutterX(gutterX);
+      if ($$props.gutterY === void 0 && $$bindings.gutterY && gutterY !== void 0)
+        $$bindings.gutterY(gutterY);
+      $$result.css.add(css);
+      return `<div class="${[
+        escape2(null_to_empty(`${width} ${direction}`)) + " svelte-ayk24v",
+        (gutterX ? "gutter-x" : "") + " " + (gutterY ? "gutter-y" : "")
+      ].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
+</div>`;
+    });
+    bootcamps = [
+      {
+        title: "Bootcamp #1",
+        id: 1,
+        isLaunched: true,
+        image: "/Flow-Zero-to-Jacob.png",
+        imageAlt: "Flow Zero to Jacob course",
+        href: "/bootcamps/1",
+        repository: "https://github.com/jacob-tucker/Flow-Zero-to-Jacob",
+        welcomeVideo: "https://www.youtube.com/embed/JBtmLjZBR6M",
+        videos: [
+          {
+            src: "https://www.youtube.com/embed/5wCFxiLVuMA",
+            title: "Workshop 1/8",
+            subject: [
+              "What is the Flow Blockchain?",
+              "Introduction to Programming [optional]",
+              "Transactions, Scripts, and Cadence Basics [1/2]"
+            ],
+            content: ["Chapter 1, Day 1", "Chapter 1, Day 2", "Chapter 2, Day 1", "Chapter 2, Day 2"]
+          },
+          {
+            src: "https://www.youtube.com/embed/mX9XKU74qgg",
+            title: "Workshop 2/8",
+            subject: ["Transactions, Scripts, and Cadence Basics [2/2]"],
+            content: ["Chapter 2, Day 3", "Chapter 2, Day 4"]
+          },
+          {
+            src: "https://www.youtube.com/embed/MuVj-mhhLTg",
+            title: "Workshop 3/8",
+            subject: ["Resources, References, and Access Control [1/2]"],
+            content: ["Chapter 3, Day 1", "Chapter 3, Day 2", "Chapter 3, Day 3"]
+          },
+          {
+            src: "https://www.youtube.com/embed/0WjnFAyjC0c",
+            title: "Workshop 4/8",
+            subject: ["Resources, References, and Access Control [2/2]"],
+            content: ["Chapter 3, Day 4", "Chapter 3, Day 5"]
+          },
+          {
+            src: "https://www.youtube.com/embed/DLwkrSSNjKk",
+            title: "Workshop 5/8",
+            subject: ["Account Storage and Starting our NFT Contract [1/2]"],
+            content: ["Chapter 4, Day 1", "Chapter 4, Day 2", "Chapter 4, Day 3"]
+          },
+          {
+            src: "https://www.youtube.com/embed/UCyIIjUFnEw",
+            title: "Workshop 6/8",
+            subject: ["Account Storage and Starting our NFT Contract [2/2]"],
+            content: ["Chapter 4, Day 3", "Chapter 4, Day 4"]
+          },
+          {
+            src: "https://www.youtube.com/embed/ExX11tPZjRI",
+            title: "Workshop 7/8",
+            subject: ["Misc and Finishing our NFT Contract [1/2]"],
+            content: ["Chapter 5, Day 1", "Chapter 5, Day 2"]
+          },
+          {
+            src: "https://www.youtube.com/embed/Y9PMiXB4mAg",
+            title: "Workshop 8/8",
+            subject: ["Misc and Finishing our NFT Contract [2/2]"],
+            content: ["Chapter 5, Day 3"]
+          }
+        ],
+        description: "Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.",
+        date: "March 18th, 2022",
+        link: "https://github.com/jacob-tucker/flow-zero-to-jacob",
+        timeToFinish: "2 weeks"
+      },
+      {
+        title: "Bootcamp #2",
+        id: 2,
+        isLaunched: false,
+        image: "/Flow-Zero-to-Jacob.png",
+        imageAlt: "Flow Zero to Jacob course",
+        href: "/bootcamps/2",
+        repository: "",
+        welcomeVideo: "",
+        videos: [],
+        description: "Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.",
+        date: "",
+        link: "",
+        timeToFinish: ""
+      }
+    ];
+  }
+});
+
+// .svelte-kit/output/server/chunks/__layout-36268382.js
+var layout_36268382_exports = {};
+__export(layout_36268382_exports, {
   default: () => _layout
 });
-var css, _layout;
-var init_layout_16195fdc = __esm({
-  ".svelte-kit/output/server/chunks/__layout-16195fdc.js"() {
+function writable2(value, start = noop3) {
+  let stop;
+  const subscribers = /* @__PURE__ */ new Set();
+  function set(new_value) {
+    if (safe_not_equal2(value, new_value)) {
+      value = new_value;
+      if (stop) {
+        const run_queue = !subscriber_queue2.length;
+        for (const subscriber of subscribers) {
+          subscriber[1]();
+          subscriber_queue2.push(subscriber, value);
+        }
+        if (run_queue) {
+          for (let i2 = 0; i2 < subscriber_queue2.length; i2 += 2) {
+            subscriber_queue2[i2][0](subscriber_queue2[i2 + 1]);
+          }
+          subscriber_queue2.length = 0;
+        }
+      }
+    }
+  }
+  function update(fn) {
+    set(fn(value));
+  }
+  function subscribe2(run2, invalidate = noop3) {
+    const subscriber = [run2, invalidate];
+    subscribers.add(subscriber);
+    if (subscribers.size === 1) {
+      stop = start(set) || noop3;
+    }
+    run2(value);
+    return () => {
+      subscribers.delete(subscriber);
+      if (subscribers.size === 0) {
+        stop();
+        stop = null;
+      }
+    };
+  }
+  return { set, update, subscribe: subscribe2 };
+}
+function persistentWritable(key, defaultValue) {
+  const { subscribe: subscribe2, set, update } = writable2();
+  let storedValue;
+  const resolvedValue = storedValue;
+  set(resolvedValue);
+  subscribe2((value) => {
+  });
+  return { subscribe: subscribe2, set, update };
+}
+var subscriber_queue2, theme, css$8, ThemeToggle, css$7, Logo, css$6, AnimatedHamburger, css$5, Navigation, css$4, Header, css$3, CitySvg, css$2, Footer, css$1, BackgroundGradient, css2, _layout;
+var init_layout_36268382 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-36268382.js"() {
     init_shims();
-    init_app_0cdd269b();
+    init_app_807d5c7e();
+    init_stores_ba39d13f();
+    init_bootcamps_71f71815();
     init_ssr();
-    css = {
-      code: "footer.svelte-1slif1z.svelte-1slif1z{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:10px;margin-top:25px}p.svelte-1slif1z.svelte-1slif1z{font-size:.9rem}footer.svelte-1slif1z a.svelte-1slif1z{font-weight:bold}@media(min-width: 480px){footer.svelte-1slif1z.svelte-1slif1z{padding:10px 0}}",
+    subscriber_queue2 = [];
+    theme = persistentWritable();
+    css$8 = {
+      code: ".theme-toggle.svelte-mxvugh{height:45px;width:45px;background-color:var(--primary-focus);border-radius:50%;display:inline-block;text-align:center;animation:show 0.5s forwards;animation-delay:1.5s;margin-top:10px}",
+      map: null
+    };
+    ThemeToggle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $theme, $$unsubscribe_theme;
+      $$unsubscribe_theme = subscribe(theme, (value) => $theme = value);
+      $$result.css.add(css$8);
+      $$unsubscribe_theme();
+      return `<a class="${"theme-toggle svelte-mxvugh"}" href="${"/"}">${$theme === "light" ? `<svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"16"}" height="${"16"}" fill="${"currentColor"}" viewBox="${"0 0 16 16"}"><path d="${"M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"}"></path></svg>` : `<svg xmlns="${"http://www.w3.org/2000/svg"}" width="${"16"}" height="${"16"}" fill="${"currentColor"}" viewBox="${"0 0 16 16"}"><path d="${"M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"}"></path></svg>`}
+</a>`;
+    });
+    css$7 = {
+      code: "#logo.svelte-1pko782{width:40px;height:40px}",
+      map: null
+    };
+    Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$7);
+      return `<div><span style="${"text-align: right;"}">Emerald</span>
+  <img id="${"logo"}" src="${"/favicon.png"}" alt="${"emerald academy logo"}" class="${"svelte-1pko782"}">
+  <span>Academy</span>
+</div>`;
+    });
+    css$6 = {
+      code: ":root{--transition-duration:400ms}button.svelte-1i474u8.svelte-1i474u8{width:fit-content;padding:0;margin:0;cursor:pointer;display:flex;align-items:center;overflow:hidden;background-color:transparent;border:0}svg.svelte-1i474u8.svelte-1i474u8{transition:transform var(--transition-duration)}.top.svelte-1i474u8.svelte-1i474u8{stroke-dasharray:40 160;transition:stroke-dashoffset var(--transition-duration)}.middle.svelte-1i474u8.svelte-1i474u8{transform-origin:50%;transition:transform var(--transition-duration)}.bottom.svelte-1i474u8.svelte-1i474u8{stroke-dasharray:40 85;transition:stroke-dashoffset var(--transition-duration)}.open.svelte-1i474u8.svelte-1i474u8{transform:rotate(45deg)}.open.svelte-1i474u8 .top.svelte-1i474u8,.open.svelte-1i474u8 .bottom.svelte-1i474u8{stroke-dashoffset:-64px}.open.svelte-1i474u8 .middle.svelte-1i474u8{transform:rotate(90deg)}",
+      map: null
+    };
+    AnimatedHamburger = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { open = false } = $$props;
+      let { onClick = () => {
+        open = !open;
+      } } = $$props;
+      let { ariaLabel = "toggle menu" } = $$props;
+      let { width = 40 } = $$props;
+      if ($$props.open === void 0 && $$bindings.open && open !== void 0)
+        $$bindings.open(open);
+      if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
+        $$bindings.onClick(onClick);
+      if ($$props.ariaLabel === void 0 && $$bindings.ariaLabel && ariaLabel !== void 0)
+        $$bindings.ariaLabel(ariaLabel);
+      if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+        $$bindings.width(width);
+      $$result.css.add(css$6);
+      return `<button${add_attribute("aria-expanded", open, 0)}${add_attribute("aria-label", ariaLabel, 0)} class="${"svelte-1i474u8"}"><svg viewBox="${"0 0 100 100"}" fill="${"none"}" stroke="${"currentColor"}" stroke-width="${"5"}"${add_attribute("width", width, 0)} class="${["svelte-1i474u8", open ? "open" : ""].join(" ").trim()}"><path class="${"top svelte-1i474u8"}" d="${"m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"}"></path><path class="${"middle svelte-1i474u8"}" d="${"m 30,50 h 40"}"></path><path class="${"bottom svelte-1i474u8"}" d="${"m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"}"></path></svg>
+</button>`;
+    });
+    css$5 = {
+      code: "ul.svelte-b54azp{display:flex;flex-direction:inherit;list-style-type:none;gap:10px}.nav-link.svelte-b54azp{font-family:'JetBrains Mono', monospace;font-size:15px;color:var(--primary)\n  }",
+      map: null
+    };
+    Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$5);
+      return `<ul class="${"svelte-b54azp"}">${each(bootcamps, (bootcamp) => {
+        return `${bootcamp.isLaunched ? `<li><a class="${"nav-link svelte-b54azp"}"${add_attribute("href", bootcamp.href, 0)} sveltekit:prefetch>${escape2(bootcamp.title)}</a></li>` : ``}`;
+      })}
+  <li><a class="${"nav-link svelte-b54azp"}" href="${"https://discord.com/invite/emeraldcity"}" target="${"_blank"}">Emerald City</a></li>
+  ${slots.default ? slots.default({}) : ``}
+</ul>`;
+    });
+    css$4 = {
+      code: "header.svelte-199i2kz{padding:0}nav.svelte-199i2kz{display:flex;flex-direction:row;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--primary)}#mobile-menu.svelte-199i2kz{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--primary-bg);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:10px;z-index:1}#desktop-menu.svelte-199i2kz{display:none}#close-button.svelte-199i2kz{position:absolute;top:0;right:0;padding:10px}@media(min-width: 60em){#hamburger-button.svelte-199i2kz{display:none}#desktop-menu.svelte-199i2kz{display:flex;flex-direction:row;gap:30px}}@media(max-width: 20em){nav.svelte-199i2kz{flex-direction:column;gap:1em}}",
+      map: null
+    };
+    Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $navigating, $$unsubscribe_navigating;
+      $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
+      let { open = false } = $$props;
+      let { onClick = () => {
+        open = !open;
+        if (open) {
+          document.body.style.overflowY = "hidden";
+        } else {
+          document.body.style.overflowY = "scroll";
+        }
+      } } = $$props;
+      let onPageChange = () => {
+        open = false;
+        document.body.style.overflowY = "scroll";
+      };
+      if ($$props.open === void 0 && $$bindings.open && open !== void 0)
+        $$bindings.open(open);
+      if ($$props.onClick === void 0 && $$bindings.onClick && onClick !== void 0)
+        $$bindings.onClick(onClick);
+      $$result.css.add(css$4);
+      {
+        if ($navigating)
+          onPageChange();
+      }
+      $$unsubscribe_navigating();
+      return `<header class="${"svelte-199i2kz"}">${validate_component(Container, "Container").$$render($$result, { width: "medium" }, {}, {
+        default: () => {
+          return `<nav class="${"svelte-199i2kz"}"><a sveltekit:prefetch href="${"/"}">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}</a>
+
+      
+      <div id="${"desktop-menu"}" class="${"svelte-199i2kz"}">${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {})}
+        ${validate_component(ThemeToggle, "ThemeToggle").$$render($$result, {}, {}, {})}</div>
+
+      
+      <div id="${"hamburger-button"}" class="${"svelte-199i2kz"}">${validate_component(AnimatedHamburger, "AnimatedHamburger").$$render($$result, { open, onClick }, {}, {})}</div>
+      ${open ? `<div id="${"mobile-menu"}" class="${"svelte-199i2kz"}">${validate_component(Navigation, "Navigation").$$render($$result, {}, {}, {
+            default: () => {
+              return `<div id="${"close-button"}" class="${"svelte-199i2kz"}">${validate_component(AnimatedHamburger, "AnimatedHamburger").$$render($$result, { open, onClick }, {}, {})}</div>`;
+            }
+          })}</div>` : ``}</nav>`;
+        }
+      })}
+</header>`;
+    });
+    css$3 = {
+      code: "g.svelte-13hhybo{fill:var(--primary-bg)}",
+      map: null
+    };
+    CitySvg = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$3);
+      return `<svg version="${"1.0"}" xmlns="${"http://www.w3.org/2000/svg"}" viewBox="${"0 0 1499.000000 269.000000"}" preserveAspectRatio="${"xMidYMid meet"}" fill="${"red"}"><g transform="${"translate(0.000000,269.000000) scale(0.100000,-0.100000)"}" fill="${"current-color"}" class="${"svelte-13hhybo"}"><path d="${"M3936 2653 c-3 -21 -6 -124 -6 -229 l0 -191 -42 -9 c-30 -6 -46 -16\n    -53 -31 -5 -13 -13 -23 -17 -23 -3 0 -14 -7 -22 -16 -13 -12 -16 -39 -16 -125\n    l0 -109 -29 0 c-17 0 -33 -4 -36 -10 -9 -15 -25 -12 -25 4 0 20 -172 27 -217\n    10 l-33 -13 0 -324 c0 -269 -3 -330 -15 -353 -8 -16 -15 -37 -15 -46 0 -12 -8\n    -18 -24 -18 -23 0 -25 -5 -28 -47 -2 -35 -8 -49 -19 -51 -15 -3 -17 15 -23\n    135 -3 76 -12 214 -19 308 l-12 170 -40 13 c-27 9 -54 11 -85 5 -38 -7 -45\n    -12 -51 -38 -19 -79 -32 -296 -25 -440 6 -148 6 -153 -14 -158 -17 -4 -20 -13\n    -20 -61 l0 -56 -40 0 -40 0 0 -220 0 -221 -72 3 -73 3 -3 55 c-2 30 -8 60 -14\n    67 -5 7 -10 28 -11 48 l-1 35 -63 0 -63 0 0 208 0 207 -41 22 -42 23 -33 -21\n    -34 -21 0 -400 0 -401 -45 6 c-25 2 -54 12 -64 21 -10 9 -25 16 -34 16 -16 0\n    -17 41 -17 518 l0 518 -35 17 c-39 19 -140 23 -150 7 -3 -5 -14 -10 -24 -10\n    -14 0 -20 10 -25 39 -5 36 -9 40 -45 46 -25 4 -42 13 -48 27 -8 19 -18 21\n    -137 22 -127 1 -128 1 -142 -24 -25 -45 -52 -70 -82 -76 -21 -4 -32 -14 -36\n    -30 -4 -15 -14 -24 -26 -24 -20 0 -20 -8 -20 -305 l0 -306 -87 3 -88 3 -7 72\n    c-4 41 -17 91 -29 114 -13 27 -23 69 -26 118 -3 42 -11 83 -18 91 -7 8 -19 44\n    -27 80 l-15 65 -7 -65 c-4 -36 -13 -72 -21 -80 -7 -8 -15 -40 -19 -70 -10 -96\n    -18 -124 -42 -147 -20 -19 -24 -32 -24 -85 0 -35 -4 -68 -8 -75 -5 -8 -56 -13\n    -152 -15 -80 -2 -152 -6 -160 -8 -11 -4 -16 5 -20 35 -5 38 -33 83 -97 151\n    -27 30 -68 40 -89 23 -27 -22 -53 -86 -60 -146 -5 -39 -13 -62 -25 -71 -26\n    -18 -37 -70 -45 -194 l-6 -108 -43 0 c-26 0 -47 6 -55 15 -7 8 -19 15 -26 15\n    -11 0 -14 38 -14 210 0 178 -2 212 -15 216 -8 4 -15 19 -15 34 0 16 -26 76\n    -60 137 -34 59 -66 127 -73 151 -11 42 -27 57 -27 25 0 -25 -44 -115 -63 -132\n    -15 -12 -17 -10 -17 15 0 16 -4 34 -8 39 -8 11 -88 65 -97 65 -3 0 -5 -288 -5\n    -640 l0 -640 7495 0 7495 0 0 295 0 294 -42 -39 c-37 -34 -42 -44 -44 -87 -1\n    -33 -6 -48 -15 -48 -11 0 -14 54 -17 287 -2 276 -3 287 -22 293 -11 4 -20 11\n    -20 16 0 16 -28 10 -34 -8 -6 -14 -9 -14 -27 5 -18 20 -40 28 -64 22 -5 -1\n    -50 -3 -100 -4 -64 -1 -95 2 -107 12 -15 12 -23 10 -63 -17 -32 -21 -58 -31\n    -84 -31 -27 0 -41 -5 -47 -18 -5 -9 -9 -198 -9 -419 0 -221 -3 -405 -7 -409\n    -4 -4 -36 -7 -70 -8 l-63 -1 -3 78 c-4 97 -22 94 -22 -4 0 -39 -4 -69 -10 -69\n    -6 0 -10 57 -10 150 l0 150 -121 0 -121 0 3 710 c2 516 0 713 -8 721 -6 6 -31\n    14 -56 16 -34 4 -58 -1 -107 -23 -63 -28 -80 -49 -80 -99 0 -12 -7 -25 -15\n    -29 -12 -4 -15 6 -15 62 -1 43 -6 74 -15 86 -12 16 -15 54 -15 176 0 151 -1\n    157 -25 190 -24 33 -25 38 -25 212 0 236 -18 235 -22 -1 -3 -180 -3 -180 -30\n    -208 -26 -28 -27 -30 -32 -198 -3 -93 -8 -194 -11 -222 l-7 -53 -89 0 -89 0 0\n    -294 0 -295 -47 -3 -48 -3 -3 -542 c-2 -474 -4 -543 -17 -543 -13 0 -15 49\n    -15 370 l0 370 -49 0 c-40 0 -50 -3 -54 -20 -4 -16 -14 -20 -51 -20 -35 0 -46\n    4 -46 16 0 12 -10 14 -47 12 -46 -3 -48 -4 -51 -35 -3 -29 -7 -33 -31 -33 -19\n    0 -30 6 -33 18 -6 22 -108 46 -198 47 l-65 0 -3 -297 -2 -298 -45 0 -45 0 0\n    55 c0 54 0 54 -35 61 l-34 6 -3 82 -3 81 -67 3 -68 3 0 114 c0 103 -2 115 -20\n    125 -15 8 -20 23 -22 73 l-3 62 -66 3 -66 3 -7 -32 c-3 -17 -6 -46 -6 -65 0\n    -30 -3 -33 -32 -36 -32 -3 -33 -5 -40 -58 -3 -30 -6 -178 -7 -327 l-1 -273\n    -45 0 -45 0 0 709 c0 650 -1 709 -17 715 -9 4 -38 21 -65 38 l-48 31 -1 171\n    c-1 120 -4 158 -10 126 -4 -25 -8 -105 -8 -177 l-1 -133 -24 0 c-17 0 -29 -9\n    -38 -27 -12 -26 -19 -28 -83 -33 l-70 -5 -3 -62 -3 -62 -62 -3 -62 -3 -3 -403\n    -2 -402 -100 0 -100 0 0 78 c-1 92 -7 99 -115 129 l-70 20 -3 60 c-3 67 -10\n    73 -79 73 -22 0 -33 5 -33 14 0 8 -14 16 -32 18 -18 3 -40 8 -49 12 -10 5 -20\n    -1 -29 -19 -12 -23 -19 -25 -82 -25 l-68 0 0 -364 0 -363 -57 -12 c-31 -6 -59\n    -8 -62 -5 -3 3 -8 97 -11 208 -5 188 -6 203 -27 229 -12 15 -25 41 -28 57 -8\n    38 -23 39 -27 2 -3 -26 -5 -27 -76 -32 l-72 -5 0 96 c0 53 -3 111 -6 128 l-7\n    31 -113 0 c-102 0 -114 2 -124 20 -18 33 -79 45 -182 33 -56 -6 -94 -16 -99\n    -24 -5 -8 -9 -207 -9 -444 0 -281 -4 -425 -10 -415 -5 8 -10 95 -10 193 l0\n    178 -47 -3 c-46 -3 -48 -4 -53 -38 -5 -33 -7 -35 -47 -38 l-43 -3 0 -105 0\n    -104 -34 0 c-31 0 -34 3 -40 37 -3 21 -6 135 -6 254 0 118 -4 219 -9 225 -5 5\n    -14 34 -20 65 -5 31 -20 82 -33 115 l-24 59 -65 8 c-41 5 -77 4 -101 -3 -35\n    -10 -39 -15 -55 -70 -25 -83 -43 -79 -43 10 0 63 -2 71 -25 86 -25 16 -25 17\n    -25 175 l0 159 -45 0 -44 0 -3 57 -3 56 -55 18 c-67 23 -123 24 -140 4 -7 -8\n    -16 -15 -19 -15 -13 0 -51 90 -51 120 0 18 -5 30 -13 30 -20 0 -37 -21 -37\n    -45 0 -15 -11 -27 -36 -38 -64 -31 -69 -57 -68 -344 1 -253 1 -253 -20 -253\n    -12 0 -28 6 -35 13 -10 10 -16 7 -30 -12 -17 -22 -22 -23 -87 -17 -38 3 -88 9\n    -111 12 l-43 6 0 258 0 257 -47 44 c-27 24 -62 62 -80 83 l-32 39 -100 -6\n    c-112 -6 -100 -12 -115 63 -2 14 -14 50 -25 80 -16 46 -25 57 -51 64 -23 7\n    -29 13 -24 25 4 9 9 43 10 76 2 43 1 53 -5 35 -5 -14 -9 -36 -10 -49 -1 -22\n    -27 -91 -71 -186 -10 -22 -21 -71 -24 -110 -3 -38 -10 -104 -16 -145 -5 -41\n    -9 -177 -10 -302 l0 -228 -24 0 -25 0 -3 258 -3 257 -48 101 c-36 76 -49 118\n    -54 168 -3 37 -9 69 -14 71 -4 3 -10 -21 -14 -52 -9 -85 -22 -130 -64 -208\n    -38 -72 -61 -168 -61 -259 l0 -46 -55 0 -55 0 0 -75 0 -75 -85 0 c-77 0 -85 2\n    -85 19 0 15 -10 21 -41 26 l-41 7 2 232 c1 127 2 264 1 304 l-1 72 -139 0\n    c-83 0 -142 4 -146 10 -10 16 -23 12 -30 -9 -4 -14 -29 -25 -93 -43 l-87 -24\n    0 -294 c0 -162 -2 -317 -4 -345 l-3 -50 -9 40 c-4 22 -8 104 -8 181 l-1 142\n    -97 4 c-81 4 -110 1 -168 -16 l-70 -22 -1 -159 c-2 -246 -8 -296 -14 -125 l-5\n    154 -33 7 c-36 7 -72 35 -72 56 0 10 -20 13 -80 13 l-80 0 0 65 c0 81 -13 90\n    -122 89 l-78 -2 0 154 0 154 -164 0 -164 0 -6 -27 c-3 -16 -4 -223 -2 -461 l4\n    -432 -23 0 c-23 0 -35 17 -35 50 0 14 -9 20 -32 22 l-33 3 -3 197 -2 197 -28\n    3 -27 3 -5 319 c-4 252 -8 320 -18 324 -7 2 -16 -5 -19 -17 -6 -24 -23 -28\n    -23 -6 0 12 -14 15 -64 15 -55 0 -67 3 -80 21 -15 21 -15 21 -35 -12 -17 -28\n    -21 -51 -21 -134 l0 -100 -30 -17 -30 -17 0 -361 c0 -224 -4 -360 -10 -360\n    -18 0 -30 39 -30 99 l0 60 -42 6 c-24 3 -77 5 -118 3 l-75 -3 -3 -240 c-1\n    -132 -5 -247 -8 -255 -11 -31 -24 16 -24 93 0 73 -2 80 -29 108 -35 34 -70 38\n    -78 8 -3 -12 -17 -22 -33 -26 l-28 -5 -4 -117 c-4 -111 -20 -174 -38 -155 -4\n    5 -11 50 -14 99 -3 50 -10 137 -15 195 -6 58 -10 396 -10 751 l-1 647 -24 16\n    c-14 8 -26 26 -28 38 -2 19 -12 25 -52 32 l-48 9 3 71 c5 138 -1 386 -10 386\n    -4 0 -11 -17 -15 -37z"}"></path></g></svg>`;
+    });
+    css$2 = {
+      code: "footer.svelte-1egdjrb{padding:0}div.svelte-1egdjrb{background-color:var(--primary-bg)}.flex-container.svelte-1egdjrb{display:flex;flex-direction:column-reverse;justify-content:space-between;align-items:center;gap:2em}p.svelte-1egdjrb{margin:0;font-size:.6rem;font-family:var(--font-accent)}@media(min-width: 50em){.flex-container.svelte-1egdjrb{flex-direction:row}}",
+      map: null
+    };
+    Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$2);
+      return `<footer class="${"svelte-1egdjrb"}">${validate_component(CitySvg, "CitySvg").$$render($$result, {}, {}, {})}
+  <div class="${"svelte-1egdjrb"}">${validate_component(Container, "Container").$$render($$result, { width: "medium" }, {}, {
+        default: () => {
+          return `<div class="${"flex-container svelte-1egdjrb"}"><p class="${"svelte-1egdjrb"}">${escape2(new Date().getFullYear())}. All rights reserved.</p>
+        <a sveltekit:prefetch href="${"/"}">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}</a>
+        <p class="${"svelte-1egdjrb"}">Created by <a href="${"https://discord.gg/emeraldcity"}" target="${"_blank"}">Emerald City DAO</a></p></div>`;
+        }
+      })}</div>
+</footer>`;
+    });
+    css$1 = {
+      code: ".background-gradient.svelte-xofsgc{background:radial-gradient(ellipse at right, var(--gradient-primary), transparent),\n    radial-gradient(ellipse at bottom, var(--gradient-secondary), transparent);height:100%;width:100%;position:fixed;top:0;left:0;z-index:-1}#circle-container.svelte-xofsgc{position:fixed;height:100vh;width:100vw;top:0;left:0;z-index:-2;display:flex;flex-direction:column;justify-content:center;align-items:center}.circle.svelte-xofsgc{position:absolute;border-radius:50%;background:transparent;border:hsla(105, 17%, 41%, 0.07) solid 1px;aspect-ratio:1/1;box-sizing:border-box}.circle-little.svelte-xofsgc{border-radius:50%;background:hsla(105, 17%, 41%, 0.07);position:relative;top:50%;transform:translate(-50%, -50%);width:20px;aspect-ratio:1/1;z-index:-2}.circle.one.svelte-xofsgc{height:95%}.circle.two.svelte-xofsgc{height:85%}.circle.three.svelte-xofsgc{height:75%}.circle.four.svelte-xofsgc{height:65%}.circle.five.svelte-xofsgc{height:55%}.circle.six.svelte-xofsgc{height:45%}.circle.seven.svelte-xofsgc{height:35%}.circle.eight.svelte-xofsgc{height:25%}.circle.nine.svelte-xofsgc{height:15%}@-webkit-keyframes svelte-xofsgc-rotating{from{-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes svelte-xofsgc-rotating{from{-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg)}to{-ms-transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}.rotating.svelte-xofsgc{-webkit-animation:svelte-xofsgc-rotating 8s linear infinite;-moz-animation:svelte-xofsgc-rotating 8s linear infinite;-ms-animation:svelte-xofsgc-rotating 8s linear infinite;-o-animation:svelte-xofsgc-rotating 8s linear infinite;animation:svelte-xofsgc-rotating 8s linear infinite}.rotating.two.svelte-xofsgc,.rotating.seven.svelte-xofsgc{-webkit-animation:svelte-xofsgc-rotating 14s linear infinite;-moz-animation:svelte-xofsgc-rotating 14s linear infinite;-ms-animation:svelte-xofsgc-rotating 14s linear infinite;-o-animation:svelte-xofsgc-rotating 14s linear infinite;animation:svelte-xofsgc-rotating 14s linear infinite}.rotating.reverse.svelte-xofsgc{animation-direction:reverse}@media(min-width: 50em){.circle.one.svelte-xofsgc{width:95%;height:auto}.circle.two.svelte-xofsgc{width:85%;height:auto}.circle.three.svelte-xofsgc{width:75%;height:auto}.circle.four.svelte-xofsgc{width:65%;height:auto}.circle.five.svelte-xofsgc{width:55%;height:auto}.circle.six.svelte-xofsgc{width:45%;height:auto}.circle.seven.svelte-xofsgc{width:35%;height:auto}.circle.eight.svelte-xofsgc{width:25%;height:auto}.circle.nine.svelte-xofsgc{width:15%;height:auto}}@supports not (aspect-ratio: 1/1){#circle-container.svelte-xofsgc{display:none}}",
+      map: null
+    };
+    BackgroundGradient = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$1);
+      return `<div class="${"background-gradient svelte-xofsgc"}"></div>
+<div id="${"circle-container"}" class="${"svelte-xofsgc"}"><div class="${"circle one svelte-xofsgc"}"></div>
+  <div class="${"circle two rotating svelte-xofsgc"}"><div class="${"circle-little svelte-xofsgc"}"></div></div>
+  <div class="${"circle three svelte-xofsgc"}"></div>
+  <div class="${"circle four rotating reverse svelte-xofsgc"}"><div class="${"circle-little svelte-xofsgc"}"></div></div>
+  <div class="${"circle five svelte-xofsgc"}"></div>
+  <div class="${"circle six rotating svelte-xofsgc"}"><div class="${"circle-little svelte-xofsgc"}"></div></div>
+  <div class="${"circle seven rotating reverse svelte-xofsgc"}"><div class="${"circle-little svelte-xofsgc"}"></div></div>
+  <div class="${"circle eight svelte-xofsgc"}"></div>
+  <div class="${"circle nine svelte-xofsgc"}"></div>
+</div>`;
+    });
+    css2 = {
+      code: "main.svelte-1sjpq62{padding:0}",
       map: null
     };
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css);
-      return `<main class="${"container"}">${slots.default ? slots.default({}) : ``}</main>
-
-<footer class="${"svelte-1slif1z"}"><p class="${"svelte-1slif1z"}"><small>Created by
-      <a href="${"https://discord.gg/emeraldcity"}" target="${"_blank"}" class="${"svelte-1slif1z"}">Emerald City DAO</a></small></p>
-</footer>`;
+      $$result.css.add(css2);
+      return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
+<main class="${"svelte-1sjpq62"}">${slots.default ? slots.default({}) : ``}</main>
+${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
+${validate_component(BackgroundGradient, "BackgroundGradient").$$render($$result, {}, {}, {})}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/error-07034a0b.js
-var error_07034a0b_exports = {};
-__export(error_07034a0b_exports, {
-  default: () => Error2,
+// .svelte-kit/output/server/chunks/__error-41a00b81.js
+var error_41a00b81_exports = {};
+__export(error_41a00b81_exports, {
+  default: () => _error,
   load: () => load
 });
-function load({ error: error2, status }) {
-  return { props: { error: error2, status } };
+function load({ error: error2 }) {
+  return { props: { message: error2.message } };
 }
-var Error2;
-var init_error_07034a0b = __esm({
-  ".svelte-kit/output/server/chunks/error-07034a0b.js"() {
+var css3, _error;
+var init_error_41a00b81 = __esm({
+  ".svelte-kit/output/server/chunks/__error-41a00b81.js"() {
     init_shims();
-    init_app_0cdd269b();
+    init_app_807d5c7e();
     init_ssr();
-    Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { status } = $$props;
-      let { error: error2 } = $$props;
-      if ($$props.status === void 0 && $$bindings.status && status !== void 0)
-        $$bindings.status(status);
-      if ($$props.error === void 0 && $$bindings.error && error2 !== void 0)
-        $$bindings.error(error2);
-      return `<h1>${escape2(status)}</h1>
-
-<pre>${escape2(error2.message)}</pre>
-
-
-
-${error2.frame ? `<pre>${escape2(error2.frame)}</pre>` : ``}
-${error2.stack ? `<pre>${escape2(error2.stack)}</pre>` : ``}`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/index-98eef438.js
-var index_98eef438_exports = {};
-__export(index_98eef438_exports, {
-  default: () => Routes
-});
-var css2, Routes;
-var init_index_98eef438 = __esm({
-  ".svelte-kit/output/server/chunks/index-98eef438.js"() {
-    init_shims();
-    init_app_0cdd269b();
-    init_ssr();
-    css2 = {
-      code: "#logo.svelte-4eyh7u.svelte-4eyh7u{width:70px;height:70px}.cards.svelte-4eyh7u.svelte-4eyh7u{position:relative;width:100%;display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap}a.svelte-4eyh7u.svelte-4eyh7u{outline:0;text-decoration:none}.cards.svelte-4eyh7u article.svelte-4eyh7u{opacity:0;width:300px;height:250px;margin:0px 30px 30px 30px;animation:svelte-4eyh7u-show .5s forwards;animation-delay:1.1s;padding:0px;min-width:300px}.cards.svelte-4eyh7u img.svelte-4eyh7u{top:0;left:0;width:100%;height:100px;object-fit:cover}.cards.svelte-4eyh7u h5.svelte-4eyh7u{text-align:left;margin:5px 0px 5px 10px;color:var(--primary)}.cards.svelte-4eyh7u p.svelte-4eyh7u{font-size:17px;text-align:left;margin:0px;color:var(--text);margin-left:10px;width:85%}.description.svelte-4eyh7u.svelte-4eyh7u{opacity:0;animation:svelte-4eyh7u-show .5s forwards;animation-delay:1.1s;font-size:25px;color:var(--text)}@keyframes svelte-4eyh7u-show{100%{opacity:1}}.line.svelte-4eyh7u.svelte-4eyh7u{width:0px;height:2px;background:var(--primary);animation:svelte-4eyh7u-expand 1s forwards}@keyframes svelte-4eyh7u-expand{100%{width:500px}}h1.svelte-4eyh7u.svelte-4eyh7u{position:relative;text-align:center;font-size:70px;overflow:hidden}.text.svelte-4eyh7u.svelte-4eyh7u{display:inline-block;transform:translateY(100%);animation:svelte-4eyh7u-comeBack 1s forwards;animation-delay:0.75;display:flex;align-items:center}.text.svelte-4eyh7u>span.svelte-4eyh7u{margin:10px}.main.svelte-4eyh7u.svelte-4eyh7u{left:0;width:100vw;text-align:center}.title.svelte-4eyh7u.svelte-4eyh7u{position:relative;display:flex;justify-content:center;align-items:center;flex-direction:column;top:50vh;margin-top:0px;animation:svelte-4eyh7u-moveUp 1s forwards;animation-delay:.75s}@keyframes svelte-4eyh7u-moveUp{100%{top:0vh;margin-top:50px}}@keyframes svelte-4eyh7u-comeBack{100%{transform:translateY(0%)}}",
+    css3 = {
+      code: ".error.svelte-n8vex4{text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center}",
       map: null
     };
-    Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css2);
-      return `${$$result.head += `${$$result.title = `<title>Emerald Academy</title>`, ""}`, ""}
-
-<div class="${"main svelte-4eyh7u"}"><div class="${"title svelte-4eyh7u"}"><h1 class="${"svelte-4eyh7u"}"><span class="${"text svelte-4eyh7u"}"><span class="${"svelte-4eyh7u"}">Emerald</span>
-        <img id="${"logo"}" src="${"/favicon.png"}" alt="${"emerald academy logo"}" class="${"svelte-4eyh7u"}">
-        <span class="${"svelte-4eyh7u"}">Academy</span></span></h1>
-    <span class="${"line svelte-4eyh7u"}"></span></div>
-  <article class="${"description svelte-4eyh7u"}">Learn everything about the Flow Blockchain and the Cadence Smart Contract programming language.</article>
-  <div class="${"cards svelte-4eyh7u"}"><a href="${"https://discord.gg/emeraldcity"}" target="${"_blank"}" class="${"svelte-4eyh7u"}"><article href="${"https://discord.gg/emeraldcity"}" target="${"_blank"}" class="${"svelte-4eyh7u"}"><img src="${"/cityskyline.png"}" alt="${"city skyline"}" class="${"svelte-4eyh7u"}">
-        <h5 class="${"svelte-4eyh7u"}">Join Emerald City</h5>
-        <p class="${"svelte-4eyh7u"}">We are the first DAO on Flow. Educate, build, and govern.</p></article></a>
-    <a href="${"https://github.com/jacob-tucker/Flow-Zero-to-Jacob"}" target="${"_blank"}" class="${"svelte-4eyh7u"}"><article class="${"svelte-4eyh7u"}"><img src="${"/Flow-Zero-to-Jacob.png"}" alt="${"Flow Zero to Jacob course"}" class="${"svelte-4eyh7u"}">
-        <h5 class="${"svelte-4eyh7u"}">Bootcamp #1</h5>
-        <p class="${"svelte-4eyh7u"}">Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.</p></article></a></div>
+    _error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { message } = $$props;
+      if ($$props.message === void 0 && $$bindings.message && message !== void 0)
+        $$bindings.message(message);
+      $$result.css.add(css3);
+      return `<div class="${"error svelte-n8vex4"}"><h2>Oops</h2>
+  <p>${escape2(message)}</p>
+  <a href="${"/"}">Return to Home</a>
 </div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/app-0cdd269b.js
+// .svelte-kit/output/server/chunks/Button-8197acaf.js
+var css$12, Section, css4, Button;
+var init_Button_8197acaf = __esm({
+  ".svelte-kit/output/server/chunks/Button-8197acaf.js"() {
+    init_shims();
+    init_app_807d5c7e();
+    css$12 = {
+      code: ".padding-top.small.svelte-1cz7plr{padding-top:3rem}.padding-top.medium.svelte-1cz7plr{padding-top:3.5rem}.padding-top.large.svelte-1cz7plr{padding-top:4rem}.padding-bottom.small.svelte-1cz7plr{padding-bottom:3rem}.padding-bottom.medium.svelte-1cz7plr{padding-bottom:3.5rem}.padding-bottom.large.svelte-1cz7plr{padding-bottom:4rem}",
+      map: null
+    };
+    Section = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { paddingTop = true } = $$props;
+      let { paddingBottom = true } = $$props;
+      let { padding = "medium" } = $$props;
+      if ($$props.paddingTop === void 0 && $$bindings.paddingTop && paddingTop !== void 0)
+        $$bindings.paddingTop(paddingTop);
+      if ($$props.paddingBottom === void 0 && $$bindings.paddingBottom && paddingBottom !== void 0)
+        $$bindings.paddingBottom(paddingBottom);
+      if ($$props.padding === void 0 && $$bindings.padding && padding !== void 0)
+        $$bindings.padding(padding);
+      $$result.css.add(css$12);
+      return `<div class="${[
+        escape2(null_to_empty(padding)) + " svelte-1cz7plr",
+        (paddingTop ? "padding-top" : "") + " " + (paddingBottom ? "padding-bottom" : "")
+      ].join(" ").trim()}">${slots.default ? slots.default({}) : ``}
+</div>`;
+    });
+    css4 = {
+      code: "button.svelte-1yf1ex6{width:fit-content;background:var(--primary);color:black;font-family:var(--font-accent);padding:0.5em 1.4em;border-radius:5em;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:.6em}.ghost.svelte-1yf1ex6{background:transparent;border:2px solid var(--primary);color:var(--primary)}.small.svelte-1yf1ex6{font-size:var(--font-size-xs)}.medium.svelte-1yf1ex6{font-size:var(--font-size-m)}.large.svelte-1yf1ex6{font-size:var(--font-size-l)}.disabled.svelte-1yf1ex6{cursor:not-allowed}",
+      map: null
+    };
+    Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $$restProps = compute_rest_props($$props, ["disabled"]);
+      let buttonProps = { class: [$$restProps.class] };
+      let { disabled = false } = $$props;
+      if ($$props.disabled === void 0 && $$bindings.disabled && disabled !== void 0)
+        $$bindings.disabled(disabled);
+      $$result.css.add(css4);
+      return `<button${spread([{ disabled: disabled || null }, escape_object(buttonProps)], { classes: "svelte-1yf1ex6" })}>${slots.default ? slots.default({}) : ``}
+</button>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-86fe08fa.js
+var index_86fe08fa_exports = {};
+__export(index_86fe08fa_exports, {
+  default: () => Routes
+});
+var css$32, HeroSection, css$22, BootcampCard, css$13, BootcampsGridSection, css5, DaoInvitationSection, Routes;
+var init_index_86fe08fa = __esm({
+  ".svelte-kit/output/server/chunks/index-86fe08fa.js"() {
+    init_shims();
+    init_app_807d5c7e();
+    init_bootcamps_71f71815();
+    init_Button_8197acaf();
+    init_ssr();
+    css$32 = {
+      code: ".column.svelte-115vdnh{display:flex;flex-direction:column;align-items:center;justify-content:center}span.svelte-115vdnh{font-family:var(--font-accent);letter-spacing:.5em;padding-bottom:1.4em;text-align:center}h1.svelte-115vdnh{text-align:center;font-size:clamp(2rem, 15vw, 6.2rem);font-weight:700;color:transparent;-webkit-text-stroke:1px var(--text)}p.svelte-115vdnh{text-align:center;font-size:var(--font-size-l)}b.svelte-115vdnh{color:var(--primary)}",
+      map: null
+    };
+    HeroSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$32);
+      return `${validate_component(Section, "Section").$$render($$result, { paddingTop: false }, {}, {
+        default: () => {
+          return `${validate_component(Container, "Container").$$render($$result, { width: "small" }, {}, {
+            default: () => {
+              return `<div class="${"column svelte-115vdnh"}"><span class="${"svelte-115vdnh"}">WELCOME TO</span>
+      <h1 class="${"svelte-115vdnh"}">EMERALD ACADEMY</h1>
+      <p class="${"svelte-115vdnh"}">Learn everything about the <b class="${"svelte-115vdnh"}">Flow Blockchain</b> and the Cadence Smart Contract programming language.
+      </p>
+      <p class="${"svelte-115vdnh"}">Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at <b class="${"svelte-115vdnh"}">Emerald City</b>.
+      </p></div>`;
+            }
+          })}`;
+        }
+      })}`;
+    });
+    css$22 = {
+      code: "article.svelte-1ui106b{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background-color:var(--primary-bg);border-radius:10px;padding:0;margin:0;box-shadow:none}img.svelte-1ui106b{border-radius:10px 10px 0 0}.launched.svelte-1ui106b{box-shadow:var(--shadow)}h5.svelte-1ui106b{margin-bottom:1em\n  }p.svelte-1ui106b{font-size:var(--font-size-xs);margin-bottom:2em}div.svelte-1ui106b{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:35px 40px}",
+      map: null
+    };
+    BootcampCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { bootcamp } = $$props;
+      if ($$props.bootcamp === void 0 && $$bindings.bootcamp && bootcamp !== void 0)
+        $$bindings.bootcamp(bootcamp);
+      $$result.css.add(css$22);
+      return `<article class="${["svelte-1ui106b", bootcamp.isLaunched ? "launched" : ""].join(" ").trim()}"><img${add_attribute("src", bootcamp.image, 0)}${add_attribute("alt", bootcamp.imageAlt, 0)} class="${"svelte-1ui106b"}">
+    <div class="${"svelte-1ui106b"}"><h5 class="${"svelte-1ui106b"}">${escape2(bootcamp.title)}</h5>
+      <p class="${"svelte-1ui106b"}">${escape2(bootcamp.description)}</p>
+      ${validate_component(Button, "Button").$$render($$result, {
+        class: "ghost small",
+        disabled: !bootcamp.isLaunched
+      }, {}, {
+        default: () => {
+          return `${escape2(bootcamp.isLaunched ? "Go to Bootcamp" : "Coming Soon")}`;
+        }
+      })}</div>
+</article>`;
+    });
+    css$13 = {
+      code: ".row.svelte-yhni35{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}h2.svelte-yhni35{text-align:center;font-size:clamp(1.2rem, 15vw, 2.4rem);margin-bottom:1.2em}.grid.svelte-yhni35{width:100%;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(12rem, 100%), 1fr));gap:40px}",
+      map: null
+    };
+    BootcampsGridSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$13);
+      return `<div>${validate_component(Section, "Section").$$render($$result, {}, {}, {
+        default: () => {
+          return `${validate_component(Container, "Container").$$render($$result, { width: "small" }, {}, {
+            default: () => {
+              return `<div class="${"row svelte-yhni35"}"><h2 class="${"svelte-yhni35"}">Bootcamps</h2>
+        <div class="${"grid svelte-yhni35"}">${each(bootcamps, (bootcamp) => {
+                return `${validate_component(BootcampCard, "BootcampCard").$$render($$result, { bootcamp }, {}, {})}`;
+              })}</div></div>`;
+            }
+          })}`;
+        }
+      })}
+</div>`;
+    });
+    css5 = {
+      code: ".column.svelte-99odx5{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}h2.svelte-99odx5{text-align:center;font-size:clamp(1.2rem, 15vw, 2.4rem);margin-bottom:.5em}p.svelte-99odx5{margin-bottom:50px}",
+      map: null
+    };
+    DaoInvitationSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css5);
+      return `${validate_component(Section, "Section").$$render($$result, { paddingBottom: false }, {}, {
+        default: () => {
+          return `${validate_component(Container, "Container").$$render($$result, { width: "small" }, {}, {
+            default: () => {
+              return `<div class="${"column svelte-99odx5"}"><h2 class="${"svelte-99odx5"}">Emerald City</h2>
+      <p class="${"svelte-99odx5"}">We are the first DAO on the Flow Blockchain. 
+        <br>
+        Educate, build, and govern.
+      </p>
+      ${validate_component(Button, "Button").$$render($$result, {}, {}, {
+                default: () => {
+                  return `Join DAO`;
+                }
+              })}</div>`;
+            }
+          })}`;
+        }
+      })}`;
+    });
+    Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      return `${$$result.head += `${$$result.title = `<title>Emerald Academy</title>`, ""}`, ""}
+
+${validate_component(HeroSection, "HeroSection").$$render($$result, {}, {}, {})}
+${validate_component(BootcampsGridSection, "BootcampsGridSection").$$render($$result, {}, {}, {})}
+${validate_component(DaoInvitationSection, "DaoInvitationSection").$$render($$result, {}, {}, {})}`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/_id_-ec7bf05b.js
+var id_ec7bf05b_exports = {};
+__export(id_ec7bf05b_exports, {
+  default: () => U5Bidu5D
+});
+var css$33, BootcampIntro, css$23, BootcampIntroSection, css$14, BootcampVideoCard, css6, BootcampVideosSection, U5Bidu5D;
+var init_id_ec7bf05b = __esm({
+  ".svelte-kit/output/server/chunks/_id_-ec7bf05b.js"() {
+    init_shims();
+    init_app_807d5c7e();
+    init_stores_ba39d13f();
+    init_bootcamps_71f71815();
+    init_Button_8197acaf();
+    init_ssr();
+    css$33 = {
+      code: ".column.svelte-15fgb5d{display:flex;flex-direction:column}#date.svelte-15fgb5d{font-size:var(--font-size-xs);color:var(--primary);font-family:var(--font-accent);margin-bottom:2em}h1.svelte-15fgb5d{font-size:clamp(1.4rem, 15vw, 2rem);margin-bottom:.6em;margin-top:0}#time-to-finish.svelte-15fgb5d{font-size:var(--font-size-xs);color:var(--primary);font-family:var(--font-accent);text-transform:uppercase;letter-spacing:.3em;margin-bottom:1.4em}#description.svelte-15fgb5d{margin-bottom:3em;max-width:45ch}.buttons.svelte-15fgb5d{display:flex;gap:.9em}",
+      map: null
+    };
+    BootcampIntro = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { bootcamp } = $$props;
+      if ($$props.bootcamp === void 0 && $$bindings.bootcamp && bootcamp !== void 0)
+        $$bindings.bootcamp(bootcamp);
+      $$result.css.add(css$33);
+      return `<div class="${"column svelte-15fgb5d"}"><p id="${"date"}" class="${"svelte-15fgb5d"}">Completed on ${escape2(bootcamp.date)}</p>
+  <h1 class="${"svelte-15fgb5d"}">Bootcamp #${escape2(bootcamp.id)}</h1>
+  <p id="${"time-to-finish"}" class="${"svelte-15fgb5d"}">Part Time - ${escape2(bootcamp.timeToFinish)}</p>
+  <p id="${"description"}" class="${"svelte-15fgb5d"}">${escape2(bootcamp.description)}</p>
+  <div class="${"buttons svelte-15fgb5d"}">${validate_component(Button, "Button").$$render($$result, { class: "small ghost" }, {}, {
+        default: () => {
+          return `<svg xmlns="${"http://www.w3.org/2000/svg"}" id="${"Layer_1"}" viewBox="${"0 0 47.999998 48.000002"}" width="${"22"}" height="${"22"}"><path fill="${"current-color"}" d="${"M23.928 1.15C11 1.15.514 11.638.514 24.566c0 10.343 6.75 19.105 15.945 22.265 1.148.144 1.58-.574 1.58-1.15v-4.02c-6.465 1.436-7.902-3.16-7.902-3.16-1.005-2.73-2.586-3.45-2.586-3.45-2.154-1.435.144-1.435.144-1.435 2.298.144 3.59 2.442 3.59 2.442 2.156 3.59 5.46 2.586 6.753 2.01.142-1.58.86-2.585 1.435-3.16-5.17-.574-10.63-2.585-10.63-11.635 0-2.585.862-4.596 2.442-6.32-.287-.575-1.005-3.017.288-6.177 0 0 2.01-.574 6.464 2.442 1.866-.574 3.877-.718 5.888-.718 2.01 0 4.022.286 5.89.717 4.453-3.016 6.464-2.442 6.464-2.442 1.293 3.16.43 5.602.287 6.177a9.29 9.29 0 0 1 2.44 6.32c0 9.05-5.458 10.918-10.63 11.492.863.718 1.58 2.155 1.58 4.31v6.464c0 .574.432 1.292 1.58 1.15 9.338-3.16 15.946-11.924 15.946-22.266-.143-12.785-10.63-23.27-23.558-23.27z"}" id="${"path20"}" clip-rule="${"evenodd"}" fill-rule="${"evenodd"}"></path></svg>
+        Repository
+    `;
+        }
+      })}</div>
+</div>`;
+    });
+    css$23 = {
+      code: "#video-grid.svelte-12wjluw{display:grid;grid-template-columns:repeat(auto-fit,  minmax(min(16rem, 100%), 1fr));gap:4rem;align-items:center}iframe.svelte-12wjluw{border-radius:20px;aspect-ratio:16/9;width:100%;min-height:14rem}",
+      map: null
+    };
+    BootcampIntroSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { bootcamp } = $$props;
+      if ($$props.bootcamp === void 0 && $$bindings.bootcamp && bootcamp !== void 0)
+        $$bindings.bootcamp(bootcamp);
+      $$result.css.add(css$23);
+      return `${validate_component(Section, "Section").$$render($$result, { padding: "large" }, {}, {
+        default: () => {
+          return `${validate_component(Container, "Container").$$render($$result, {}, {}, {
+            default: () => {
+              return `<div id="${"video-grid"}" class="${"svelte-12wjluw"}">${validate_component(BootcampIntro, "BootcampIntro").$$render($$result, { bootcamp }, {}, {})}
+      <iframe${add_attribute("src", bootcamp.welcomeVideo, 0)} title="${"Bootcamp 1 Welcome Video"}" class="${"svelte-12wjluw"}"></iframe></div>`;
+            }
+          })}`;
+        }
+      })}`;
+    });
+    css$14 = {
+      code: ".video-card.svelte-4yhw9w{display:flex;flex-direction:column;background-color:var(--primary-bg);border-radius:10px;min-height:100%}iframe.svelte-4yhw9w{border-radius:10px;aspect-ratio:16 / 9;min-height:9rem}.video-content.svelte-4yhw9w{padding:1.8rem 2.4rem 0}h5.svelte-4yhw9w{font-size:var(--font-size-m);font-weight:bold;color:var(--primary);padding:0}ul.svelte-4yhw9w{padding:0}li.svelte-4yhw9w{font-family:var(--font-accent);font-size:var(--font-size-xs);padding:0 0 .8em 0;margin:0}",
+      map: null
+    };
+    BootcampVideoCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { bootcampVideo } = $$props;
+      if ($$props.bootcampVideo === void 0 && $$bindings.bootcampVideo && bootcampVideo !== void 0)
+        $$bindings.bootcampVideo(bootcampVideo);
+      $$result.css.add(css$14);
+      return `<div class="${"video-card svelte-4yhw9w"}"><iframe${add_attribute("title", bootcampVideo.title, 0)} width="${"100%"}" height="${"215"}"${add_attribute("src", bootcampVideo.src, 0)} class="${"svelte-4yhw9w"}"></iframe>
+  <div class="${"video-content svelte-4yhw9w"}"><h5 class="${"svelte-4yhw9w"}">${escape2(bootcampVideo.title)}</h5>
+    <ul class="${"svelte-4yhw9w"}">${each(bootcampVideo.subject, (subject) => {
+        return `<li class="${"svelte-4yhw9w"}">${escape2(subject)}</li>`;
+      })}</ul></div>
+</div>`;
+    });
+    css6 = {
+      code: ".grid.svelte-4rg6mp{display:grid;grid-template-columns:repeat(auto-fit, minmax(min(14rem, 100%), 1fr));gap:60px;align-items:baseline\n  }",
+      map: null
+    };
+    BootcampVideosSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { bootcamp } = $$props;
+      if ($$props.bootcamp === void 0 && $$bindings.bootcamp && bootcamp !== void 0)
+        $$bindings.bootcamp(bootcamp);
+      $$result.css.add(css6);
+      return `${validate_component(Section, "Section").$$render($$result, { padding: "large" }, {}, {
+        default: () => {
+          return `${validate_component(Container, "Container").$$render($$result, {}, {}, {
+            default: () => {
+              return `<div class="${"grid svelte-4rg6mp"}">${each(bootcamp.videos, (bootcampVideo) => {
+                return `${validate_component(BootcampVideoCard, "BootcampVideoCard").$$render($$result, { bootcampVideo }, {}, {})}`;
+              })}</div>`;
+            }
+          })}`;
+        }
+      })}`;
+    });
+    U5Bidu5D = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $page, $$unsubscribe_page;
+      $$unsubscribe_page = subscribe(page, (value) => $page = value);
+      const bootcamp = bootcamps[$page.params.id - 1];
+      $$unsubscribe_page();
+      return `${$$result.head += `${$$result.title = `<title>Emerald Academy</title>`, ""}`, ""}
+
+${validate_component(BootcampIntroSection, "BootcampIntroSection").$$render($$result, { bootcamp }, {}, {})}
+${validate_component(BootcampVideosSection, "BootcampVideosSection").$$render($$result, { bootcamp }, {}, {})}`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/app-807d5c7e.js
+function noop3() {
+}
 function run(fn) {
   return fn();
 }
@@ -6777,6 +7363,27 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
+}
+function safe_not_equal2(a, b) {
+  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
+}
+function subscribe(store, ...callbacks) {
+  if (store == null) {
+    return noop3;
+  }
+  const unsub = store.subscribe(...callbacks);
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+function compute_rest_props(props, keys) {
+  const rest = {};
+  keys = new Set(keys);
+  for (const k in props)
+    if (!keys.has(k) && k[0] !== "$")
+      rest[k] = props[k];
+  return rest;
+}
+function null_to_empty(value) {
+  return value == null ? "" : value;
 }
 function set_current_component(component) {
   current_component = component;
@@ -6789,8 +7396,84 @@ function get_current_component() {
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
 }
+function getContext(key) {
+  return get_current_component().$$.context.get(key);
+}
+function spread(args, attrs_to_add) {
+  const attributes = Object.assign({}, ...args);
+  if (attrs_to_add) {
+    const classes_to_add = attrs_to_add.classes;
+    const styles_to_add = attrs_to_add.styles;
+    if (classes_to_add) {
+      if (attributes.class == null) {
+        attributes.class = classes_to_add;
+      } else {
+        attributes.class += " " + classes_to_add;
+      }
+    }
+    if (styles_to_add) {
+      if (attributes.style == null) {
+        attributes.style = style_object_to_string(styles_to_add);
+      } else {
+        attributes.style = style_object_to_string(merge_ssr_styles(attributes.style, styles_to_add));
+      }
+    }
+  }
+  let str = "";
+  Object.keys(attributes).forEach((name) => {
+    if (invalid_attribute_name_character.test(name))
+      return;
+    const value = attributes[name];
+    if (value === true)
+      str += " " + name;
+    else if (boolean_attributes.has(name.toLowerCase())) {
+      if (value)
+        str += " " + name;
+    } else if (value != null) {
+      str += ` ${name}="${value}"`;
+    }
+  });
+  return str;
+}
+function merge_ssr_styles(style_attribute, style_directive) {
+  const style_object = {};
+  for (const individual_style of style_attribute.split(";")) {
+    const colon_index = individual_style.indexOf(":");
+    const name = individual_style.slice(0, colon_index).trim();
+    const value = individual_style.slice(colon_index + 1).trim();
+    if (!name)
+      continue;
+    style_object[name] = value;
+  }
+  for (const name in style_directive) {
+    const value = style_directive[name];
+    if (value) {
+      style_object[name] = value;
+    } else {
+      delete style_object[name];
+    }
+  }
+  return style_object;
+}
 function escape2(html) {
   return String(html).replace(/["'&<>]/g, (match) => escaped2[match]);
+}
+function escape_attribute_value(value) {
+  return typeof value === "string" ? escape2(value) : value;
+}
+function escape_object(obj) {
+  const result = {};
+  for (const key in obj) {
+    result[key] = escape_attribute_value(obj[key]);
+  }
+  return result;
+}
+function each(items, fn) {
+  let str = "";
+  for (let i2 = 0; i2 < items.length; i2 += 1) {
+    str += fn(items[i2], i2);
+  }
+  return str;
 }
 function validate_component(component, name) {
   if (!component || !component.$$render) {
@@ -6834,6 +7517,15 @@ function create_ssr_component(fn) {
     $$render
   };
 }
+function add_attribute(name, value, boolean) {
+  if (value == null || boolean && !value)
+    return "";
+  const assignment = boolean && value === true ? "" : `="${escape_attribute_value(value.toString())}"`;
+  return ` ${name}${assignment}`;
+}
+function style_object_to_string(style_object) {
+  return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
+}
 function afterUpdate() {
 }
 function set_paths(paths) {
@@ -6850,9 +7542,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-63b8da86.js",
+      file: assets + "/_app/start-562d7c60.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-63b8da86.js", assets + "/_app/chunks/vendor-26403bca.js"]
+      js: [assets + "/_app/start-562d7c60.js", assets + "/_app/chunks/index-71560656.js", assets + "/_app/chunks/index-cf759bf6.js", assets + "/_app/chunks/singletons-12a22614.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6895,12 +7587,39 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender });
 }
-var current_component, escaped2, missing_component, on_destroy, css3, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_0cdd269b = __esm({
-  ".svelte-kit/output/server/chunks/app-0cdd269b.js"() {
+var current_component, boolean_attributes, invalid_attribute_name_character, escaped2, missing_component, on_destroy, css7, Root, base, assets, user_hooks, template, options, default_settings, d, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_807d5c7e = __esm({
+  ".svelte-kit/output/server/chunks/app-807d5c7e.js"() {
     init_shims();
     init_ssr();
     Promise.resolve();
+    boolean_attributes = /* @__PURE__ */ new Set([
+      "allowfullscreen",
+      "allowpaymentrequest",
+      "async",
+      "autofocus",
+      "autoplay",
+      "checked",
+      "controls",
+      "default",
+      "defer",
+      "disabled",
+      "formnovalidate",
+      "hidden",
+      "ismap",
+      "loop",
+      "multiple",
+      "muted",
+      "nomodule",
+      "novalidate",
+      "open",
+      "playsinline",
+      "readonly",
+      "required",
+      "reversed",
+      "selected"
+    ]);
+    invalid_attribute_name_character = /[\s'">/=\u{FDD0}-\u{FDEF}\u{FFFE}\u{FFFF}\u{1FFFE}\u{1FFFF}\u{2FFFE}\u{2FFFF}\u{3FFFE}\u{3FFFF}\u{4FFFE}\u{4FFFF}\u{5FFFE}\u{5FFFF}\u{6FFFE}\u{6FFFF}\u{7FFFE}\u{7FFFF}\u{8FFFE}\u{8FFFF}\u{9FFFE}\u{9FFFF}\u{AFFFE}\u{AFFFF}\u{BFFFE}\u{BFFFF}\u{CFFFE}\u{CFFFF}\u{DFFFE}\u{DFFFF}\u{EFFFE}\u{EFFFF}\u{FFFFE}\u{FFFFF}\u{10FFFE}\u{10FFFF}]/u;
     escaped2 = {
       '"': "&quot;",
       "'": "&#39;",
@@ -6911,13 +7630,13 @@ var init_app_0cdd269b = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css3 = {
+    css7 = {
       code: "#svelte-announcer.svelte-1j55zn5{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
       map: null
     };
     Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { stores } = $$props;
-      let { page } = $$props;
+      let { page: page2 } = $$props;
       let { components } = $$props;
       let { props_0 = null } = $$props;
       let { props_1 = null } = $$props;
@@ -6926,8 +7645,8 @@ var init_app_0cdd269b = __esm({
       afterUpdate(stores.page.notify);
       if ($$props.stores === void 0 && $$bindings.stores && stores !== void 0)
         $$bindings.stores(stores);
-      if ($$props.page === void 0 && $$bindings.page && page !== void 0)
-        $$bindings.page(page);
+      if ($$props.page === void 0 && $$bindings.page && page2 !== void 0)
+        $$bindings.page(page2);
       if ($$props.components === void 0 && $$bindings.components && components !== void 0)
         $$bindings.components(components);
       if ($$props.props_0 === void 0 && $$bindings.props_0 && props_0 !== void 0)
@@ -6936,9 +7655,9 @@ var init_app_0cdd269b = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css3);
+      $$result.css.add(css7);
       {
-        stores.page.set(page);
+        stores.page.set(page2);
       }
       return `
 
@@ -6957,25 +7676,39 @@ ${``}`;
     });
     base = "";
     assets = "";
-    user_hooks = /* @__PURE__ */ Object.freeze({
-      __proto__: null,
-      [Symbol.toStringTag]: "Module"
-    });
-    template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<meta name="description" content="Svelte demo app" />\n		<link rel="icon" href="/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
+    user_hooks = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+      __proto__: null
+    }, Symbol.toStringTag, { value: "Module" }));
+    template = ({ head, body }) => `<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Emerald City's Flow & Cadence Academy" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		` + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
     options = null;
     default_settings = { paths: { "base": "", "assets": "" } };
+    d = (s3) => s3.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
     empty = () => ({});
     manifest = {
-      assets: [{ "file": "Flow-Zero-to-Jacob.png", "size": 109321, "type": "image/png" }, { "file": "cityskyline.png", "size": 153852, "type": "image/png" }, { "file": "favicon.png", "size": 32122, "type": "image/png" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
+      assets: [{ "file": "Flow-Zero-to-Jacob.png", "size": 109321, "type": "image/png" }, { "file": "favicon.png", "size": 32122, "type": "image/png" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
       layout: "src/routes/__layout.svelte",
-      error: ".svelte-kit/build/components/error.svelte",
+      error: "src/routes/__error.svelte",
       routes: [
         {
           type: "page",
           pattern: /^\/$/,
           params: empty,
           a: ["src/routes/__layout.svelte", "src/routes/index.svelte"],
-          b: [".svelte-kit/build/components/error.svelte"]
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/bootcamps\/([^/]+?)\/?$/,
+          params: (m2) => ({ id: d(m2[1]) }),
+          a: ["src/routes/__layout.svelte", "src/routes/bootcamps/[id].svelte"],
+          b: ["src/routes/__error.svelte"]
         }
       ]
     };
@@ -6986,11 +7719,12 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_16195fdc(), layout_16195fdc_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_07034a0b(), error_07034a0b_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_98eef438(), index_98eef438_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_36268382(), layout_36268382_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_41a00b81(), error_41a00b81_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_86fe08fa(), index_86fe08fa_exports)),
+      "src/routes/bootcamps/[id].svelte": () => Promise.resolve().then(() => (init_id_ec7bf05b(), id_ec7bf05b_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-9eaab52b.js", "css": ["assets/pages/__layout.svelte-75127215.css"], "js": ["pages/__layout.svelte-9eaab52b.js", "chunks/vendor-26403bca.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-ceec6a11.js", "css": [], "js": ["error.svelte-ceec6a11.js", "chunks/vendor-26403bca.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-5ca5dda7.js", "css": ["assets/pages/index.svelte-b8fc2db4.css"], "js": ["pages/index.svelte-5ca5dda7.js", "chunks/vendor-26403bca.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-be1d82b0.js", "css": ["assets/pages/__layout.svelte-5bd850dd.css", "assets/bootcamps-9b7447da.css"], "js": ["pages/__layout.svelte-be1d82b0.js", "chunks/index-71560656.js", "chunks/stores-cebae916.js", "chunks/bootcamps-255700ff.js", "chunks/index-cf759bf6.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-85472549.js", "css": ["assets/pages/__error.svelte-d54f6766.css"], "js": ["pages/__error.svelte-85472549.js", "chunks/index-71560656.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-74a368d6.js", "css": ["assets/pages/index.svelte-900d325c.css", "assets/bootcamps-9b7447da.css", "assets/Button-244a2f10.css"], "js": ["pages/index.svelte-74a368d6.js", "chunks/index-71560656.js", "chunks/bootcamps-255700ff.js", "chunks/Button-7ca1405a.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/bootcamps/[id].svelte": { "entry": "pages/bootcamps/_id_.svelte-fd0c574a.js", "css": ["assets/pages/bootcamps/_id_.svelte-6f5cdec7.css", "assets/bootcamps-9b7447da.css", "assets/Button-244a2f10.css"], "js": ["pages/bootcamps/_id_.svelte-fd0c574a.js", "chunks/index-71560656.js", "chunks/stores-cebae916.js", "chunks/bootcamps-255700ff.js", "chunks/Button-7ca1405a.js"], "styles": [] } };
   }
 });
 
@@ -7044,7 +7778,7 @@ function getRawBody(req) {
 // .svelte-kit/output/server/app.js
 init_shims();
 init_ssr();
-init_app_0cdd269b();
+init_app_807d5c7e();
 
 // .svelte-kit/vercel/entry.js
 init();
