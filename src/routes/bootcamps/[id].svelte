@@ -1,8 +1,8 @@
 <script>
   import { page } from "$app/stores";
   import { bootcamps } from "$lib/data/bootcamps";
-  import IntroSection from "$lib/components/sections/bootcamps/IntroSection.svelte";
-  import VideosSection from "$lib/components/sections/bootcamps/VideosSection.svelte";
+  import BootcampIntroSection from "$lib/components/sections/bootcamps/BootcampIntroSection.svelte";
+  import BootcampVideosSection from "$lib/components/sections/bootcamps/BootcampVideosSection.svelte";
 
   const bootcamp = bootcamps[$page.params.id - 1];
 </script>
@@ -11,5 +11,5 @@
   <title>Emerald Academy</title>
 </svelte:head>
 
-<IntroSection bootcamp={bootcamp}/>
-<VideosSection bootcamp={bootcamp}/>
+<BootcampIntroSection bootcamp={bootcamp}/>
+<BootcampVideosSection bootcamp={bootcamp}/>

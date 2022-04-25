@@ -1,7 +1,7 @@
 <script>
   import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
-  import BootcampsSection from "$lib/components/sections/index/BootcampsSection.svelte";
-  import InvitationSection from "$lib/components/sections/index/InvitationSection.svelte";
+  import BootcampsGridSection from "$lib/components/sections/index/BootcampsGridSection.svelte";
+  import DaoInvitationSection from "$lib/components/sections/index/DaoInvitationSection.svelte";
 </script>
 
 <svelte:head>
@@ -9,5 +9,5 @@
 </svelte:head>
 
 <HeroSection/>
-<BootcampsSection/>
-<InvitationSection/>
+<BootcampsGridSection/>
+<DaoInvitationSection/>

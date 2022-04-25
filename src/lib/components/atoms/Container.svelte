@@ -34,5 +34,4 @@
     padding-top: var(--gutter-y);
     padding-bottom: var(--gutter-y);
   }
-
 </style>

@@ -96,9 +96,9 @@
 
   /* Container widths */
   --container-width-full: 100%;
-  --container-width-large: 1600px;
-  --container-width-medium: 1200px;
-  --container-width-small: 800px;
+  --container-width-large: 80em;
+  --container-width-medium: 60em;
+  --container-width-small: 40em;
 
   /* Gutters */
   --gutter-x: 2rem;

@@ -4,7 +4,6 @@
   <span>Academy</span>
 </div>
 
-
 <style>
   #logo {
     width: 40px;
