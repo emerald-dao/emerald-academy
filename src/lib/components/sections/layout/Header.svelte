@@ -1,10 +1,12 @@
 <script>
   import { fly } from 'svelte/transition'
+  import { navigating } from '$app/stores';
 
   import Container from "../../atoms/Container.svelte";
   import ThemeToggle from "../../atoms/ThemeToggle.svelte";
   import Logo from "../../atoms/Logo.svelte";
   import AnimatedHamburger from "../../atoms/AnimatedHamburger.svelte";
+  import Navigation from '$lib/components/modules/Navigation.svelte';
 
   export let open = false
   export let onClick = () => {
@@ -16,6 +18,13 @@
       document.body.style.overflowY = "scroll"
     }
   }
+
+  let onPageChange = () => {
+    open = false
+    document.body.style.overflowY = "scroll"
+  }
+
+  $: if($navigating) onPageChange()
 </script>
 
 <header>
@@ -27,11 +36,7 @@
 
       <!-- Desktop menu -->
       <div id="desktop-menu">
-        <ul>
-          <li><a class="nav-link" sveltekit:prefetch href="/bootcamps/1">Bootcamp #1</a></li>
-          <li><a class="nav-link disabled" sveltekit:prefetch href="/bootcamps/2" disabled>Bootcamp #2 [soon]</a></li>
-          <li><a class="nav-link" href="https://discord.com/invite/emeraldcity" target="_blank">Emerald City</a></li>
-        </ul>
+        <Navigation/>
         <ThemeToggle/>
       </div>
 
@@ -41,14 +46,11 @@
       </div>
       {#if open}
         <div id="mobile-menu" transition:fly={{ y: -200, duration: 400 }}>
-          <ul>
-            <li><a class="nav-link" sveltekit:prefetch href="/bootcamps/1">Bootcamp #1</a></li>
-            <li><a class="nav-link disabled" sveltekit:prefetch href="/bootcamps/2" disabled>Bootcamp #2 [soon]</a></li>
-            <li><a class="nav-link" href="https://discord.com/invite/emeraldcity" target="_blank">Emerald City</a></li>
+          <Navigation>
             <div id="close-button">
               <AnimatedHamburger {open} {onClick}/>
             </div>
-          </ul>
+          </Navigation>
         </div>
       {/if}
     </nav>
@@ -85,19 +87,6 @@
     z-index: 1;
   }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    gap: 10px;
-  }
-
-  .nav-link {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 15px;
-    color: var(--primary)
-  }
-
   #desktop-menu {
     display: none;
   }
@@ -108,11 +97,6 @@
     right: 0;
     padding: 10px;
   }
-
-  .disabled {
-    color: gray;
-  }
-
   @media (min-width: 60em) {
     #hamburger-button {
       display: none;
@@ -123,10 +107,12 @@
       flex-direction: row;
       gap: 30px;
     }
+  }
 
-    ul {
-      display: flex;
-      flex-direction: row;
+  @media (max-width: 20em) {
+    nav {
+      flex-direction: column;
+      gap: 1em;
     }
   }
 </style>

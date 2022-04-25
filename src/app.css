@@ -10,9 +10,11 @@
   --primary-focus: transparent;
   --primary-inverse: hsla(var(--palette-green-50), 100%);
   --primary-bg: hsl(0, 0%, 100%);
+  --secondary-bg: hsl(0, 0%, 95%);
   --gradient-primary: hsla(var(--palette-green-70), 35%);
   --gradient-secondary: hsla(var(--palette-blue-70), 35%);
   --text: hsl(0, 0%, 10%);
+  --disabled: hsl(0, 0%, 40%);
   --shadow: hsla(0, 0%, 0%, 0.05) 0px 1px 0px, hsla(0, 0%, 0%, 0.1) 0px 0px 8px;
 }
 
@@ -25,9 +27,11 @@
     --primary-focus: transparent;
     --primary-inverse: hsla(var(--palette-green-60), 100%);
     --primary-bg: hsl(0, 0%, 0%);
+    --secondary-bg: hsl(0, 0%, 5%);
     --gradient-primary: hsla(var(--palette-green-70), 35%);
     --gradient-secondary: hsla(var(--palette-blue-70), 35%);
     --text: hsl(0, 0%, 100%);
+    --disabled: hsl(0, 0%, 60%);
     --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px, hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
   }
 }
@@ -40,9 +44,11 @@
   --primary-focus: transparent;
   --primary-inverse: hsla(var(--palette-green-60), 100%);
   --primary-bg: hsl(0, 0%, 0%);
+  --secondary-bg: hsl(0, 0%, 5%);
   --gradient-primary: hsla(var(--palette-green-70), 35%);
   --gradient-secondary: hsla(var(--palette-blue-70), 35%);
   --text: hsl(0, 0%, 100%);
+  --disabled: hsl(0, 0%, 60%);
   --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px, hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
 }
 
@@ -126,6 +132,10 @@ body {
   font-family: var(--font-primary);
   font-size: var(--font-size-m);
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h2,

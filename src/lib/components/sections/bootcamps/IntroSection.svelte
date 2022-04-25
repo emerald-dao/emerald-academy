@@ -8,17 +8,17 @@
 
 <Section padding="large">
   <Container>
-    <div class="grid">
+    <div id="video-grid">
       <BootcampIntro bootcamp={bootcamp}/>
-      <iframe title="Welcome video" width="100%" height="315" src={bootcamp.videos[0].src}/>
+      <iframe src={bootcamp.welcomeVideo} title="Bootcamp 1 Welcome Video"/>
     </div>
   </Container>
 </Section>
 
 <style>
-  .grid {
+  #video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,  minmax(min(14rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit,  minmax(min(16rem, 100%), 1fr));
     gap: 4rem;
     align-items: center;
   }
@@ -26,5 +26,7 @@
   iframe {
     border-radius: 20px;
     aspect-ratio: 16/9;
+    width: 100%;
+    min-height: 14rem;
   }
 </style>

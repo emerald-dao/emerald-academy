@@ -13,7 +13,7 @@ import Section from "$lib/components/atoms/Section.svelte";
         <br/>
         Educate, build, and govern.
       </p>
-      <Button link="/">Join DAO</Button>
+      <Button on:click={() => window.open('https://discord.gg/emeraldcity', '_blank')}>Join DAO</Button>
     </div>
   </Container>
 </Section>

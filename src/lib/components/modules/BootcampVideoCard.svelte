@@ -7,8 +7,8 @@
   <div class="video-content">
     <h5>{bootcampVideo.title}</h5>
     <ul>
-      {#each bootcampVideo.content as chapter (chapter)}
-        <li>{chapter}</li>
+      {#each bootcampVideo.subject as subject (subject)}
+        <li>{subject}</li>
       {/each}
     </ul>
   </div>
@@ -20,12 +20,13 @@
     flex-direction: column;
     background-color:  var(--primary-bg);
     border-radius: 10px;
-    height: 100%;
+    min-height: 100%;
   }
 
   iframe {
     border-radius: 10px;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
+    min-height: 9rem;
   }
 
   .video-content {
@@ -46,7 +47,7 @@
   li {
     font-family: var(--font-accent);
     font-size: var(--font-size-xs);
-    padding: 0;
+    padding: 0 0 .8em 0;
     margin: 0;
   }
 </style>

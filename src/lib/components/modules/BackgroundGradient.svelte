@@ -1,27 +1,30 @@
 <div class="background-gradient"/>
-<div class="circle one"/>
-<div class="circle two rotating">
-  <div class="circle-little"/>
+<div id="circle-container">
+  <div class="circle one"/>
+  <div class="circle two rotating">
+    <div class="circle-little"/>
+  </div>
+  <div class="circle three"/>
+  <div class="circle four rotating reverse">
+    <div class="circle-little"/>
+  </div>
+  <div class="circle five"/>
+  <div class="circle six rotating">
+    <div class="circle-little"/>
+  </div>
+  <div class="circle seven rotating reverse">
+    <div class="circle-little"/>
+  </div>
+  <div class="circle eight"/>
+  <div class="circle nine"/>
 </div>
-<div class="circle three"/>
-<div class="circle four rotating reverse">
-  <div class="circle-little"/>
-</div>
-<div class="circle five"/>
-<div class="circle six rotating">
-  <div class="circle-little"/>
-</div>
-<div class="circle seven rotating reverse">
-  <div class="circle-little"/>
-</div>
-<div class="circle eight"/>
-<div class="circle nine"/>
 
 <style>  
+  
   .background-gradient {
     background: 
-      radial-gradient(ellipse at right, var(--gradient-primary), transparent),
-      radial-gradient(ellipse at bottom, var(--gradient-secondary), transparent);
+    radial-gradient(ellipse at right, var(--gradient-primary), transparent),
+    radial-gradient(ellipse at bottom, var(--gradient-secondary), transparent);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -29,25 +32,32 @@
     left: 0;
     z-index: -1;
   }
+  
+  #circle-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .circle {
+    position: absolute;
     border-radius: 50%;
     background: transparent;
-    border: 1px solid rgba(96, 123, 87, 0.06);
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto; 
+    border: hsla(105, 17%, 41%, 0.07) solid 1px;
     aspect-ratio: 1/1;
     box-sizing: border-box;
-    z-index: -2;
   }
 
   .circle-little {
     border-radius: 50%;
-    background: rgba(96, 123, 87, 0.071);
+    background: hsla(105, 17%, 41%, 0.07);
     position: relative;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -57,39 +67,39 @@
   }
 
   .circle.one {
-    width: 95%;
+    height: 95%;
   }
 
   .circle.two {
-    width: 85%;
+    height: 85%;
   }
 
   .circle.three {
-    width: 75%;
+    height: 75%;
   }
 
   .circle.four {
-    width: 65%;
+    height: 65%;
   }
 
   .circle.five {
-    width: 55%;
+    height: 55%;
   }
 
   .circle.six {
-    width: 45%;
+    height: 45%;
   }
 
   .circle.seven {
-    width: 35%;
+    height: 35%;
   }
 
   .circle.eight {
-    width: 25%;
+    height: 25%;
   }
 
   .circle.nine {
-    width: 15%;
+    height: 15%;
   }
 
   /* Circle rotating effect */
@@ -140,4 +150,58 @@
   .rotating.reverse {
     animation-direction: reverse;
   }
+
+  @media (min-width: 50em) {
+    .circle.one {
+      width: 95%;
+      height: auto;
+    }
+
+    .circle.two {
+      width: 85%;
+      height: auto;
+    }
+
+    .circle.three {
+      width: 75%;
+      height: auto;
+    }
+
+    .circle.four {
+      width: 65%;
+      height: auto;
+    }
+
+    .circle.five {
+      width: 55%;
+      height: auto;
+    }
+
+    .circle.six {
+      width: 45%;
+      height: auto;
+    }
+
+    .circle.seven {
+      width: 35%;
+      height: auto;
+    }
+
+    .circle.eight {
+      width: 25%;
+      height: auto;
+    }
+
+    .circle.nine {
+      width: 15%;
+      height: auto;
+    }
+  }
+  
+  @supports not (aspect-ratio: 1/1) {
+    #circle-container {
+      display: none;
+    }
+  }
+  
 </style>

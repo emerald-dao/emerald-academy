@@ -1,10 +1,21 @@
 <script>
-  export let link = "/"
-  export let ghost = false
-  export let size = "medium"
+  let buttonProps = {
+    class:[$$restProps.class]
+  }
+
+  export let disabled = false
 </script>
 
-<button class:ghost={ghost} class={size} href={link}><slot/></button>
+<button 
+  on:click
+  on:mouseover
+  on:focus
+  on:mouseenter
+  on:mouseleave
+  disabled = {disabled}
+  {...buttonProps}>
+  <slot/>
+</button>
 
 <style>
   button {
@@ -14,6 +25,11 @@
     font-family: var(--font-accent);
     padding: 0.5em 1.4em;
     border-radius: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .6em;
   }
 
   .ghost {
@@ -32,5 +48,9 @@
 
   .large {
     font-size: var(--font-size-l);
+  }
+
+  .disabled {
+    cursor: not-allowed;
   }
 </style>

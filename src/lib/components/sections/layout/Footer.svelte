@@ -8,9 +8,11 @@ import Container from "../../atoms/Container.svelte";
   <CitySvg/>
   <div>
     <Container width="medium">
-      <div class="row">
+      <div class="flex-container">
         <p>{new Date().getFullYear()}. All rights reserved.</p>
-        <Logo/>
+        <a sveltekit:prefetch href="/">
+          <Logo/>
+        </a>
         <p>
         Created by <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City DAO</a> 
         </p>
@@ -28,16 +30,23 @@ import Container from "../../atoms/Container.svelte";
     background-color: var(--primary-bg);
   }
 
-  .row {
+  .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
+    gap: 2em;
   }
 
   p {
     margin: 0;
     font-size: .6rem;
     font-family: var(--font-accent);
+  }
+
+  @media (min-width: 50em) {
+    .flex-container {
+      flex-direction: row;
+    }
   }
 </style>

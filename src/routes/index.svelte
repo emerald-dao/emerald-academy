@@ -2,7 +2,6 @@
   import HeroSection from "$lib/components/sections/index/HeroSection.svelte";
   import BootcampsSection from "$lib/components/sections/index/BootcampsSection.svelte";
   import InvitationSection from "$lib/components/sections/index/InvitationSection.svelte";
-  import BackgroundGradient from "$lib/components/modules/BackgroundGradient.svelte";
 </script>
 
 <svelte:head>
@@ -12,4 +11,3 @@
 <HeroSection/>
 <BootcampsSection/>
 <InvitationSection/>
-<BackgroundGradient/>
