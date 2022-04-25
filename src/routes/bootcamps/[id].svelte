@@ -11,5 +11,7 @@
   <title>Emerald Academy</title>
 </svelte:head>
 
-<BootcampIntroSection bootcamp={bootcamp}/>
-<BootcampVideosSection bootcamp={bootcamp}/>
+{#if bootcamp}
+  <BootcampIntroSection {bootcamp} />
+  <BootcampVideosSection {bootcamp} />
+{/if}
