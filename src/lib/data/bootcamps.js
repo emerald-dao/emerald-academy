@@ -77,7 +77,7 @@ export const bootcamps = [
     imageAlt: 'Flow Zero to Jacob course',
     href: '/bootcamps/2',
     repository: 'https://github.com/jacob-tucker/Flow-Zero-to-Jacob',
-    welcomeVideo: 'https://www.youtube.com/watch?v=uZ2iicBoZ4s',
+    welcomeVideo: 'https://www.youtube.com/embed/uZ2iicBoZ4s',
     videos: [],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     date: 'May 2nd - May 30th',
