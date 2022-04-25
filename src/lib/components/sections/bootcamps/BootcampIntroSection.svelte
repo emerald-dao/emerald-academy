@@ -10,7 +10,7 @@
   <Container>
     <div id="video-grid">
       <BootcampIntro bootcamp={bootcamp}/>
-      <iframe src={bootcamp.welcomeVideo} title="Bootcamp 1 Welcome Video"/>
+      <iframe src={bootcamp.welcomeVideo} title="Bootcamp 1 Welcome Video" allow="fullscreen"/>
     </div>
   </Container>
 </Section>
