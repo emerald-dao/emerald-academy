@@ -1,45 +1,20 @@
 <script>
-  import Header from "$lib/header/Header.svelte";
   import "../app.css";
+  
+  import Header from "$lib/components/sections/layout/Header.svelte";
+  import Footer from "$lib/components/sections/layout/Footer.svelte";
+  import BackgroundGradient from "$lib/components/modules/BackgroundGradient.svelte";
 </script>
 
-<main class="container">
-  <slot />
+<Header/>
+<main>
+  <slot/>
 </main>
-
-<footer>
-  <p>
-    <small>
-      Created by
-      <a href="https://discord.gg/emeraldcity" target="_blank"
-        >Emerald City DAO</a>
-    </small>
-  </p>
-</footer>
+<Footer/>
+<BackgroundGradient/>
 
 <style>
-  footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    margin-top: 25px;
-  }
-
-  p {
-    font-size: .9rem;
-  }
-
-  footer a {
-    font-weight: bold;
-  }
-
-  @media (min-width: 480px) {
-    footer {
-      padding: 10px 0;
-    }
+  main {
+    padding: 0;
   }
 </style>

@@ -1,72 +1,148 @@
 @import '@picocss/pico';
-
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@400;700&display=swap');
 
 /* Green Light scheme (Default) */
 /* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --primary: #35d9ba;
-  --primary-hover: #248f7a;
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --primary: hsla(var(--palette-green-40), 100%);
+  --primary-hover: hsla(var(--palette-green-50), 100%);
   --primary-focus: transparent;
-  --primary-inverse: #fff;
-  --text: #111;
+  --primary-inverse: hsla(var(--palette-green-50), 100%);
+  --primary-bg: hsl(0, 0%, 100%);
+  --secondary-bg: hsl(0, 0%, 95%);
+  --gradient-primary: hsla(var(--palette-green-70), 35%);
+  --gradient-secondary: hsla(var(--palette-blue-70), 35%);
+  --text: hsl(0, 0%, 10%);
+  --disabled: hsl(0, 0%, 40%);
+  --shadow: hsla(0, 0%, 0%, 0.05) 0px 1px 0px, hsla(0, 0%, 0%, 0.1) 0px 0px 8px;
 }
 
 /* Green Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --primary: #38e8c6;
-    --primary-hover: #12bf9d;
+  :root:not([data-theme='light']) {
+    --primary: hsla(var(--palette-green-50), 100%);
+    --primary-hover: hsla(var(--palette-green-60), 100%);
     --primary-focus: transparent;
-    --primary-inverse: #111;
-    --text: #fff;
+    --primary-inverse: hsla(var(--palette-green-60), 100%);
+    --primary-bg: hsl(0, 0%, 0%);
+    --secondary-bg: hsl(0, 0%, 5%);
+    --gradient-primary: hsla(var(--palette-green-70), 35%);
+    --gradient-secondary: hsla(var(--palette-blue-70), 35%);
+    --text: hsl(0, 0%, 100%);
+    --disabled: hsl(0, 0%, 60%);
+    --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px, hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
   }
 }
 
 /* Green Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
-  --primary: #38e8c6;
-  --primary-hover: #12bf9d;
+[data-theme='dark'] {
+  --primary: hsla(var(--palette-green-50), 100%);
+  --primary-hover: hsla(var(--palette-green-60), 100%);
   --primary-focus: transparent;
-  --primary-inverse: #111;
-  --text: #fff;
+  --primary-inverse: hsla(var(--palette-green-60), 100%);
+  --primary-bg: hsl(0, 0%, 0%);
+  --secondary-bg: hsl(0, 0%, 5%);
+  --gradient-primary: hsla(var(--palette-green-70), 35%);
+  --gradient-secondary: hsla(var(--palette-blue-70), 35%);
+  --text: hsl(0, 0%, 100%);
+  --disabled: hsl(0, 0%, 60%);
+  --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px, hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
 }
 
-/* Green (Common styles) */
 :root {
+  /* Base colors */
+  --base-green: 169, 81%;
+  --base-blue: 234, 67%;
+
+  --palette-green-10: var(--base-green), 10%;
+  --palette-green-20: var(--base-green), 20%;
+  --palette-green-30: var(--base-green), 30%;
+  --palette-green-40: var(--base-green), 40%;
+  --palette-green-50: var(--base-green), 50%;
+  --palette-green-60: var(--base-green), 60%;
+  --palette-green-70: var(--base-green), 70%;
+  --palette-green-80: var(--base-green), 80%;
+  --palette-green-90: var(--base-green), 90%;
+  --palette-green-100: var(--base-green), 100%;
+
+  --palette-blue-10: var(--base-blue), 10%;
+  --palette-blue-20: var(--base-blue), 20%;
+  --palette-blue-30: var(--base-blue), 30%;
+  --palette-blue-40: var(--base-blue), 40%;
+  --palette-blue-50: var(--base-blue), 50%;
+  --palette-blue-60: var(--base-blue), 60%;
+  --palette-blue-70: var(--base-blue), 70%;
+  --palette-blue-80: var(--base-blue), 80%;
+  --palette-blue-90: var(--base-blue), 90%;
+  --palette-blue-100: var(--base-blue), 100%;
+
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
+
+  /* Fonts Families*/
+  --font-primary: 'Poppins', sans-serif;
+  --font-accent: 'JetBrains Mono', monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.8rem;
+  --font-size-m: 0.9rem;
+  --font-size-l: 1rem;
+
+  /* Container widths */
+  --container-width-full: 100%;
+  --container-width-large: 80em;
+  --container-width-medium: 60em;
+  --container-width-small: 40em;
+
+  /* Gutters */
+  --gutter-x: 2rem;
+  --gutter-y: 1.6rem;
+
+  font-family: var(--font-primary);
+  box-sizing: border-box;
 }
 
-button {
-  font-weight: bold;
+/* Responsive Font Size */
+@media (min-width: 30em) {
+  :root {
+    --font-size-xs: 0.8rem;
+    --font-size-s: 0.9rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.1rem;
+  }
 }
 
-h1, h2, gh3 {
-  margin-bottom: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  line-height: 1;
 }
 
-.card {
-  margin:0;
-  padding: 1em 2em;
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-m);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.container, main {
-  margin: 0;
-  padding: 0;
-}
-
-.mb-1 {
-  margin-bottom:1em;
-}
-.mb-2 {
-  margin-bottom:2em;
-}
-
-.accent-border {
-  border: 1px solid var(--primary);
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1em;
 }
