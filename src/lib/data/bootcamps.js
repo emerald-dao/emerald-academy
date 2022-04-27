@@ -1,6 +1,6 @@
 export const bootcamps = [
   {
-    title: 'Bootcamp #1',
+    title: 'Intro to Flow/Cadence v1',
     id: 1,
     isLaunched: true,
     active: false,
@@ -70,7 +70,7 @@ export const bootcamps = [
     timeToFinish: '4 weeks',
   },
   {
-    title: 'Bootcamp #2',
+    title: 'Intro to Flow/Cadence v2',
     id: 2,
     isLaunched: true,
     active: true,

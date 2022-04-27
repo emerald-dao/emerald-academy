@@ -13,7 +13,7 @@
     {/if}
   </p>
   <h1>
-    Bootcamp #{bootcamp.id}
+    {bootcamp.title}
   </h1>
   <p id="time-to-finish">
     Part Time - {bootcamp.timeToFinish}

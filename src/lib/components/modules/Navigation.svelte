@@ -4,7 +4,7 @@
 
 <ul>
   {#each bootcamps as bootcamp (bootcamp.title)}
-    {#if bootcamp.isLaunched}
+    {#if bootcamp.active}
       <li>
         <a class="nav-link" href={bootcamp.href} sveltekit:prefetch>{bootcamp.title}</a>
       </li>
