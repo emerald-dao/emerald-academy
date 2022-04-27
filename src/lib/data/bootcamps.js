@@ -9,6 +9,7 @@ export const bootcamps = [
     href: '/bootcamps/1',
     repository: 'https://github.com/jacob-tucker/Flow-Zero-to-Jacob',
     welcomeVideo: 'https://www.youtube.com/embed/JBtmLjZBR6M',
+    signUp: 'https://discord.com/channels/906264258189332541/943594522498195506/943598333203738655',
     videos: [
       {
         src: 'https://www.youtube.com/embed/5wCFxiLVuMA',
@@ -78,6 +79,7 @@ export const bootcamps = [
     href: '/bootcamps/2',
     repository: 'https://github.com/jacob-tucker/Flow-Zero-to-Jacob',
     welcomeVideo: 'https://www.youtube.com/embed/uZ2iicBoZ4s',
+    signUp: 'https://discord.com/channels/906264258189332541/943594522498195506/968239076266373132',
     videos: [],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     date: 'May 2nd - May 30th',
