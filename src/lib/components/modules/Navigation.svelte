@@ -5,10 +5,12 @@
 <ul>
   {#each bootcamps as bootcamp (bootcamp.title)}
     {#if bootcamp.isLaunched}
-    <li><a class="nav-link" href={bootcamp.href} sveltekit:prefetch>{bootcamp.title}</a></li>
+      <li><a class="nav-link" href={bootcamp.href}>{bootcamp.title}</a></li>
     {/if}
   {/each}
-  <li><a class="nav-link" href="https://discord.com/invite/emeraldcity" target="_blank">Emerald City</a></li>
+  <li>
+    <a class="nav-link" href="https://discord.com/invite/emeraldcity" target="_blank">Emerald City</a>
+  </li>
   <slot/>
 </ul>
 

@@ -4,7 +4,7 @@
   import BootcampIntroSection from "$lib/components/sections/bootcamps/BootcampIntroSection.svelte";
   import BootcampVideosSection from "$lib/components/sections/bootcamps/BootcampVideosSection.svelte";
 
-  const bootcamp = bootcamps[$page.params.id - 1];
+  $: bootcamp = bootcamps[$page.params.id - 1];
 </script>
 
 <svelte:head>
