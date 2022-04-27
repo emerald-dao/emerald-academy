@@ -3,7 +3,7 @@
 </script>
 
 <div class="video-card">
-  <iframe title={bootcampVideo.title} width="100%" height="215" src={bootcampVideo.src}/>
+  <iframe title={bootcampVideo.title} width="100%" height="215" src={bootcampVideo.src} allow="fullscreen"/>
   <div class="video-content">
     <h5>{bootcampVideo.title}</h5>
     <ul>
