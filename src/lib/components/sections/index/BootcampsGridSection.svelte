@@ -3,16 +3,31 @@
   import BootcampCard from "$lib/components/modules/BootcampCard.svelte";
   import Container from "$lib/components/atoms/Container.svelte";
   import Section from "$lib/components/atoms/Section.svelte";
+
+  const currentDate = new Date();
 </script>
 
 <div>
   <Section>
     <Container width="small">
       <div class="row">
-        <h2>Bootcamps</h2>
+        <h2>Current Bootcamps</h2>
         <div class="grid">
           {#each bootcamps as bootcamp (bootcamp.title)}
+            {#if new Date(bootcamp.dateEnd) >= currentDate}
             <BootcampCard bootcamp={bootcamp}/>
+            {/if}
+          {/each}
+        </div>
+      </div>
+
+      <div class="row margin-top">
+        <h2>Past Bootcamps</h2>
+        <div class="grid">
+          {#each bootcamps as bootcamp (bootcamp.title)}
+            {#if new Date(bootcamp.dateEnd) < currentDate}
+            <BootcampCard bootcamp={bootcamp}/>
+            {/if}
           {/each}
         </div>
       </div>
@@ -27,6 +42,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+  .margin-top {
+    margin-top: 5em;
   }
 
   h2 {

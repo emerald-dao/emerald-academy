@@ -1,9 +1,8 @@
 <script>
-  import { goto } from "$app/navigation";
-
   import Button from "../atoms/Button.svelte";
-
-  export let bootcamp
+  import { formatDate } from '$lib/utils';
+  // import Countdown from "../atoms/Countdown.svelte";
+  export let bootcamp;
 </script>
 
 <article class:launched={bootcamp.isLaunched}>
@@ -11,7 +10,8 @@
     <div>
       <h5>{bootcamp.title}</h5>
       <p>{bootcamp.description}</p>
-      <Button on:click={()=>goto(bootcamp.href)} class="ghost small" disabled={!bootcamp.isLaunched}>{bootcamp.isLaunched ? "Go to Bootcamp" : "Coming Soon"}</Button>
+      <p>{formatDate(bootcamp.dateStart)} - {formatDate(bootcamp.dateEnd)}</p>
+      <Button href="{bootcamp.href}" class="ghost small">{bootcamp.isLaunched ? "Go to Bootcamp" : "Coming Soon"}</Button>
     </div>
 </article>
 
@@ -27,6 +27,8 @@
     padding: 0;
     margin: 0;
     box-shadow: none;
+    border:5px solid rgba(255,255,255,0.8);
+    border-radius:20px;
   }
 
   img {

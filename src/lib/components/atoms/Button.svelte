@@ -4,21 +4,34 @@
   }
 
   export let disabled = false
+  export let href;
 </script>
 
+{#if href}
+<a 
+{href}
+on:click
+on:mouseover
+on:focus
+on:mouseenter
+on:mouseleave
+{...buttonProps}>
+<slot/>
+</a>
+{:else}
 <button 
   on:click
   on:mouseover
   on:focus
   on:mouseenter
   on:mouseleave
-  disabled = {disabled}
   {...buttonProps}>
   <slot/>
 </button>
+{/if}
 
 <style>
-  button {
+  button, a {
     width: fit-content;
     background: var(--primary);
     color: black;
@@ -48,9 +61,5 @@
 
   .large {
     font-size: var(--font-size-l);
-  }
-
-  .disabled {
-    cursor: not-allowed;
   }
 </style>
