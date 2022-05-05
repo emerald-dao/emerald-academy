@@ -8,7 +8,7 @@
 <div class="column">
   <p id="date">
     {#if bootcamp.active }
-      Kickoff: {formatDate(bootcamp.dateStart)}
+      {formatDate(bootcamp.dateStart)} - {formatDate(bootcamp.dateEnd)}
     {:else}
       Completed on {bootcamp.dateEnd}
     {/if}
