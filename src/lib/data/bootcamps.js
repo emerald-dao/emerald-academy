@@ -15,16 +15,19 @@ export const bootcamps = [
         src: 'https://www.youtube.com/embed/5wCFxiLVuMA',
         title: 'Workshop 1/8',
         subject: [
-          'What is the Flow Blockchain?',
+          'What is the Flow Blockchain and Smart Contracts?',
           'Introduction to Programming [optional]',
-          'Transactions, Scripts, and Cadence Basics [1/2]',
+          'Transactions, Scripts, and Cadence Basics',
         ],
         content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1', 'Chapter 2, Day 2'],
       },
       {
         src: 'https://www.youtube.com/embed/mX9XKU74qgg',
         title: 'Workshop 2/8',
-        subject: ['Transactions, Scripts, and Cadence Basics [2/2]'],
+        subject: [
+          'Arrays, Dictionaries, and Optionals', 
+          'Structs'
+        ],
         content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
       },
       {
@@ -86,16 +89,19 @@ export const bootcamps = [
         src: 'https://www.youtube.com/embed/TjguI0u6jms',
         title: 'Workshop 1/8',
         subject: [
-          'What is the Flow Blockchain?',
+          'What is the Flow Blockchain and Smart Contracts?',
           'Introduction to Programming [optional]',
-          'Transactions, Scripts, and Cadence Basics [1/2]',
+          'Transactions, Scripts, and Cadence Basics',
         ],
         content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1', 'Chapter 2, Day 2'],
       },
       {
         src: 'https://www.youtube.com/embed/HUtbTNMZE2M',
         title: 'Workshop 2/8',
-        subject: ['Transactions, Scripts, and Cadence Basics [2/2]'],
+        subject: [
+          'Arrays, Dictionaries, and Optionals', 
+          'Structs'
+        ],
         content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
       },
     ],
