@@ -92,11 +92,17 @@ export const bootcamps = [
         ],
         content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1', 'Chapter 2, Day 2'],
       },
+      {
+        src: 'https://www.youtube.com/embed/HUtbTNMZE2M',
+        title: 'Workshop 2/8',
+        subject: ['Transactions, Scripts, and Cadence Basics [2/2]'],
+        content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
+      },
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     dateStart: '2022-05-02',
     dateEnd: '2022-05-31',
     timeToFinish: '4 weeks',
     link: 'https://github.com/emerald-dao/beginner-cadence-course',
-  },
+  }
 ];
