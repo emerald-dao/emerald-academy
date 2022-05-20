@@ -121,6 +121,12 @@ export const bootcamps = [
         title: 'Workshop 5/8',
         subject: ['Account Storage', 'Capabilities'],
         content: ['Chapter 4, Day 1', 'Chapter 4, Day 2'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/lm8Dt84kCxA',
+        title: 'Workshop 6/8',
+        subject: ['NFT Collections', 'Admin Minting', 'Reading NFT Metadata'],
+        content: ['Chapter 4, Day 3', 'Chapter 4, Day 4'],
       }
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
