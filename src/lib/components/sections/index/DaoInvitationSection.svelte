@@ -25,6 +25,7 @@ import Section from "$lib/components/atoms/Section.svelte";
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-bottom: 20rem;
   }
 
   h2 {
