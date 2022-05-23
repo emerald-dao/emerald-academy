@@ -27,6 +27,11 @@ let id = 0
 <div>
     <HeroTutorial header="HELLO WORLD">
         <img src={emerald} alt="" class="bg-image emerald">
+        <h4 class="title" slot="title">
+            Deploy a simple <b>HelloWorld</b> contract to learn the basics of the Flow blockchain and Cadence. 
+          </h4>
+          <p slot="final" class="single">🌟 The final deliverable is an app that lets users read and change a greeting field on Flow testnet.
+        </p>
     </HeroTutorial>
     <SideNav {heading} {section1} {section2} {section3} {section4} {section5} {section6} {id} />
     <GreenSection header={section1} id={section1} number=1>
@@ -98,6 +103,12 @@ let id = 0
         <p class="intro">👛 Create your <b>deployer account</b> by going to <br/> <a href="https://testnet-faucet.onflow.org/">https://testnet-faucet.onflow.org/</a>, pasting in your public key from above, and clicking CREATE ACCOUNT:
         </p>
         <div class="img"></div>
+        <p class="intro">In your .env file, change the following:</p>
+            <ul class="instructions">
+                <li><p class="intro"><code>NEXT_PUBLIC_ACCESS_NODE</code> to <code>https://testnet.onflow.org</code></p></li>
+                <li><p class="intro"><code>NEXT_PUBLIC_WALLET</code> to <code>https://fcl-discovery.onflow.org/testnet/authn</code></p></li>
+                <li><p class="intro"><code>NEXT_PUBLIC_CONTRACT_ADDRESS</code> to your generated testnet address</p></li>
+            </ul>
         <p class="intro">⛽️ Add your testnet account to flow.json as by modifying the following lines of code:</p>
         <pre><code>"accounts": &#123;
             "emulator-account": &#123;
@@ -151,6 +162,11 @@ let id = 0
      color: var(--text);
  }
 
+ h4 {
+        line-height: 1.8rem;
+        text-align: center;
+      }
+
  code {
      color: var(--text);
      padding: 0.5rem 1rem;
@@ -159,6 +175,9 @@ let id = 0
  span {
      color: var(--side-nav);
  }
+ b {
+        color: var(--primary);
+      } 
 
  .intro {
      margin: 1rem ;
@@ -222,5 +241,7 @@ let id = 0
  .map {
      top: 150px;
  }
+ 
+ 
 
 </style>

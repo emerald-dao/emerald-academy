@@ -6,11 +6,12 @@
     export let section4;
     export let section5;
     export let section6;
+    export let section7;
     export let id;
     
     import { tutorials } from "$lib/data/tutorials";
 
-   let href = tutorials[id].href;
+    let href = tutorials[id].href;   
 </script>
 
 <div class="side-nav">
@@ -22,13 +23,14 @@
         <a href="{href}#{section4.split(' ')[0]}" class="nav-link">{section4}</a>
         <a href="{href}#{section5.split(' ')[0]}" class="nav-link">{section5}</a>
         <a href="{href}#{section6.split(' ')[0]}" class="nav-link">{section6}</a>
+        {#if section7 === "Side Quests"}<a href="{href}#{section7.split(' ')[0]}" class="nav-link">{section7}</a>{/if}
     </div>
 </div>
 
 <style>
     .side-nav {
         position: fixed;
-        top: 0;
+        top: 10vh;
         left: 0;
         height: 80vh;
         width: 18rem;

@@ -8,9 +8,7 @@
       <div class="column tut1">
         <div class="">
           <h1>{header}</h1>
-          <h4 class="intro">
-            Deploy a simple <b>HelloWorld</b> contract to learn the basics of the Flow blockchain and Cadence. 
-          </h4>
+          <slot name="title"><!-- optional fallback --></slot>
         </div>
         <div class="instructions">
           <p><b>You'll use:</b></p>
@@ -18,8 +16,7 @@
             - The local Flow dev wallet to log into test accounts. <br/>
             - A template Next.js app with sample scripts and transactions to interact with your contract.
           </p>
-          <p>🌟 The final deliverable is an app that lets users read and change a greeting field on Flow testnet.
-          </p>
+          <slot name="final"></slot>
           <p>💬 Meet other builders working on this challenge and get help in the <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City Discord</a>!
           </p>
         </div>
@@ -53,11 +50,7 @@
         font-weight: 700;
         color: transparent;
         -webkit-text-stroke: 1px var(--text);
-      }
-
-      h4 {
-        line-height: 1.8rem;
-      }
+      }      
     
       p {
         font-size: var(--font-size-m);
@@ -65,11 +58,7 @@
       
       b {
         color: var(--primary);
-      }      
-
-      .intro {
-        text-align: center;
-      }
+      }            
 
       .instructions {
         display: flex;
