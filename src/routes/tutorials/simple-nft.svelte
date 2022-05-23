@@ -3,13 +3,13 @@
     import BlueSection from "$lib/components/sections/tutorials/BlueSection.svelte";
     import GreenSection from "$lib/components/sections/tutorials/GreenSection.svelte";
     import HeroTutorial from "$lib/components/sections/tutorials/HeroTutorial.svelte";
-    import letters from '$lib/components/atoms/Images/Letters.png'
+    import mint from '$lib/components/atoms/Images/Mint-nft.png'
     import emerald from '$lib/components/atoms/Images/Emerald.png'
     import flow from '$lib/components/atoms/Images/Flow.png'
     import install from '$lib/components/atoms/Images/Install.png'
     import map from '$lib/components/atoms/Images/Map.png'
-    import reading from '$lib/components/atoms/Images/Reading.png'
-    import replace from '$lib/components/atoms/Images/Replace.png'
+    import setup from '$lib/components/atoms/Images/Setup.png'
+    import transfer from '$lib/components/atoms/Images/Transfer.png'
     import rocket from '$lib/components/atoms/Images/Rocket.png'
     import wallet from '$lib/components/atoms/Images/Wallet.png'
     
@@ -79,15 +79,14 @@
             <p class="intro"> In a terminal, run <code> npm run mint </code></p>
             <div class="img"></div>
             <p class="end">That will mint 3 NFTs to the Service Account (0xf8d6e0586b0a20c7)</p> 
-            <img src={reading} alt="" class="bg-image reading">
+            <img src={mint} alt="" class="bg-image mint">
         </GreenSection>
         <BlueSection header={section4} id="Setup" number=4 >
             <p class="intro">Log out of the admin account and into a new account that does not have the NFTs </p>
             <p class="intro">Click on the SETUP COLLECTION button </p>    
             <div class="img"></div>
             <p class="intro">Copy the user account</p>                
-            <img src={replace} alt="" class="bg-image replace">  
-            <img src={letters} alt="" class="bg-image letters">  
+            <img src={setup} alt="" class="bg-image setup">
         </BlueSection>
         <GreenSection header={section5} id='Transfer' number=5>
             <p class="intro"> Log back into the admin account</p>
@@ -95,7 +94,7 @@
             <div class="img"></div>
             <p class="intro">Log back into the other account and see the NFTs appear in the user's collection</p> 
             <div class="img"></div>
-            <img src={reading} alt="" class="bg-image reading">
+            <img src={transfer} alt="" class="bg-image transfer">
         </GreenSection>
         <BlueSection header={section6} id="Deploy" number=6>
             <p class="intro">📔 Ready to deploy to a public testnet?!?</p>            
@@ -150,7 +149,7 @@
         </BlueSection>
         <GreenSection header={section7} id="Side" number=6 >
             <div class="quests">
-                <p class="intro">Head to your next challenge <a href="/tutorials/2-simple-ft/">here</a></p>
+                <p class="intro">Head to your next challenge <a href="/tutorials/simple-ft/">here</a></p>
                 <p class="intro">💬 Meet other builders working on this challenge and get help in the 💎 <a href="https://discord.gg/emeraldcity" target="_blank"> Emerald City Discord!</a></p>
                 <p class="intro">👉 Problems, questions, comments on the stack? Post them to the 💎 <a href="https://discord.gg/emeraldcity" target="_blank"> Emerald City Discord!</a></p>
             </div>
@@ -227,24 +226,33 @@
          right: 350px;
          width: 10%;
      }
-     .reading {
+     .mint {
          transform: rotate(20deg);
+         top: 300px;
+         width: 18%;
+         right: 100px;
      }
-     .replace {
+     .setup {
          transform: rotate(-30deg);
+         top: 350px;
+         width: 18%;
+         right: 120px;
+     }
+     .transfer {
+         transform: rotate(30deg);
          top: 450px;
+         width: 18%;
      }
-     .letters {
-         bottom: 450px;
-         width: 16%;
-     }
+     
      .rocket {
          transform: rotate(-30deg);
-         width: 25%;
-         right: 70px;
+         width: 20%;
+         right: 100px;
      }
      .map {
          top: 150px;
+         width: 13%;
+         right: 160px;
      }     
     
     </style>

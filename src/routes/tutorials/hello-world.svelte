@@ -145,7 +145,7 @@ let id = 0
     </GreenSection>
     <BlueSection header={section6} id="Side" number=6 >
         <div class="quests">
-            <p class="intro">Head to your next challenge <a href="/tutorials/1-simple-nft/">here</a></p>
+            <p class="intro">Head to your next challenge <a href="/tutorials/simple-nft/">here</a></p>
             <p class="intro">💬 Meet other builders working on this challenge and get help in the 💎 <a href="https://discord.gg/emeraldcity" target="_blank"> Emerald City Discord!</a></p>
             <p class="intro">👉 Problems, questions, comments on the stack? Post them to the 💎 <a href="https://discord.gg/emeraldcity" target="_blank"> Emerald City Discord!</a></p>
         </div>
@@ -235,11 +235,13 @@ let id = 0
  }
  .rocket {
      transform: rotate(-30deg);
-     width: 25%;
-     right: 70px;
+     width: 20%;
+     right: 100px;
  }
  .map {
      top: 150px;
+     width: 13%;
+     right: 160px;
  }
  
  
