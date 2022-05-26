@@ -45,19 +45,19 @@ export const bootcamps = [
       {
         src: 'https://www.youtube.com/embed/DLwkrSSNjKk',
         title: 'Workshop 5/8',
-        subject: ['Account Storage and Starting our NFT Contract [1/2]'],
+        subject: ['Account Storage', 'Capabilities'],
         content: ['Chapter 4, Day 1', 'Chapter 4, Day 2', 'Chapter 4, Day 3'],
       },
       {
         src: 'https://www.youtube.com/embed/UCyIIjUFnEw',
         title: 'Workshop 6/8',
-        subject: ['Account Storage and Starting our NFT Contract [2/2]'],
+        subject: ['NFT Collections', 'Admin Minting', 'Reading NFT Metadata'],
         content: ['Chapter 4, Day 3', 'Chapter 4, Day 4'],
       },
       {
         src: 'https://www.youtube.com/embed/ExX11tPZjRI',
         title: 'Workshop 7/8',
-        subject: ['Misc and Finishing our NFT Contract [1/2]'],
+        subject: ['Pre/Post Conditions', 'Events', 'Contract Interfaces'],
         content: ['Chapter 5, Day 1', 'Chapter 5, Day 2'],
       },
       {
@@ -127,6 +127,12 @@ export const bootcamps = [
         title: 'Workshop 6/8',
         subject: ['NFT Collections', 'Admin Minting', 'Reading NFT Metadata'],
         content: ['Chapter 4, Day 3', 'Chapter 4, Day 4'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/5xif8qNCaL8',
+        title: 'Workshop 7/8',
+        subject: ['Pre/Post Conditions', 'Events', 'Contract Interfaces'],
+        content: ['Chapter 5, Day 1', 'Chapter 5, Day 2'],
       }
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
