@@ -14,8 +14,8 @@
         <h2>Current Bootcamps</h2>
         <div class="grid">
           {#each bootcamps as bootcamp (bootcamp.title)}
-            {#if new Date(bootcamp.dateEnd) >= currentDate}
-            <BootcampCard bootcamp={bootcamp}/>
+            {#if bootcamp.active}
+              <BootcampCard bootcamp={bootcamp}/>
             {/if}
           {/each}
         </div>
