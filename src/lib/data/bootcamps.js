@@ -63,7 +63,7 @@ export const bootcamps = [
       {
         src: 'https://www.youtube.com/embed/Y9PMiXB4mAg',
         title: 'Workshop 8/8',
-        subject: ['Misc and Finishing our NFT Contract [2/2]'],
+        subject: ['Conforming to NFT Standard'],
         content: ['Chapter 5, Day 3'],
       },
     ],
@@ -133,6 +133,12 @@ export const bootcamps = [
         title: 'Workshop 7/8',
         subject: ['Pre/Post Conditions', 'Events', 'Contract Interfaces'],
         content: ['Chapter 5, Day 1', 'Chapter 5, Day 2'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/Tad1if8DFA4',
+        title: 'Workshop 8/8',
+        subject: ['Conforming to NFT Standard', 'Deploy to testnet'],
+        content: ['Chapter 5, Day 3'],
       }
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
