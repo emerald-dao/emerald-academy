@@ -4,25 +4,26 @@
     export let header;
     </script>
     
-    <div class="tutorial">
-      <div class="column tut1">
-        <div class="">
-          <h1>{header}</h1>
-          <slot name="title"><!-- optional fallback --></slot>
+    
+      <div class="tutorial">
+        <div class="column tut1">
+          <div class="">
+            <h1>{header}</h1>
+            <slot name="title"><!-- optional fallback --></slot>
+          </div>
+          <div class="instructions">
+            <p><b>You'll use:</b></p>
+            <p>- The local Flow emulator to deploy smart contracts. <br/>
+              - The local Flow dev wallet to log into test accounts. <br/>
+              - A template Next.js app with sample scripts and transactions to interact with your contract.
+            </p>
+            <slot name="final"></slot>
+            <p>💬 Meet other builders working on this challenge and get help in the <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City Discord</a>!
+            </p>
+          </div>
         </div>
-        <div class="instructions">
-          <p><b>You'll use:</b></p>
-          <p>- The local Flow emulator to deploy smart contracts. <br/>
-            - The local Flow dev wallet to log into test accounts. <br/>
-            - A template Next.js app with sample scripts and transactions to interact with your contract.
-          </p>
-          <slot name="final"></slot>
-          <p>💬 Meet other builders working on this challenge and get help in the <a href="https://discord.gg/emeraldcity" target="_blank">Emerald City Discord</a>!
-          </p>
-        </div>
+        <slot/>
       </div>
-      <slot/>
-    </div>
     
     <style>
 
@@ -30,7 +31,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         width: 100vw;
         top: 0;
         background: var(--tut-bg1);
@@ -41,7 +42,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 40%;
+        max-width: 700px;
+        width: 80%;
       }      
     
       h1 {
