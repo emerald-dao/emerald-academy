@@ -60,7 +60,7 @@
         width: 100px;
         height: 60px;
         font-size: 3rem;
-        background: var(--tut-bg3);
+        background: var(--tut-bg2);
         color: var(--text);
       }      
 

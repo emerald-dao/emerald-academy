@@ -3,15 +3,15 @@
     import BlueSection from "$lib/components/sections/tutorials/BlueSection.svelte";
     import GreenSection from "$lib/components/sections/tutorials/GreenSection.svelte";
     import HeroTutorial from "$lib/components/sections/tutorials/HeroTutorial.svelte";
-    import mint from '$lib/components/atoms/Images/Mint-nft.png'
-    import emerald from '$lib/components/atoms/Images/Emerald.png'
-    import flow from '$lib/components/atoms/Images/Flow.png'
-    import install from '$lib/components/atoms/Images/Install.png'
-    import map from '$lib/components/atoms/Images/Map.png'
-    import setup from '$lib/components/atoms/Images/Setup.png'
-    import transfer from '$lib/components/atoms/Images/Transfer.png'
-    import rocket from '$lib/components/atoms/Images/Rocket.png'
-    import wallet from '$lib/components/atoms/Images/Wallet.png'
+    import mint from '$lib/components/atoms/Images/SVGIcons/Mint-nft.png'
+    import emerald from '$lib/components/atoms/Images/SVGIcons/Emerald.png'
+    import flow from '$lib/components/atoms/Images/SVGIcons/Flow.png'
+    import install from '$lib/components/atoms/Images/SVGIcons/Install.png'
+    import map from '$lib/components/atoms/Images/SVGIcons/Map.png'
+    import setup from '$lib/components/atoms/Images/SVGIcons/Setup.png'
+    import transfer from '$lib/components/atoms/Images/SVGIcons/Transfer.png'
+    import rocket from '$lib/components/atoms/Images/SVGIcons/Rocket.png'
+    import wallet from '$lib/components/atoms/Images/SVGIcons/Wallet.png'
     
     let heading="SIMPLE NFT"
     let section1="Install"
