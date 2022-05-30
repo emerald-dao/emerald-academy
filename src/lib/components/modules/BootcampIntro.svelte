@@ -1,6 +1,5 @@
 <script>
   import Button from "../atoms/Button.svelte";
-  import { formatDate } from "$lib/utils";
 
   export let bootcamp;
 </script>
@@ -8,7 +7,7 @@
 <div class="column">
   <p id="date">
     {#if bootcamp.active }
-      {formatDate(bootcamp.dateStart)} - {formatDate(bootcamp.dateEnd)}
+      {bootcamp.dateStart} - {bootcamp.dateEnd}
     {:else}
       Completed on {bootcamp.dateEnd}
     {/if}

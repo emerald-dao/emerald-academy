@@ -1,7 +1,5 @@
 <script>
   import Button from "../atoms/Button.svelte";
-  import { formatDate } from '$lib/utils';
-  // import Countdown from "../atoms/Countdown.svelte";
   export let bootcamp;
 </script>
 
@@ -10,7 +8,7 @@
     <div>
       <h5>{bootcamp.title}</h5>
       <p>{bootcamp.description}</p>
-      <p>{formatDate(bootcamp.dateStart)} - {formatDate(bootcamp.dateEnd)}</p>
+      <p>{bootcamp.dateStart} - {bootcamp.dateEnd}</p>
       <Button href="{bootcamp.href}" class="ghost small">{bootcamp.isLaunched ? "Go to Bootcamp" : "Coming Soon"}</Button>
     </div>
 </article>
