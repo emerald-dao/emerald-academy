@@ -1,7 +1,7 @@
 export const bootcamps = [
   {
     title: 'Beginner Cadence Bootcamp - April 2022',
-    id: 1,  
+    id: 1,
     isLaunched: true,
     active: false,
     image: '/thumb-beginner-cadence.png',
@@ -25,7 +25,7 @@ export const bootcamps = [
         src: 'https://www.youtube.com/embed/mX9XKU74qgg',
         title: 'Workshop 2/8',
         subject: [
-          'Arrays, Dictionaries, and Optionals', 
+          'Arrays, Dictionaries, and Optionals',
           'Structs'
         ],
         content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
@@ -99,7 +99,7 @@ export const bootcamps = [
         src: 'https://www.youtube.com/embed/HUtbTNMZE2M',
         title: 'Workshop 2/8',
         subject: [
-          'Arrays, Dictionaries, and Optionals', 
+          'Arrays, Dictionaries, and Optionals',
           'Structs'
         ],
         content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
@@ -158,7 +158,17 @@ export const bootcamps = [
     repository: 'https://github.com/emerald-dao/beginner-cadence-course',
     welcomeVideo: 'https://www.youtube.com/embed/52cJXmTnvC0',
     signUp: 'https://forms.gle/wcocFV2Z1yFFRvy9A',
-    videos: [],
+    videos: [
+      {
+        src: 'https://www.youtube.com/embed/QMLYJnr8Pa4',
+        title: 'Introductory Call',
+        subject: [
+          'Learn about the bootcamp',
+          'How to submit quests'
+        ],
+        content: [],
+      },
+    ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     dateStart: '6/6/2022',
     dateEnd: '7/3/2022',
