@@ -139,6 +139,12 @@ export const bootcamps = [
         title: 'Workshop 8/8',
         subject: ['Conforming to NFT Standard', 'Deploy to testnet'],
         content: ['Chapter 5, Day 3'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/BYIS5l_FUjw',
+        title: 'Post Graduation Content',
+        subject: ['Goated Goats Contract Review', 'Intro to FCL/DApp Development'],
+        content: [],
       }
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
