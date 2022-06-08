@@ -1,30 +1,48 @@
-# Emerald Academy
+# 🏗 Emerald Academy
 
-Learn everything about the <b>Flow Blockchain</b> and the Cadence Smart Contract programming language.
+> everything you need to build on Flow! 🚀
 
-## Description
+🧪 Quickly experiment with Flow decentralized application (DApp) development by walking through our tutorials.
 
-Emerald Academy is a series of Flow educational resources throughout time, by your <i>best</i> friends at <b>Emerald City</b>.
+📚 Learn Cadence through our monthly introductory bootcamps.
 
-## Contributing
+# 📚 Documentation
 
-### Getting Started
+For documentation, tutorials, challenges, bootcamps, and many more resources, visit: [academy.ecdao.org](https://academy.ecdao.org)
 
-Once you've forked the project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+# 🔧 Important Tools
+- [Flow CLI](https://docs.onflow.org/flow-cli/install/)
+- [Flow Emulator](https://docs.onflow.org/emulator/)
+- [Cadence VSCode Extension](https://docs.onflow.org/vscode-extension/)
 
-```bash
-npm run dev
+# 🔭 Learning Cadence
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+📕 Read the docs: https://docs.onflow.org/cadence/
 
-### Building
+📺 Watch Jacob Tucker's ["Learn Cadence" series on YouTube](https://www.youtube.com/watch?v=iVevnipJbHo&list=PLvcQxi9WyGdF32YuZABVTx-t3-FsBNCN2)
 
-To create a production version of the app:
+📚 Go through each topic from Emerald Academy's [Beginner Cadence Bootcamp](https://github.com/emerald-dao/beginner-cadence-course)
 
-```bash
-npm run build
-```
+- [Intro to Smart Contracts](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter2.0/day1)
+- [Transactions & Scripts](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter2.0/day2)
+- [Arrays, Dictionaries & Optionals](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter2.0/day3)
+- [Structs](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter2.0/day4)
+- [Resources](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter3.0/day1)
+- [References](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter3.0/day3)
+- [Interfaces](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter3.0/day4)
+- [Access Control](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter3.0/day5)
+- [Account Storage](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter4.0/day1)
+- [Capabilities](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter4.0/day2)
+- [Pre/Post Conditions](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter5.0/day1)
+- [Events](https://github.com/emerald-dao/beginner-cadence-course/tree/main/chapter5.0/day1)
 
-You can preview the production build with `npm run preview`.
+# 🛠 Build
+
+Check out the 🔨 Building Guild by joining [💎 Emerald City's Discord](https://discord.gg/emeraldcity)
+
+ - 🎟 [Create your first NFT]()
+ - 🥩 [Create your first Fungible Token]()
+
+# 💬 Support Chat
+
+Join the [💎 Emerald City Discord](https://discord.gg/emeraldcity) to ask questions and find others building with 🏗 Emerald Academy!
