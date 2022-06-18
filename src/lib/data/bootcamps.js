@@ -199,6 +199,12 @@ export const bootcamps = [
         subject: ['Resources', 'References'],
         content: ['Chapter 3, Day 1', 'Chapter 3, Day 2', 'Chapter 3, Day 3'],
       },
+      {
+        src: 'https://www.youtube.com/embed/Dq7MXXm4nuY',
+        title: 'Workshop 4/8',
+        subject: ['Resource/Struct Interfaces', 'Access Control'],
+        content: ['Chapter 3, Day 4', 'Chapter 3, Day 5'],
+      },
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     dateStart: '6/6/2022',
