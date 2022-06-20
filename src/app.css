@@ -7,7 +7,7 @@
 :root:not([data-theme='dark']) {
   --primary: hsla(var(--palette-green-40), 100%);
   --primary-hover: hsla(var(--palette-green-50), 100%);
-  --primary-focus: transparent;
+  /* --primary-focus: transparent; */
   --primary-inverse: hsla(var(--palette-green-50), 100%);
   --primary-bg: hsl(0, 0%, 100%);
   --secondary-bg: hsl(0, 0%, 95%);
@@ -24,7 +24,7 @@
   :root:not([data-theme='light']) {
     --primary: hsla(var(--palette-green-50), 100%);
     --primary-hover: hsla(var(--palette-green-60), 100%);
-    --primary-focus: transparent;
+    /* --primary-focus: transparent; */
     --primary-inverse: hsla(var(--palette-green-60), 100%);
     --primary-bg: hsl(0, 0%, 0%);
     --secondary-bg: hsl(0, 0%, 5%);
@@ -41,7 +41,7 @@
 [data-theme='dark'] {
   --primary: hsla(var(--palette-green-50), 100%);
   --primary-hover: hsla(var(--palette-green-60), 100%);
-  --primary-focus: transparent;
+  /* --primary-focus: transparent; */
   --primary-inverse: hsla(var(--palette-green-60), 100%);
   --primary-bg: hsl(0, 0%, 0%);
   --secondary-bg: hsl(0, 0%, 5%);
