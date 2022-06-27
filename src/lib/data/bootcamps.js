@@ -1,7 +1,7 @@
 export const bootcamps = [
   {
     title: 'Beginner Cadence Bootcamp - April 2022',
-    id: 1,  
+    id: 1,
     isLaunched: true,
     active: false,
     image: '/thumb-beginner-cadence.png',
@@ -25,7 +25,7 @@ export const bootcamps = [
         src: 'https://www.youtube.com/embed/mX9XKU74qgg',
         title: 'Workshop 2/8',
         subject: [
-          'Arrays, Dictionaries, and Optionals', 
+          'Arrays, Dictionaries, and Optionals',
           'Structs'
         ],
         content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
@@ -68,8 +68,8 @@ export const bootcamps = [
       },
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
-    dateStart: '2022-03-18',
-    dateEnd: '2022-04-16',
+    dateStart: '3/18/2022',
+    dateEnd: '4/16/2022',
     timeToFinish: '4 weeks',
     link: 'https://github.com/emerald-dao/beginner-cadence-course',
   },
@@ -99,7 +99,7 @@ export const bootcamps = [
         src: 'https://www.youtube.com/embed/HUtbTNMZE2M',
         title: 'Workshop 2/8',
         subject: [
-          'Arrays, Dictionaries, and Optionals', 
+          'Arrays, Dictionaries, and Optionals',
           'Structs'
         ],
         content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
@@ -139,11 +139,88 @@ export const bootcamps = [
         title: 'Workshop 8/8',
         subject: ['Conforming to NFT Standard', 'Deploy to testnet'],
         content: ['Chapter 5, Day 3'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/BYIS5l_FUjw',
+        title: 'Post Graduation Content',
+        subject: ['Goated Goats Contract Review', 'Intro to FCL/DApp Development'],
+        content: [],
       }
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
-    dateStart: '2022-05-02',
-    dateEnd: '2022-05-31',
+    dateStart: '5/1/2022',
+    dateEnd: '5/29/2022',
+    timeToFinish: '4 weeks',
+    link: 'https://github.com/emerald-dao/beginner-cadence-course',
+  },
+  {
+    title: 'Beginner Cadence Bootcamp - June 2022',
+    id: 3,
+    isLaunched: true,
+    active: true,
+    image: '/thumb-beginner-cadence.png',
+    imageAlt: 'Beginner Cadence Bootcamp',
+    href: '/bootcamps/3',
+    repository: 'https://github.com/emerald-dao/beginner-cadence-course',
+    welcomeVideo: 'https://www.youtube.com/embed/52cJXmTnvC0',
+    signUp: 'https://forms.gle/wcocFV2Z1yFFRvy9A',
+    videos: [
+      {
+        src: 'https://www.youtube.com/embed/QMLYJnr8Pa4',
+        title: 'Introductory Call',
+        subject: [
+          'Learn about the bootcamp',
+          'How to submit quests'
+        ],
+        content: [],
+      },
+      {
+        src: 'https://www.youtube.com/embed/s1uh1AiXPmE',
+        title: 'Workshop #1',
+        subject: [
+          'What is the Flow Blockchain and Smart Contracts?',
+          'Introduction to Programming [optional]',
+          'Transactions, Scripts, and Cadence Basics',
+        ],
+        content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1', 'Chapter 2, Day 2'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/66_2CWOPZLs',
+        title: 'Workshop 2/8',
+        subject: [
+          'Arrays, Dictionaries, and Optionals',
+          'Structs'
+        ],
+        content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/hrW3yR9xHNY',
+        title: 'Workshop 3/8',
+        subject: ['Resources', 'References'],
+        content: ['Chapter 3, Day 1', 'Chapter 3, Day 2', 'Chapter 3, Day 3'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/Dq7MXXm4nuY',
+        title: 'Workshop 4/8',
+        subject: ['Resource/Struct Interfaces', 'Access Control'],
+        content: ['Chapter 3, Day 4', 'Chapter 3, Day 5'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/4dZa8UKUjMQ',
+        title: 'Workshop 5/8',
+        subject: ['Account Storage', 'Capabilities'],
+        content: ['Chapter 4, Day 1', 'Chapter 4, Day 2'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/GCND9Tl57zs',
+        title: 'Workshop 6/8',
+        subject: ['NFT Collections', 'Admin Minting', 'Reading NFT Metadata'],
+        content: ['Chapter 4, Day 3', 'Chapter 4, Day 4'],
+      },
+    ],
+    description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
+    dateStart: '6/6/2022',
+    dateEnd: '7/3/2022',
     timeToFinish: '4 weeks',
     link: 'https://github.com/emerald-dao/beginner-cadence-course',
   }
