@@ -11,7 +11,7 @@ export const tutorials = [
     raw: 'https://raw.githubusercontent.com/emerald-dao/0-hello-world/main/README.md',
   },
   {
-    title: 'NonFungibleToken',
+    title: 'NFT',
     id: 2,
     href: '/tutorials/simple-nft',
     slug: 'simple-nft',
