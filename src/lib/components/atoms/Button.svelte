@@ -1,37 +1,39 @@
 <script>
   let buttonProps = {
-    class:[$$restProps.class]
-  }
+    class: [$$restProps.class],
+  };
 
-  export let disabled = false
+  export let disabled = false;
   export let href;
 </script>
 
 {#if href}
-<a 
-{href}
-on:click
-on:mouseover
-on:focus
-on:mouseenter
-on:mouseleave
-{...buttonProps}>
-<slot/>
-</a>
+  <a
+    {href}
+    target="_blank"
+    on:click
+    on:mouseover
+    on:focus
+    on:mouseenter
+    on:mouseleave
+    {...buttonProps}>
+    <slot />
+  </a>
 {:else}
-<button 
-  on:click
-  on:mouseover
-  on:focus
-  on:mouseenter
-  on:mouseleave
-  {...buttonProps}>
-  <slot/>
-</button>
+  <button
+    on:click
+    on:mouseover
+    on:focus
+    on:mouseenter
+    on:mouseleave
+    {...buttonProps}>
+    <slot />
+  </button>
 {/if}
 
 <style>
-  button, a {
+  button,
+  a {
     width: fit-content;
     background: var(--primary);
     color: black;
@@ -42,7 +44,7 @@ on:mouseleave
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: .6em;
+    gap: 0.6em;
   }
 
   .ghost {

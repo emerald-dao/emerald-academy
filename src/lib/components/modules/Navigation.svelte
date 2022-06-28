@@ -29,10 +29,13 @@
     </ul>
   </li>
   <li>
+    <a class="nav-link" href="/important-resources">Important Resources</a>
+  </li>
+  <li>
     <a
       class="nav-link"
       href="https://discord.com/invite/emeraldcity"
-      target="_blank">Emerald City</a>
+      target="_blank">Emerald City Discord</a>
   </li>
   <slot />
 </ul>

@@ -120,10 +120,6 @@
   li::marker {
     color: transparent;
   }
-  .spacer {
-    width: 100%;
-    height: 300px;
-  }
 
   @media only screen and (max-width: 1680px) {
     #menu {
