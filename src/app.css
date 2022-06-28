@@ -167,3 +167,14 @@ h6,
 p {
   margin-bottom: 1em;
 }
+
+img {
+  display: flex;
+  border-radius: 6px;
+  margin: 10px auto;
+  align-self: center;
+}
+
+code {
+  cursor: text;
+}
