@@ -10,8 +10,8 @@
 <main>
   <slot/>
 </main>
-<Footer/>
 <BackgroundGradient/>
+<Footer/>
 
 <style>
   main {

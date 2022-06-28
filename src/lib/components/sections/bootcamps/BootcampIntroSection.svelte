@@ -21,6 +21,7 @@
     grid-template-columns: repeat(auto-fit,  minmax(min(16rem, 100%), 1fr));
     gap: 4rem;
     align-items: center;
+    padding-top: 5rem;
   }
 
   iframe {

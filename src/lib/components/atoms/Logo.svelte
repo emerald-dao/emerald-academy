@@ -8,5 +8,6 @@
   #logo {
     width: 40px;
     height: 40px;
+    display: inline;
   }
 </style>

@@ -3,7 +3,7 @@ import Container from "$lib/components/atoms/Container.svelte";
 import Section from "$lib/components/atoms/Section.svelte";
 </script>
 
-<Section paddingTop={false}>
+<Section paddingTop={true}>
   <Container width="small">
     <div class="column">
       <span>WELCOME TO</span>
@@ -24,6 +24,7 @@ import Section from "$lib/components/atoms/Section.svelte";
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 5rem;
   }
 
   span {
