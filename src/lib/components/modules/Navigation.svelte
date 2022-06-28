@@ -1,30 +1,40 @@
 <script>
   import { bootcamps } from "$lib/data/bootcamps";
   import { tutorials } from "$lib/data/tutorials";
-  
 </script>
 
-<ul class="test"> 
-  <li class="dropdown nav-link"> Tutorials
+<ul class="test">
+  <li class="dropdown nav-link">
+    Tutorials
     <ul class="dropdown-list">
       {#each tutorials as tutorial (tutorial.title)}
-       <li class="dropdown-link">            
-          <a class="nav-link" href={tutorial.href} sveltekit:prefetch>{tutorial.title}</a>            
-       </li>          
+        <li class="dropdown-link">
+          <a class="nav-link" href={tutorial.href} sveltekit:prefetch
+            >{tutorial.title}</a>
+        </li>
       {/each}
     </ul>
   </li>
-  {#each bootcamps as bootcamp (bootcamp.title)}
-    {#if bootcamp.active}
-      <li>
-        <a class="nav-link" href={bootcamp.href} sveltekit:prefetch>{bootcamp.title}</a>
-      </li>
-    {/if}
-  {/each}
-  <li>
-    <a class="nav-link" href="https://discord.com/invite/emeraldcity" target="_blank">Emerald City</a>
+  <li class="dropdown nav-link">
+    Bootcamps
+    <ul class="dropdown-list">
+      {#each bootcamps as bootcamp (bootcamp.title)}
+        {#if bootcamp.active}
+          <li class="dropdown-link">
+            <a class="nav-link" href={bootcamp.href} sveltekit:prefetch
+              >{bootcamp.title}</a>
+          </li>
+        {/if}
+      {/each}
+    </ul>
   </li>
-  <slot/>
+  <li>
+    <a
+      class="nav-link"
+      href="https://discord.com/invite/emeraldcity"
+      target="_blank">Emerald City</a>
+  </li>
+  <slot />
 </ul>
 
 <style>
@@ -34,15 +44,11 @@
     list-style-type: none;
     gap: 10px;
   }
-  
-  .nav-link {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 15px;
-    color: var(--primary)
-  }
 
-  .test {
-    position: relative;
+  .nav-link {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    color: var(--primary);
   }
 
   .dropdown {
@@ -50,7 +56,7 @@
     top: 2px;
     cursor: pointer;
     text-align: center;
-    display:flex;
+    display: flex;
     justify-content: center;
   }
 
@@ -70,7 +76,8 @@
     width: 87%;
   }
 
-  .dropdown:hover ul, .dropdown:focus ul {
+  .dropdown:hover ul,
+  .dropdown:focus ul {
     opacity: 1;
     visibility: visible;
   }
@@ -79,14 +86,14 @@
     position: absolute;
     top: 2.8rem;
     width: 205px;
-    box-shadow:0 0 10px rgb(36, 36, 36);
+    box-shadow: 0 0 10px rgb(36, 36, 36);
     background: var(--menu-bg);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
     opacity: 0;
-    visibility: hidden;    
+    visibility: hidden;
     transition: opacity 0.3s ease-in-out;
   }
 
@@ -94,11 +101,8 @@
     padding: 0.2rem 0.5rem;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
-}
-.dropdown-link:hover {
-  background-color: var(--menu-hover);
-}
-
-
-
+  }
+  .dropdown-link:hover {
+    background-color: var(--menu-hover);
+  }
 </style>
