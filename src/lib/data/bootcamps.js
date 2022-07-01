@@ -217,6 +217,18 @@ export const bootcamps = [
         subject: ['NFT Collections', 'Admin Minting', 'Reading NFT Metadata'],
         content: ['Chapter 4, Day 3', 'Chapter 4, Day 4'],
       },
+      {
+        src: 'https://www.youtube.com/embed/e9KaqPedrUM',
+        title: 'Workshop 7/8',
+        subject: ['Pre/Post Conditions', 'Events', 'Contract Interfaces'],
+        content: ['Chapter 5, Day 1', 'Chapter 5, Day 2'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/Jkg1F7buWk4',
+        title: 'Workshop 8/8',
+        subject: ['Conforming to NFT Standard', 'Goated Goats Review'],
+        content: ['Chapter 5, Day 3'],
+      },
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     dateStart: '6/6/2022',
