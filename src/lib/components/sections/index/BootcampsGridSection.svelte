@@ -15,7 +15,7 @@
         <div class="grid">
           {#each bootcamps as bootcamp (bootcamp.title)}
             {#if bootcamp.active}
-              <BootcampCard bootcamp={bootcamp}/>
+              <BootcampCard {bootcamp} />
             {/if}
           {/each}
         </div>
@@ -26,7 +26,7 @@
         <div class="grid">
           {#each bootcamps as bootcamp (bootcamp.title)}
             {#if !bootcamp.active}
-              <BootcampCard bootcamp={bootcamp}/>
+              <BootcampCard {bootcamp} />
             {/if}
           {/each}
         </div>
@@ -55,7 +55,7 @@
   .grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     gap: 40px;
   }
 </style>
