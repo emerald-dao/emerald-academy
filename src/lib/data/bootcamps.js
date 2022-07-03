@@ -235,5 +235,23 @@ export const bootcamps = [
     dateEnd: '7/3/2022',
     timeToFinish: '4 weeks',
     link: 'https://github.com/emerald-dao/beginner-cadence-course',
+  },
+  {
+    title: 'Beginner Cadence Bootcamp - July 2022',
+    id: 4,
+    isLaunched: false,
+    active: false,
+    image: '/thumb-beginner-cadence.png',
+    imageAlt: 'Beginner Cadence Bootcamp',
+    href: '/bootcamps/4',
+    repository: 'https://github.com/emerald-dao/beginner-cadence-course',
+    welcomeVideo: 'https://www.youtube.com/embed/52cJXmTnvC0',
+    signUp: 'https://forms.gle/uTdmewS9SnNs12dV8',
+    videos: [],
+    description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
+    dateStart: '7/11/2022',
+    dateEnd: '8/5/2022',
+    timeToFinish: '4 weeks',
+    link: 'https://github.com/emerald-dao/beginner-cadence-course',
   }
 ];
