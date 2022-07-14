@@ -257,6 +257,16 @@ export const bootcamps = [
         ],
         content: [],
       },
+      {
+        src: 'https://www.youtube.com/embed/2j4iIwNeQGo',
+        title: 'Workshop #1',
+        subject: [
+          'What is the Flow Blockchain and Smart Contracts?',
+          'Introduction to Programming [optional]',
+          'Transactions, Scripts, and Cadence Basics',
+        ],
+        content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1', 'Chapter 2, Day 2'],
+      },
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     dateStart: '7/11/2022',
