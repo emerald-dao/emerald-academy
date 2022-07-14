@@ -29,7 +29,7 @@
     </ul>
   </li>
   <li>
-    <a class="nav-link" href="/important-resources">Important Resources</a>
+    <a class="nav-link" href="/resources">Resources</a>
   </li>
   <li>
     <a

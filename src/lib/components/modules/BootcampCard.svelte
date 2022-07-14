@@ -10,7 +10,7 @@
     <p>{bootcamp.description}</p>
     <p>{bootcamp.dateStart} - {bootcamp.dateEnd}</p>
     <Button href={bootcamp.href} class="ghost small"
-      >{bootcamp.isLaunched ? "Go to Bootcamp" : "Coming Soon"}</Button>
+      >{bootcamp.isLaunched ? "Start Learning" : "Coming Soon"}</Button>
   </div>
 </article>
 
