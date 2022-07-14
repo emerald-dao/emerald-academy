@@ -9,8 +9,15 @@
     <h5>{bootcamp.title}</h5>
     <p>{bootcamp.description}</p>
     <p>{bootcamp.dateStart} - {bootcamp.dateEnd}</p>
-    <Button href={bootcamp.href} class="ghost small"
-      >{bootcamp.isLaunched ? "Start Learning" : "Coming Soon"}</Button>
+    <Button href={bootcamp.href} class="ghost small">
+      {bootcamp.active && bootcamp.isLaunched
+        ? "Start Learning"
+        : bootcamp.isLaunched
+        ? "View Recordings"
+        : bootcamp.active
+        ? "Coming Soon"
+        : null}
+    </Button>
   </div>
 </article>
 
