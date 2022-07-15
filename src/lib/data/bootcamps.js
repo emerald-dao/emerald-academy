@@ -259,7 +259,7 @@ export const bootcamps = [
       },
       {
         src: 'https://www.youtube.com/embed/2j4iIwNeQGo',
-        title: 'Workshop #1',
+        title: 'Workshop 1/8',
         subject: [
           'What is the Flow Blockchain and Smart Contracts?',
           'Introduction to Programming [optional]',
