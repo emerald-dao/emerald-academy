@@ -89,25 +89,29 @@
 </script>
 
 <Section>
-  <Container>
-    <ul id='menu'>
-      {#each headings as heading}
-      <li><a href="#{slugger.slug(heading.text)}">{heading.text}</a></li>
-      {/each}
-    </ul>
-    <SvelteMarkdown id="markdown" source={article} on:parsed={handleParsed} />
-    <div class="spacer"></div>
+  <div class="wrapper">
+    <div class="content">
+      <ul id='menu'>
+        {#each headings as heading}
+        <li><a href="#{slugger.slug(heading.text)}">{heading.text}</a></li>
+        {/each}
+      </ul>
+      <div class="markdown">
+        <SvelteMarkdown id="markdown" source={article} on:parsed={handleParsed} />
+      </div>
+      <div class="spacer"></div>
+    </div>
   
-  </Container>
+  </div>
 </Section>
 
 <style>
 
   ul{
     position: fixed;
-    padding-top:3rem;
+    padding-top: 3.5rem;
     left: 2%;
-    width: 12%;
+    width: 15%;
     list-style: decimal;
     z-index: 10;
   }
@@ -119,12 +123,48 @@
   }
   .spacer {
     width: 100% ;
-    height: 300px;
+    height: 350px;
   }
 
-  @media only screen and (max-width: 1680px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -70px ;    
+    background-color: var(--tut-bg4);
+  }
+
+  .content {
+    max-width: 45%;
+    margin-top: 6rem;
+    margin-left: 80px;
+    font-family: "Mulish";
+  }
+
+  .markdown { 
+    padding-top: 3.5rem;  
+  }
+
+  @media only screen and (max-width: 1200px) {
+  .content {
+    margin-left: 150px;
+  } 
+  ul {
+    width: 20%;
+  }
+  .spacer {
+    height: 250px;
+  }
+}
+
+  @media only screen and (max-width: 600px) {
   #menu {
     display: none;
+  }
+  .content {
+    margin-left: 0;
+    max-width: 80%;
   }
 }
 
