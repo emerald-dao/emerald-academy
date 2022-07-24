@@ -109,14 +109,19 @@
 
   ul{
     position: fixed;
-    padding-top: 3.5rem;
-    left: 2%;
+    margin-top: 3.5rem;
+    padding: 1rem 1rem 0rem;
+    left: 3%;
     width: 15%;
     list-style: decimal;
     z-index: 10;
+    background-color: var(--tut-bg2);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
   }
   li {
     padding-bottom: 0.5rem;
+    font-size: 18px;
   }
   li::marker {
     color: transparent;
