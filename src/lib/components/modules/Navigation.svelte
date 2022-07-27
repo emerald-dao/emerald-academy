@@ -98,6 +98,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
+    z-index: 5;
   }
 
   .dropdown-link {
