@@ -176,7 +176,7 @@ export const bootcamps = [
       },
       {
         src: 'https://www.youtube.com/embed/s1uh1AiXPmE',
-        title: 'Workshop #1',
+        title: 'Workshop 1/8',
         subject: [
           'What is the Flow Blockchain and Smart Contracts?',
           'Introduction to Programming [optional]',
@@ -259,13 +259,34 @@ export const bootcamps = [
       },
       {
         src: 'https://www.youtube.com/embed/2j4iIwNeQGo',
-        title: 'Workshop #1',
+        title: 'Workshop 1/8',
         subject: [
           'What is the Flow Blockchain and Smart Contracts?',
           'Introduction to Programming [optional]',
           'Transactions, Scripts, and Cadence Basics',
         ],
         content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1', 'Chapter 2, Day 2'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/66_2CWOPZLs',
+        title: 'Workshop 2/8',
+        subject: [
+          'Arrays, Dictionaries, and Optionals',
+          'Structs'
+        ],
+        content: ['Chapter 2, Day 3', 'Chapter 2, Day 4'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/RwgIsGFs5jA',
+        title: 'Workshop 3/8',
+        subject: ['Resources', 'References'],
+        content: ['Chapter 3, Day 1', 'Chapter 3, Day 2', 'Chapter 3, Day 3'],
+      },
+      {
+        src: 'https://www.youtube.com/embed/4CPfPpsconU',
+        title: 'Workshop 4/8',
+        subject: ['Resource/Struct Interfaces', 'Access Control'],
+        content: ['Chapter 3, Day 4', 'Chapter 3, Day 5'],
       },
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
