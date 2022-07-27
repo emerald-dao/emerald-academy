@@ -20,5 +20,8 @@
     "svelte": "^3.44.3",
     "svelte-countdown": "^1.1.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "svelte-markdown": "^0.2.2"
+  }
 }

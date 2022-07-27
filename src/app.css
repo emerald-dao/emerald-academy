@@ -1,5 +1,6 @@
 @import '@picocss/pico';
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
 
 /* Green Light scheme (Default) */
 /* Can be forced with data-theme="light" */
@@ -11,9 +12,17 @@
   --primary-inverse: hsla(var(--palette-green-50), 100%);
   --primary-bg: hsl(0, 0%, 100%);
   --secondary-bg: hsl(0, 0%, 95%);
+  --tut-bg1: hsl(203, 95.9%, 9.6%);
+  --tut-bg2: rgba(112, 112, 112, 0.1);
+  --tut-bg3: #bbd2e0;
+  --tut-bg4: rgb(218, 230, 238);
+  --menu-bg: hsla(198, 29.7%, 95.4%, 0.8);
+  --menu-hover: hsla(198, 32.8%, 80.3%, 0.9);
+  --side-nav: hsl(195, 62.9%, 48.6%);
   --gradient-primary: hsla(var(--palette-green-70), 35%);
   --gradient-secondary: hsla(var(--palette-blue-70), 35%);
   --text: hsl(0, 0%, 10%);
+  --code-text: hsl(0, 0%, 10%);
   --disabled: hsl(0, 0%, 40%);
   --shadow: hsla(0, 0%, 0%, 0.05) 0px 1px 0px, hsla(0, 0%, 0%, 0.1) 0px 0px 8px;
 }
@@ -28,11 +37,19 @@
     --primary-inverse: hsla(var(--palette-green-60), 100%);
     --primary-bg: hsl(0, 0%, 0%);
     --secondary-bg: hsl(0, 0%, 5%);
+    --tut-bg1: hsl(203, 95.9%, 9.6%);
+    --tut-bg2: hsla(199, 100%, 10%, 0.068);
+    --tut-bg4: hsl(203, 95.9%, 9.6%);
+    --menu-bg: hsla(198, 29.7%, 28.4%, 0.9);
+    --menu-hover: hsla(198, 32.8%, 35.3%, 0.9);
+    --side-nav: hsl(195, 62.9%, 48.6%);
     --gradient-primary: hsla(var(--palette-green-70), 35%);
     --gradient-secondary: hsla(var(--palette-blue-70), 35%);
     --text: hsl(0, 0%, 100%);
+    --code-text: hsl(0, 0%, 80%);
     --disabled: hsl(0, 0%, 60%);
-    --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px, hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
+    --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px,
+      hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
   }
 }
 
@@ -45,11 +62,19 @@
   --primary-inverse: hsla(var(--palette-green-60), 100%);
   --primary-bg: hsl(0, 0%, 0%);
   --secondary-bg: hsl(0, 0%, 5%);
+  --tut-bg1: hsl(203, 95.9%, 9.6%);
+  --tut-bg2: hsl(199, 100%, 10%);
+  --tut-bg4: hsl(203, 95.9%, 9.6%);
+  --menu-bg: hsla(198, 29.7%, 28.4%, 0.9);
+  --menu-hover: hsla(198, 32.8%, 35.3%, 0.9);
+  --side-nav: hsl(195, 62.9%, 48.6%);
   --gradient-primary: hsla(var(--palette-green-70), 35%);
   --gradient-secondary: hsla(var(--palette-blue-70), 35%);
   --text: hsl(0, 0%, 100%);
+  --code-text: hsl(0, 0%, 80%);
   --disabled: hsl(0, 0%, 60%);
-  --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px, hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
+  --shadow: hsla(0, 0%, 100%, 0.05) 0px 1px 0px,
+    hsla(0, 0%, 100%, 0.1) 0px 0px 8px;
 }
 
 :root {
@@ -131,6 +156,7 @@ h6 {
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size-m);
+  position: relative;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -145,4 +171,34 @@ h5,
 h6,
 p {
   margin-bottom: 1em;
+}
+
+img {
+  display: flex;
+  border-radius: 6px;
+  margin: 10px auto;
+  align-self: center;
+}
+
+code {
+  cursor: text;
+  color: var(--code-text);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  margin-top: 3rem;
+}
+
+blockquote {
+  background: rgba(111, 119, 121, 0.247);
+  border-radius: 5px;
+}
+
+blockquote p {
+  margin-bottom: 0;
 }

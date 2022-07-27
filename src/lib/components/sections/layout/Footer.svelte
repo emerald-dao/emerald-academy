@@ -23,7 +23,9 @@ import Container from "../../atoms/Container.svelte";
 
 <style>
   footer {
-    padding: 0;
+    padding: 0;    
+    position: absolute;
+    bottom: 0;
   }
 
   div {

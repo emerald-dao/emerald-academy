@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
     gap: 60px;
-    align-items: baseline
+    align-items: baseline;
+    padding-bottom: 20rem;
   }
 </style>

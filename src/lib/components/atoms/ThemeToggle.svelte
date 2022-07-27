@@ -1,4 +1,4 @@
-<script>  
+<script>
   import { onMount } from "svelte";
   import { theme } from "$lib/stores/ThemeStore.js";
   import { draw } from "svelte/transition";
@@ -47,12 +47,15 @@
   .theme-toggle {
     height: 45px;
     width: 45px;
-    background-color: var(--primary-focus);
     border-radius: 50%;
     display: inline-block;
     text-align: center;
     animation: show 0.5s forwards;
     animation-delay: 1.5s;
     margin-top: 10px;
+  }
+
+  a:focus {
+    --background-color: none;
   }
 </style>

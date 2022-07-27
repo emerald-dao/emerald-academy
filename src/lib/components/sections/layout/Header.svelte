@@ -61,6 +61,8 @@
 <style>
   header {
     padding: 0;
+    z-index: 10;
+    position: absolute;
   }
 
   nav {

@@ -2,7 +2,7 @@
 
 > everything you need to build on Flow! 🚀
 
-🧪 Quickly experiment with Flow decentralized application (DApp) development by walking through our tutorials.
+🧪 Quickly experiment with Flow decentralized application (DApp) development by walking through our challenges.
 
 📚 Learn Cadence through our monthly introductory bootcamps.
 

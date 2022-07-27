@@ -1,23 +1,14 @@
 <script>
   import Button from "../atoms/Button.svelte";
-  export let bootcamp;
+  export let resource;
 </script>
 
-<article class:launched={bootcamp.isLaunched}>
-  <img src={bootcamp.image} alt={bootcamp.imageAlt} />
+<article>
+  <img src={resource.image} alt={resource.imageAlt} />
   <div>
-    <h5>{bootcamp.title}</h5>
-    <p>{bootcamp.description}</p>
-    <p>{bootcamp.dateStart} - {bootcamp.dateEnd}</p>
-    <Button href={bootcamp.href} class="ghost small">
-      {bootcamp.active && bootcamp.isLaunched
-        ? "Start Learning"
-        : bootcamp.isLaunched
-        ? "View Recordings"
-        : bootcamp.active
-        ? "Coming Soon"
-        : null}
-    </Button>
+    <h5>{resource.title}</h5>
+    <p>{resource.description}</p>
+    <Button href={resource.href} class="ghost small">Visit</Button>
   </div>
 </article>
 
@@ -31,7 +22,7 @@
     background-color: var(--primary-bg);
     border-radius: 10px;
     padding: 0;
-    margin: 0;
+    margin: 20px;
     box-shadow: none;
     border: 5px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -40,10 +31,8 @@
   img {
     border-radius: 10px 10px 0 0;
     margin: 0;
-  }
-
-  .launched {
-    box-shadow: var(--shadow);
+    height: 200px;
+    object-fit: cover;
   }
 
   h5 {
@@ -59,6 +48,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 35px 40px;
+    padding: 20px 20px;
+    height: 250px;
   }
 </style>
