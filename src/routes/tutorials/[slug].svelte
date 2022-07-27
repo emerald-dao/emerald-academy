@@ -127,7 +127,7 @@
   }
   li {
     padding-bottom: 0.5rem;
-    font-size: 18px;
+    font-size: 14px;
   }
   li::marker {
     color: transparent;
