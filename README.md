@@ -2,13 +2,13 @@
 
 > everything you need to build on Flow! 🚀
 
-🧪 Quickly experiment with Flow decentralized application (DApp) development by walking through our tutorials.
+🧪 Quickly experiment with Flow decentralized application (DApp) development by walking through our challenges.
 
 📚 Learn Cadence through our monthly introductory bootcamps.
 
 # 📚 Documentation
 
-For documentation, tutorials, challenges, bootcamps, and many more resources, visit: [academy.ecdao.org](https://academy.ecdao.org)
+For documentation, challenges, challenges, bootcamps, and many more resources, visit: [academy.ecdao.org](https://academy.ecdao.org)
 
 # 🔧 Important Tools
 - [Flow CLI](https://docs.onflow.org/flow-cli/install/)

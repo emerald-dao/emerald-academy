@@ -1,17 +1,17 @@
 <script context="module">
   export const prerender = true;
-  import { tutorials } from "$lib/data/tutorials";
+  import { challenges } from "$lib/data/challenges";
 
   export async function load({ page }) {
-    console.log("CONSOLE", page, tutorials);
-    let tutorial = tutorials.find((tut) => tut.slug === page.params.slug);
-    const url = `${tutorial.raw}`;
+    console.log("CONSOLE", page, challenges);
+    let challenge = challenges.find((tut) => tut.slug === page.params.slug);
+    const url = `${challenge.raw}`;
     const response = await fetch(url);
 
     return {
       status: response.status,
       props: {
-        title: tutorial.title,
+        title: challenge.title,
         article: response.ok && (await response.text()),
       },
     };

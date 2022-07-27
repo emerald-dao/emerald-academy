@@ -1,8 +1,8 @@
-export const tutorials = [
+export const challenges = [
   {
     title: 'Hello World',
     id: 1,
-    href: '/tutorials/hello-world',
+    href: '/challenges/hello-world',
     slug: 'hello-world',
     repository: 'https://github.com/emerald-dao/0-hello-world',
     description:
@@ -13,7 +13,7 @@ export const tutorials = [
   {
     title: 'Non Fungible Token',
     id: 2,
-    href: '/tutorials/non-fungible-token',
+    href: '/challenges/non-fungible-token',
     slug: 'non-fungible-token',
     repository: 'https://github.com/emerald-dao/1-simple-nft',
     description:
@@ -24,7 +24,7 @@ export const tutorials = [
   {
     title: 'Fungible Token',
     id: 3,
-    href: '/tutorials/fungible-token',
+    href: '/challenges/fungible-token',
     slug: 'fungible-token',
     repository: 'https://github.com/emerald-dao/2-fungible-token',
     description:

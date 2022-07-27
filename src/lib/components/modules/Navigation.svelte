@@ -1,16 +1,16 @@
 <script>
   import { bootcamps } from "$lib/data/bootcamps";
-  import { tutorials } from "$lib/data/tutorials";
+  import { challenges } from "$lib/data/challenges";
 </script>
 
 <ul class="test">
   <li class="dropdown nav-link">
-    Tutorials
+    Challenges
     <ul class="dropdown-list">
-      {#each tutorials as tutorial (tutorial.title)}
+      {#each challenges as challenge (challenge.title)}
         <li class="dropdown-link">
-          <a class="nav-link" href={tutorial.href} sveltekit:prefetch
-            >{tutorial.title}</a>
+          <a class="nav-link" href={challenge.href} sveltekit:prefetch
+            >{challenge.title}</a>
         </li>
       {/each}
     </ul>
