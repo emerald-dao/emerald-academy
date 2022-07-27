@@ -94,36 +94,88 @@
 </script>
 
 <Section>
-  <Container>
-    <ul id="menu">
-      {#each headings as heading}
-        <li><a href="#{slugger.slug(heading.text)}">{heading.text}</a></li>
-      {/each}
-    </ul>
-    <SvelteMarkdown id="markdown" source={article} on:parsed={handleParsed} />
-    <div class="spacer" />
-  </Container>
+  <div class="wrapper">
+    <div class="content">
+      <ul id="menu">
+        {#each headings as heading}
+          <li><a href="#{slugger.slug(heading.text)}">{heading.text}</a></li>
+        {/each}
+      </ul>
+      <div class="markdown">
+        <SvelteMarkdown
+          id="markdown"
+          source={article}
+          on:parsed={handleParsed} />
+      </div>
+      <div class="spacer" />
+    </div>
+  </div>
 </Section>
 
 <style>
   ul {
     position: fixed;
-    padding-top: 3rem;
-    left: 2%;
-    width: 12%;
+    margin-top: 3.5rem;
+    padding: 1rem 1rem 0rem;
+    left: 3%;
+    width: 15%;
     list-style: decimal;
     z-index: 10;
+    background-color: var(--tut-bg2);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
   }
   li {
     padding-bottom: 0.5rem;
+    font-size: 18px;
   }
   li::marker {
     color: transparent;
   }
+  .spacer {
+    width: 100%;
+    height: 350px;
+  }
 
-  @media only screen and (max-width: 1680px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -70px;
+    background-color: var(--tut-bg4);
+  }
+
+  .content {
+    max-width: 45%;
+    margin-top: 6rem;
+    margin-left: 80px;
+    font-family: "Mulish";
+  }
+
+  .markdown {
+    padding-top: 3.5rem;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .content {
+      margin-left: 150px;
+    }
+    ul {
+      width: 20%;
+    }
+    .spacer {
+      height: 250px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
     #menu {
       display: none;
+    }
+    .content {
+      margin-left: 0;
+      max-width: 80%;
     }
   }
 </style>
