@@ -13,8 +13,8 @@ export const tutorials = [
   {
     title: 'Non Fungible Token',
     id: 2,
-    href: '/tutorials/simple-nft',
-    slug: 'simple-nft',
+    href: '/tutorials/non-fungible-token',
+    slug: 'non-fungible-token',
     repository: 'https://github.com/emerald-dao/1-simple-nft',
     description:
       'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
@@ -24,23 +24,12 @@ export const tutorials = [
   {
     title: 'Fungible Token',
     id: 3,
-    href: '/tutorials/simple-ft',
-    slug: 'simple-ft',
+    href: '/tutorials/fungible-token',
+    slug: 'fungible-token',
     repository: 'https://github.com/emerald-dao/2-fungible-token',
     description:
       'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     link: 'https://github.com/emerald-dao/2-fungible-token',
     raw: 'https://raw.githubusercontent.com/emerald-dao/2-fungible-token/main/README.md',
-  },
-  {
-    title: 'Simple Marketplace',
-    id: 4,
-    href: '/tutorials/simple-marketplace',
-    slug: 'simple-marketplace',
-    repository: 'https://github.com/emerald-dao/3-simple-marketplace',
-    description:
-      'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
-    link: 'https://github.com/emerald-dao/3-simple-marketplace',
-    raw: 'https://raw.githubusercontent.com/emerald-dao/2-fungible-token/main/README.md',
-  },
+  }
 ];

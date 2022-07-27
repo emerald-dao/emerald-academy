@@ -19,7 +19,6 @@
 </script>
 
 <script>
-  import Container from "$lib/components/atoms/Container.svelte";
   import Section from "$lib/components/atoms/Section.svelte";
 
   import SvelteMarkdown from "svelte-markdown";
