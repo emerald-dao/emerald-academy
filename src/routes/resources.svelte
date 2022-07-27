@@ -7,7 +7,7 @@
 
 <Section>
   <Container>
-    <div>
+    <div class="margin-bottom">
       <h1>Important Resources</h1>
       <div class="tools">
         {#each resources as resource}
@@ -29,5 +29,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: flex-start;
+  }
+
+  .margin-bottom {
+    position: relative;
+    margin-bottom: 400px;
   }
 </style>
