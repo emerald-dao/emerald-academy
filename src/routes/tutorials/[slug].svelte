@@ -24,15 +24,16 @@
   import SvelteMarkdown from "svelte-markdown";
 
   export let article;
+  article = article.substring(article.indexOf("##"));
 
   $: headings = [];
 
   function handleParsed(event) {
     //access tokens via event.detail.tokens
-
     headings = event.detail.tokens.filter(
       (token) => token.type === "heading" && token.depth === 1
     );
+    headings.shift();
 
     console.log(headings);
   }
