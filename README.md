@@ -8,7 +8,7 @@
 
 # 📚 Documentation
 
-For documentation, challenges, challenges, bootcamps, and many more resources, visit: [academy.ecdao.org](https://academy.ecdao.org)
+For documentation, tutorials, challenges, bootcamps, and many more resources, visit: [academy.ecdao.org](https://academy.ecdao.org)
 
 # 🔧 Important Tools
 - [Flow CLI](https://docs.onflow.org/flow-cli/install/)
