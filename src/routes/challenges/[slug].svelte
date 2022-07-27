@@ -101,10 +101,7 @@
         {/each}
       </ul>
       <div class="markdown">
-        <SvelteMarkdown
-          id="markdown"
-          source={articleParsed}
-          on:parsed={handleParsed} />
+        <SvelteMarkdown source={articleParsed} on:parsed={handleParsed} />
       </div>
       <div class="spacer" />
     </div>
