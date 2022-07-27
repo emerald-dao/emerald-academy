@@ -24,7 +24,7 @@
   import SvelteMarkdown from "svelte-markdown";
 
   export let article;
-  article = article.substring(article.indexOf("##"));
+  $: articleParsed = article.substring(article.indexOf("##"));
 
   $: headings = [];
 
@@ -96,13 +96,15 @@
     <div class="content">
       <ul id="menu">
         {#each headings as heading}
-          <li><a href="#{slugger.slug(heading.text)}">{heading.text}</a></li>
+          <li>
+            <a href="#{slugger.slug(heading.text)}">{heading.text}</a>
+          </li>
         {/each}
       </ul>
       <div class="markdown">
         <SvelteMarkdown
           id="markdown"
-          source={article}
+          source={articleParsed}
           on:parsed={handleParsed} />
       </div>
       <div class="spacer" />
