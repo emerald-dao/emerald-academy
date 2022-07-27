@@ -33,8 +33,6 @@
     headings = event.detail.tokens.filter(
       (token) => token.type === "heading" && token.depth === 1
     );
-    headings.shift();
-
     console.log(headings);
   }
 
