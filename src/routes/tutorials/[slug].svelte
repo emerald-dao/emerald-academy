@@ -20,7 +20,6 @@
 
 <script>
   import Section from "$lib/components/atoms/Section.svelte";
-
   import SvelteMarkdown from "svelte-markdown";
 
   export let article;

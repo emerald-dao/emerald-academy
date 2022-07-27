@@ -35,7 +35,7 @@
     <a
       class="nav-link"
       href="https://discord.com/invite/emeraldcity"
-      target="_blank">Emerald City Discord</a>
+      target="_blank">Discord</a>
   </li>
   <slot />
 </ul>
