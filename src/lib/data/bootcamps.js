@@ -323,7 +323,7 @@ export const bootcamps = [
     title: 'Beginner Cadence Bootcamp - September 2022',
     id: 5,
     isLaunched: false,
-    active: false,
+    active: true,
     image: '/thumb-beginner-cadence.png',
     imageAlt: 'Beginner Cadence Bootcamp',
     href: '/bootcamps/5',
