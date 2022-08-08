@@ -14,9 +14,9 @@
         ? "Start Learning"
         : bootcamp.isLaunched
         ? "View Recordings"
-        : bootcamp.active
-        ? "Coming Soon"
-        : null}
+        : bootcamp.active && bootcamp.signUp
+        ? "Coming soon - enroll now for free!"
+        : "Coming Soon"}
     </Button>
   </div>
 </article>
