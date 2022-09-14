@@ -32,4 +32,16 @@ export const challenges = [
     link: 'https://github.com/emerald-dao/2-fungible-token',
     raw: 'https://raw.githubusercontent.com/emerald-dao/2-fungible-token/main/README.md',
   }
+  ,
+  {
+    title: 'NFT Minting',
+    id: 4,
+    href: '/challenges/nft-minting',
+    slug: 'nft-minting',
+    repository: 'https://github.com/emerald-dao/3-nft-minting',
+    description:
+      'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
+    link: 'https://github.com/emerald-dao/3-nft-minting',
+    raw: 'https://raw.githubusercontent.com/emerald-dao/3-nft-minting/main/README.md',
+  }
 ];
