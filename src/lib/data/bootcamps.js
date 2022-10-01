@@ -322,8 +322,8 @@ export const bootcamps = [
   {
     title: 'Beginner Cadence Bootcamp - September 2022',
     id: 5,
-    isLaunched: false,
-    active: true,
+    isLaunched: true,
+    active: false,
     image: '/thumb-beginner-cadence.png',
     imageAlt: 'Beginner Cadence Bootcamp',
     href: '/bootcamps/5',
@@ -389,6 +389,13 @@ export const bootcamps = [
         subject: ['Pre/Post Conditions', 'Events', 'Contract Interfaces'],
         content: ['Chapter 5, Day 1', 'Chapter 5, Day 2'],
       },
+      ,
+      {
+        src: 'https://www.youtube.com/embed/UF-v3leF_XE',
+        title: 'Workshop 8/8',
+        subject: ['Conforming to NFT Standard'],
+        content: ['Chapter 5, Day 3'],
+      }
     ],
     description: 'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     dateStart: '9/05/2022',
