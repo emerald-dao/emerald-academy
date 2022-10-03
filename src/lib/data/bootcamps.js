@@ -415,7 +415,7 @@ export const bootcamps = [
     signUp: '',
     videos: [
     ],
-    description: 'Learn how to code a DApp on the Flow blockchain by learning the basis of Cadence/Smart Contract & frontend development.',
+    description: 'Learn how to code a DApp on the Flow blockchain by learning Smart Contract & frontend development.',
     dateStart: '10/10/2022',
     dateEnd: '11/01/2022',
     timeToFinish: '3 weeks',
