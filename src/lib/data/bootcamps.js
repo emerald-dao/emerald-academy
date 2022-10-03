@@ -389,7 +389,6 @@ export const bootcamps = [
         subject: ['Pre/Post Conditions', 'Events', 'Contract Interfaces'],
         content: ['Chapter 5, Day 1', 'Chapter 5, Day 2'],
       },
-      ,
       {
         src: 'https://www.youtube.com/embed/UF-v3leF_XE',
         title: 'Workshop 8/8',
@@ -402,5 +401,24 @@ export const bootcamps = [
     dateEnd: '10/01/2022',
     timeToFinish: '4 weeks',
     link: 'https://github.com/emerald-dao/beginner-cadence-course',
+  },
+  {
+    title: 'Beginner DApp Bootcamp - October 2022',
+    id: 6,
+    isLaunched: false,
+    active: false,
+    image: '/thumb-beginner-cadence.png',
+    imageAlt: 'Beginner DApp Bootcamp',
+    href: '/bootcamps/6',
+    repository: 'https://github.com/emerald-dao/beginner-dapp-course',
+    welcomeVideo: '',
+    signUp: '',
+    videos: [
+    ],
+    description: 'Learn how to code a DApp on the Flow blockchain by learning the basis of Cadence/Smart Contract & frontend development.',
+    dateStart: '10/10/2022',
+    dateEnd: '11/01/2022',
+    timeToFinish: '3 weeks',
+    link: 'https://github.com/emerald-dao/beginner-dapp-course',
   }
 ];
