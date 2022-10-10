@@ -406,7 +406,7 @@ export const bootcamps = [
     title: 'Beginner DApp Bootcamp - October 2022',
     id: 6,
     isLaunched: false,
-    active: false,
+    active: true,
     image: '/beginner-dapp-course.png',
     imageAlt: 'Beginner DApp Bootcamp',
     href: '/bootcamps/6',

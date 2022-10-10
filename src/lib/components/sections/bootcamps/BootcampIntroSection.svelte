@@ -9,8 +9,15 @@
 <Section padding="large">
   <Container>
     <div id="video-grid">
-      <BootcampIntro bootcamp={bootcamp}/>
-      <iframe src={bootcamp.welcomeVideo} title="Bootcamp 1 Welcome Video" allow="fullscreen"/>
+      <BootcampIntro {bootcamp} />
+      {#if bootcamp.welcomeVideo}
+        <iframe
+          src={bootcamp.welcomeVideo}
+          title="Bootcamp Welcome Video"
+          allow="fullscreen" />
+      {:else}
+        <img src={bootcamp.image} alt={bootcamp.imageAlt} />
+      {/if}
     </div>
   </Container>
 </Section>
@@ -18,7 +25,7 @@
 <style>
   #video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,  minmax(min(16rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
     gap: 4rem;
     align-items: center;
     padding-top: 5rem;
