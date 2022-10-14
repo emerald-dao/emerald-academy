@@ -414,6 +414,26 @@ export const bootcamps = [
     welcomeVideo: '',
     signUp: 'https://discord.gg/wjA875sMjV',
     videos: [
+      {
+        src: 'https://www.youtube.com/embed/HJLS09gIurk',
+        title: 'Introductory Call',
+        subject: [
+          'Learn about the bootcamp',
+          'How to submit quests'
+        ],
+        content: [],
+      },
+      {
+        src: 'https://www.youtube.com/embed/6OGnwptbzxo',
+        title: 'Workshop 1/8',
+        subject: [
+          'What is the Flow Blockchain and Smart Contracts?',
+          'Transactions, Scripts, and Cadence Basics',
+          'Setting up GitHub',
+          'Setting up our DApp'
+        ],
+        content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1'],
+      },
     ],
     description: 'Learn how to code a DApp on the Flow blockchain by learning Smart Contract & frontend development.',
     dateStart: '10/10/2022',
