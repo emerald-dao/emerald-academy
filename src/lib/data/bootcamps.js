@@ -434,6 +434,15 @@ export const bootcamps = [
         ],
         content: ['Chapter 1, Day 1', 'Chapter 1, Day 2', 'Chapter 2, Day 1'],
       },
+      {
+        src: 'https://www.youtube.com/embed/iRg36HDr4iY',
+        title: 'Workshop 2/8',
+        subject: [
+          'Learning the basics of HTML/CSS',
+          'Intro to Next.js and JSX'
+        ],
+        content: ['Chapter 2, Day 2', 'Chapter 2, Day 3', 'Chapter 2, Day 4'],
+      },
     ],
     description: 'Learn how to code a DApp on the Flow blockchain by learning Smart Contract & frontend development.',
     dateStart: '10/10/2022',
