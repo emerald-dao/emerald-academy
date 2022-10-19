@@ -443,6 +443,16 @@ export const bootcamps = [
         ],
         content: ['Chapter 2, Day 2', 'Chapter 2, Day 3', 'Chapter 2, Day 4'],
       },
+      {
+        src: 'https://www.youtube.com/embed/dqlG11Pb9J4',
+        title: 'Workshop 3/8',
+        subject: [
+          'Cadence Basics',
+          'Deploying a contract to testnet',
+          'Interacting with our contract using Flow CLI'
+        ],
+        content: ['Chapter 3, Day 1', 'Chapter 3, Day 2', 'Chapter 3, Day 3'],
+      },
     ],
     description: 'Learn how to code a DApp on the Flow blockchain by learning Smart Contract & frontend development.',
     dateStart: '10/10/2022',
