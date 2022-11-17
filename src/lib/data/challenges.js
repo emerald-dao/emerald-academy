@@ -31,8 +31,7 @@ export const challenges = [
       'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     link: 'https://github.com/emerald-dao/2-fungible-token',
     raw: 'https://raw.githubusercontent.com/emerald-dao/2-fungible-token/main/README.md',
-  }
-  ,
+  },
   {
     title: 'NFT Minting',
     id: 4,
@@ -43,5 +42,27 @@ export const challenges = [
       'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     link: 'https://github.com/emerald-dao/3-nft-minting',
     raw: 'https://raw.githubusercontent.com/emerald-dao/3-nft-minting/main/README.md',
+  },
+  {
+    title: 'Voting',
+    id: 5,
+    href: '/challenges/voting',
+    slug: 'voting',
+    repository: 'https://github.com/emerald-dao/4-voting',
+    description:
+      'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
+    link: 'https://github.com/emerald-dao/4-voting',
+    raw: 'https://raw.githubusercontent.com/emerald-dao/4-voting/main/README.md',
+  },
+  {
+    title: 'Multisign',
+    id: 6,
+    href: '/challenges/multisign',
+    slug: 'multisign',
+    repository: 'https://github.com/emerald-dao/5-multisign',
+    description:
+      'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
+    link: 'https://github.com/emerald-dao/5-multisign',
+    raw: 'https://raw.githubusercontent.com/emerald-dao/5-multisign/main/README.md',
   }
 ];
