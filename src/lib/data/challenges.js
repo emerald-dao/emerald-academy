@@ -64,5 +64,16 @@ export const challenges = [
       'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
     link: 'https://github.com/emerald-dao/5-multisign',
     raw: 'https://raw.githubusercontent.com/emerald-dao/5-multisign/main/README.md',
+  },
+  {
+    title: 'Groups',
+    id: 7,
+    href: '/challenges/groups',
+    slug: 'groups',
+    repository: 'https://github.com/emerald-dao/6-groups',
+    description:
+      'Learn what the Flow blockchain is and how to start writing smart contracts in Cadence.',
+    link: 'https://github.com/emerald-dao/6-groups',
+    raw: 'https://raw.githubusercontent.com/emerald-dao/6-groups/main/README.md',
   }
 ];
